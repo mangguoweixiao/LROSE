@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bulkPmMrDataFile>
+    <fileHeader fileFormatVersion="1.0.0" reportTime="2016-11-29T13:22:26.349" startTime="2016-11-29T13:00:00.000" endTime="2016-11-29T13:15:00.000" period="15" jobid="1"/>
+    <eNB userLabel="CDT6318" id="464787">
+        <measurement>
+            <smr>MR.LteScRSRP MR.LteNcRSRP MR.LteScRSRQ MR.LteNcRSRQ MR.LteScEarfcn MR.LteScPci MR.LteScCgi MR.LteNcEarfcn MR.LteNcPci MR.LteFddNcRSRP MR.LteFddNcRSRQ MR.LteFddNcEarfcn MR.LteFddNcPci MR.LteTddNcRSRP MR.LteTddNcRSRQ MR.LteTddNcEarfcn MR.LteTddNcPci</smr>
+            <object id="118985535" MmeUeS1apId="157103610" MmeGroupId="4218" MmeCode="0" EventType="A3" TimeStamp="2016-11-29T13:06:20.051">
+                <v>63 70 16 19 40340 217 118985535 40340 302 NIL NIL NIL NIL NIL NIL NIL NIL</v>
+            </object>
+            <object id="118985534" MmeUeS1apId="163262667" MmeGroupId="4218" MmeCode="0" EventType="A3" TimeStamp="2016-11-29T13:09:29.626">
+                <v>20 27 10 13 40340 218 118985534 40340 370 NIL NIL NIL NIL NIL NIL NIL NIL</v>
+            </object>
+            <object id="118985535" MmeUeS1apId="17299190" MmeGroupId="4218" MmeCode="0" EventType="A3" TimeStamp="2016-11-29T13:08:52.266">
+                <v>42 48 17 21 40340 217 118985535 40340 99 NIL NIL NIL NIL NIL NIL NIL NIL</v>
+            </object>
+            <object id="118985535" MmeUeS1apId="17905091" MmeGroupId="4218" MmeCode="0" EventType="A2" TimeStamp="2016-11-29T13:02:33.886">
+                <v>16 NIL 15 NIL 40340 217 118985535 NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL</v>
+            </object>
+            <object id="118985535" MmeUeS1apId="17905091" MmeGroupId="4218" MmeCode="0" EventType="A1" TimeStamp="2016-11-29T13:02:34.666">
+                <v>14 NIL 14 NIL 40340 217 118985535 NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL</v>
+            </object>
+            <object id="118985535" MmeUeS1apId="17905091" MmeGroupId="4218" MmeCode="0" EventType="A5" TimeStamp="2016-11-29T13:02:34.921">
+                <v>15 NIL 14 NIL 40340 217 118985535 NIL NIL 41 17 1650 311 NIL NIL NIL NIL</v>
+            </object>
+            <object id="118985535" MmeUeS1apId="30695508" MmeGroupId="4218" MmeCode="0" EventType="A2" TimeStamp="2016-11-29T13:13:34.436">
+                <v>18 NIL 14 NIL 40340 217 118985535 NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL</v>
+            </object>
+            <object id="118985535" MmeUeS1apId="30695508" MmeGroupId="4218" MmeCode="0" EventType="A1" TimeStamp="2016-11-29T13:13:35.156">
+                <v>18 NIL 12 NIL 40340 217 118985535 NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL</v>
+            </object>
+            <object id="118985535" MmeUeS1apId="30695508" MmeGroupId="4218" MmeCode="0" EventType="B2" TimeStamp="2016-11-29T13:13:36.662">
+                <v>21 NIL 14 NIL 40340 217 118985535 NIL NIL NIL NIL NIL NIL NIL NIL NIL NIL</v>
+            </object>
+            <object id="118985535" MmeUeS1apId="38264432" MmeGroupId="4218" MmeCode="0" EventType="A3" TimeStamp="2016-11-29T13:12:47.996">
+                <v>48 54 17 19 40340 217 118985535 40340 290 NIL NIL NIL NIL NIL NIL NIL NIL</v>
+            </object>
+        </measurement>
+    </eNB>
+</bulkPmMrDataFile>
