@@ -71,3 +71,15 @@ E:\zuixindaima\20170421LROSE\LROSE_20170421\LROSE_DAL\bin\Debug\EntityFramework.
 E:\zuixindaima\20170421LROSE\LROSE_20170421\LROSE_DAL\obj\Debug\ResolveAssemblyReference.cache
 E:\zuixindaima\20170421LROSE\LROSE_20170421\LROSE_DAL\obj\Debug\LROSE_DAL.dll
 E:\zuixindaima\20170421LROSE\LROSE_20170421\LROSE_DAL\obj\Debug\LROSE_DAL.pdb
+E:\GitHub\Git\learngit\LROSE\LROSE_DAL\bin\Debug\LROSE_DAL.dll.config
+E:\GitHub\Git\learngit\LROSE\LROSE_DAL\bin\Debug\LROSE_DAL.dll
+E:\GitHub\Git\learngit\LROSE\LROSE_DAL\bin\Debug\LROSE_DAL.pdb
+E:\GitHub\Git\learngit\LROSE\LROSE_DAL\bin\Debug\EntityFramework.dll
+E:\GitHub\Git\learngit\LROSE\LROSE_DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\GitHub\Git\learngit\LROSE\LROSE_DAL\bin\Debug\LROSE_Model.dll
+E:\GitHub\Git\learngit\LROSE\LROSE_DAL\bin\Debug\LROSE_Model.pdb
+E:\GitHub\Git\learngit\LROSE\LROSE_DAL\bin\Debug\EntityFramework.xml
+E:\GitHub\Git\learngit\LROSE\LROSE_DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\GitHub\Git\learngit\LROSE\LROSE_DAL\obj\Debug\LROSE_DAL.csprojResolveAssemblyReference.cache
+E:\GitHub\Git\learngit\LROSE\LROSE_DAL\obj\Debug\LROSE_DAL.dll
+E:\GitHub\Git\learngit\LROSE\LROSE_DAL\obj\Debug\LROSE_DAL.pdb

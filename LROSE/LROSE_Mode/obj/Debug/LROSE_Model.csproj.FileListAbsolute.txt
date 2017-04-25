@@ -55,3 +55,13 @@ E:\zuixindaima\20170421LROSE\LROSE_20170421\LROSE_Mode\bin\Debug\EntityFramework
 E:\zuixindaima\20170421LROSE\LROSE_20170421\LROSE_Mode\obj\Debug\ResolveAssemblyReference.cache
 E:\zuixindaima\20170421LROSE\LROSE_20170421\LROSE_Mode\obj\Debug\LROSE_Model.dll
 E:\zuixindaima\20170421LROSE\LROSE_20170421\LROSE_Mode\obj\Debug\LROSE_Model.pdb
+E:\GitHub\Git\learngit\LROSE\LROSE_Mode\bin\Debug\LROSE_Model.dll.config
+E:\GitHub\Git\learngit\LROSE\LROSE_Mode\bin\Debug\LROSE_Model.dll
+E:\GitHub\Git\learngit\LROSE\LROSE_Mode\bin\Debug\LROSE_Model.pdb
+E:\GitHub\Git\learngit\LROSE\LROSE_Mode\bin\Debug\EntityFramework.dll
+E:\GitHub\Git\learngit\LROSE\LROSE_Mode\bin\Debug\EntityFramework.SqlServer.dll
+E:\GitHub\Git\learngit\LROSE\LROSE_Mode\bin\Debug\EntityFramework.xml
+E:\GitHub\Git\learngit\LROSE\LROSE_Mode\bin\Debug\EntityFramework.SqlServer.xml
+E:\GitHub\Git\learngit\LROSE\LROSE_Mode\obj\Debug\LROSE_Model.csprojResolveAssemblyReference.cache
+E:\GitHub\Git\learngit\LROSE\LROSE_Mode\obj\Debug\LROSE_Model.dll
+E:\GitHub\Git\learngit\LROSE\LROSE_Mode\obj\Debug\LROSE_Model.pdb

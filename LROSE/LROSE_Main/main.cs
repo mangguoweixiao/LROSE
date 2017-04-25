@@ -122,10 +122,10 @@ namespace LROSE_Main
             tsmDbInit.Enabled = false;
             tsmQuery.Enabled = true;
             tsmAnalysis.Enabled = true;
-            MRShow anaf1 = new MRShow();
+            query anaf1 = new query();
             //打开一维分析的界面
             if (anaf1.IsDisposed)
-                anaf1 = new MRShow();
+                anaf1 = new query();
             // 关闭活动的子窗体
             //Form activeChild = this.ActiveMdiChild;
             //while (activeChild != null)
@@ -135,7 +135,7 @@ namespace LROSE_Main
             //}
             // 打开新的子窗体
             anaf1.MdiParent = this;
-            anaf1.WindowState = FormWindowState.Maximized;
+            anaf1.WindowState = FormWindowState.Normal;
             anaf1.Show();
         
         }

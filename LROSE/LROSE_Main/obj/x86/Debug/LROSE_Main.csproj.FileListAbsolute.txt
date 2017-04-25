@@ -185,3 +185,4 @@ E:\GitHub\Git\learngit\LROSE\LROSE_Main\obj\x86\Debug\LROSE_Main.DbManagement.db
 E:\GitHub\Git\learngit\LROSE\LROSE_Main\obj\x86\Debug\LROSE_Main.main.resources
 E:\GitHub\Git\learngit\LROSE\LROSE_Main\obj\x86\Debug\PMDataOperation.Properties.Resources.resources
 E:\GitHub\Git\learngit\LROSE\LROSE_Main\obj\x86\Debug\LROSE_Main.csproj.GenerateResource.Cache
+E:\GitHub\Git\learngit\LROSE\LROSE_Main\obj\x86\Debug\LROSE_Main.query.resources
