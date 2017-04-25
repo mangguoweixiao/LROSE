@@ -186,3 +186,6 @@ E:\GitHub\Git\learngit\LROSE\LROSE_Main\obj\x86\Debug\LROSE_Main.main.resources
 E:\GitHub\Git\learngit\LROSE\LROSE_Main\obj\x86\Debug\PMDataOperation.Properties.Resources.resources
 E:\GitHub\Git\learngit\LROSE\LROSE_Main\obj\x86\Debug\LROSE_Main.csproj.GenerateResource.Cache
 E:\GitHub\Git\learngit\LROSE\LROSE_Main\obj\x86\Debug\LROSE_Main.query.resources
+E:\MingHuData\LROSE\LROSE\LROSE_Main\bin\Debug\PMDataOperation.exe.config
+E:\MingHuData\LROSE\LROSE\LROSE_Main\obj\x86\Debug\PMDataOperation.exe
+E:\MingHuData\LROSE\LROSE\LROSE_Main\obj\x86\Debug\PMDataOperation.pdb
