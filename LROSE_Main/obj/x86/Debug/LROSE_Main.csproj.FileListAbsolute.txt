@@ -23,3 +23,6 @@ E:\GitHub\Git\learngit\LROSE_Main\obj\x86\Debug\LROSE_Main.csproj.GenerateResour
 E:\GitHub\Git\learngit\LROSE_Main\obj\x86\Debug\PMDataOperation.exe
 E:\GitHub\Git\learngit\LROSE_Main\obj\x86\Debug\PMDataOperation.pdb
 E:\GitHub\Git\learngit\LROSE_Main\obj\x86\Debug\LROSE_Main.query.resources
+E:\myGitProject\LROSE\LROSE_Main\bin\Debug\PMDataOperation.exe.config
+E:\myGitProject\LROSE\LROSE_Main\obj\x86\Debug\PMDataOperation.exe
+E:\myGitProject\LROSE\LROSE_Main\obj\x86\Debug\PMDataOperation.pdb
