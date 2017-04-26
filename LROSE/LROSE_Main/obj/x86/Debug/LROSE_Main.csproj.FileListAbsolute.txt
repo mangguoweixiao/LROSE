@@ -161,3 +161,6 @@ E:\zuixindaima\20170421LROSE\LROSE_20170421\LROSE_Main\obj\x86\Debug\LROSE_Main.
 E:\zuixindaima\20170421LROSE\LROSE_20170421\LROSE_Main\obj\x86\Debug\PMDataOperation.Properties.Resources.resources
 E:\zuixindaima\20170421LROSE\LROSE_20170421\LROSE_Main\obj\x86\Debug\GenerateResource.read.1.tlog
 E:\zuixindaima\20170421LROSE\LROSE_20170421\LROSE_Main\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\myGitProject\LROSE\LROSE_Main\bin\Debug\PMDataOperation.exe.config
+E:\myGitProject\LROSE\LROSE_Main\obj\x86\Debug\PMDataOperation.exe
+E:\myGitProject\LROSE\LROSE_Main\obj\x86\Debug\PMDataOperation.pdb

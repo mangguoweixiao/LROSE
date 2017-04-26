@@ -114,17 +114,17 @@ namespace LROSE_Main.DataAnalysis.MR
         {
             if (cmbTable1.SelectedIndex > -1)
             {
-                //DataRowView drv = (DataRowView)cmbTable1.SelectedItem;
-                //string gId = drv.Row["mrName"].ToString();
-                //SqlConnection con = new SqlConnection(string.Format("Data Source=LAPTOP-D7I20ACJ;Initial Catalog={0};Integrated Security=True", dbInit.cmdValue));
-                //SqlDataAdapter da = new SqlDataAdapter(string.Format("select smrList from MrTableAllColumns where mrName={0} and tabletype='{1}' and fileFormatVersion='{2}' group by smrList", gId, cmbType1.SelectedItem, cmbVer1.SelectedItem), con);
-                //DataSet ds = new DataSet();
-                //da.Fill(ds, "indictor");
-                //DataTable dtIndictor = ds.Tables["indictor"];
+                DataRowView drv = (DataRowView)cmbTable1.SelectedItem;
+                string gId = drv.Row["mrName"].ToString();
+                SqlConnection con = new SqlConnection(string.Format("Data Source=LAPTOP-D7I20ACJ;Initial Catalog={0};Integrated Security=True", dbInit.cmdValue));
+                SqlDataAdapter da = new SqlDataAdapter(string.Format("select smrList from MrTableAllColumns where mrName='{0}' and tabletype='{1}' and fileFormatVersion='{2}' group by smrList", gId, cmbType1.SelectedItem, cmbVer1.SelectedItem), con);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "indictor");
+                DataTable dtIndictor = ds.Tables["indictor"];
 
-                //cmbTable1.DisplayMember = "smrList";
-                //cmbTable1.ValueMember = "smrList";
-                //cmbTable1.DataSource = dtIndictor;
+                cmbTable1.DisplayMember = "smrList";
+                cmbTable1.ValueMember = "smrList";
+                cmbTable1.DataSource = dtIndictor;
 
             }
         }
