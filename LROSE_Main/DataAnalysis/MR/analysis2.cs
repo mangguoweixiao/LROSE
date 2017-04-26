@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using LROSE_DAL;
 using LROSE_Main.DbManagement;
 
+
 namespace LROSE_Main.DataAnalysis.MR
 {
     public partial class analysis : Form
@@ -34,8 +35,11 @@ namespace LROSE_Main.DataAnalysis.MR
         private void analysis_Load(object sender, EventArgs e)
         {
             //二维分析窗体加载的时候，初始化界面的值
-            
-            SqlConnection con = new SqlConnection(string.Format("Data Source=LAPTOP-D7I20ACJ;Initial Catalog={0};Integrated Security=True", dbInit.cmdValue));
+            string str1 = dbInit.cmdValue;
+            string str2 = LROSRDbContext.GetEFConnctionString(str1);
+            string[] sArray = str2.Split(new char[2] { '=', ';' });
+            string strDataSource = sArray[1];
+            SqlConnection con = new SqlConnection(string.Format("Data Source={0};Initial Catalog={1};Integrated Security=True", strDataSource, dbInit.cmdValue));
             con.Open();
             SqlDataAdapter da = new SqlDataAdapter("select fileFormatVersion from MrTableAllColumns group by fileFormatVersion", con);
             DataSet ds = new DataSet();
@@ -46,7 +50,7 @@ namespace LROSE_Main.DataAnalysis.MR
             cmbVer1.DisplayMember = "fileFormatVersion";
             cmbVer1.ValueMember = "fileFormatVersion";
             cmbVer1.DataSource = dtVer;
-            
+
             con.Close();
             //cmbVer2.DisplayMember = "version_name";
             //cmbVer2.ValueMember = "version_id";

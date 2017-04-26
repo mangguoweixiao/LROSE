@@ -58,7 +58,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataAnalysis\MR\analysis2.cs" />
+    <Compile Include="DataAnalysis\MR\query.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataAnalysis\MR\query.designer.cs">
+      <DependentUpon>query.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAnalysis\MR\analysis2.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DataAnalysis\MR\analysis2.designer.cs">
       <DependentUpon>analysis2.cs</DependentUpon>
     </Compile>
@@ -91,6 +99,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DataAnalysis\MR\query.resx">
+      <DependentUpon>query.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DataAnalysis\MR\analysis2.resx">
       <DependentUpon>analysis2.cs</DependentUpon>
     </EmbeddedResource>
