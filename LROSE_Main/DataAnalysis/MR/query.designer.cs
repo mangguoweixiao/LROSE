@@ -1,4 +1,4 @@
-﻿namespace LROSE_Main
+﻿namespace LROSE_Main.DataAnalysis.MR
 {
     partial class query
     {

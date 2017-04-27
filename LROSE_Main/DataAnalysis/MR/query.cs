@@ -12,7 +12,7 @@ using LROSE_Main.DbManagement;
 
 
 
-namespace LROSE_Main
+namespace LROSE_Main.DataAnalysis.MR
 {
     public partial class query : Form
     {
@@ -21,7 +21,7 @@ namespace LROSE_Main
             InitializeComponent();
         }
 
-        public string getDataSource(){
+        public static string getDataSource(){
             string str1 = dbInit.cmdValue;
             string str2 = LROSRDbContext.GetEFConnctionString(str1);
             string[] sArray = str2.Split(new char[2] { '=', ';' });
