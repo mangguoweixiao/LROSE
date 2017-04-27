@@ -9,6 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using LROSE_DAL;
 using LROSE_Main.DbManagement;
+using LROSE_Main.DataAnalysis;
 
 
 
@@ -40,7 +41,7 @@ namespace LROSE_Main.DataAnalysis.MR
 
             string strDataSource = getDataSource();
             SqlConnection con = new SqlConnection(string.Format("Data Source={0};Initial Catalog={1};Integrated Security=True", strDataSource, dbInit.cmdValue));
-            con.Open();
+            //con.Open();
             SqlDataAdapter da = new SqlDataAdapter("select fileFormatVersion from MrTableAllColumns group by fileFormatVersion", con);
             DataSet ds = new DataSet();
 
@@ -51,7 +52,7 @@ namespace LROSE_Main.DataAnalysis.MR
             cmbVersion.ValueMember = "fileFormatVersion";
             cmbVersion.DataSource = dtVer;
 
-            con.Close();
+            //con.Close();
 
 
         }
@@ -94,6 +95,15 @@ namespace LROSE_Main.DataAnalysis.MR
         //开始按钮的事件
         private void StartButton_Click(object sender, EventArgs e)
         {
+            string startTimeStr = cmbDateTimePicker1.Value.ToString("yyyyMMddHHmm");
+            string endTimeStr = cmbDateTimePicker2.Value.ToString("yyyyMMddHHmm");
+            double startTime = Convert.ToDouble(startTimeStr);
+            double endTime = Convert.ToDouble(endTimeStr);
+
+            string minStr = cmbTextBox1.Text;
+            string maxStr = cmbTextBox2.Text;
+
+
 
         }
 
@@ -132,6 +142,85 @@ namespace LROSE_Main.DataAnalysis.MR
         private void cmbTextBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        public static SqlConnection sqlCon()
+        {
+            string server = getDataSource();
+            SqlConnection con = new SqlConnection(string.Format("Data Source={0};Initial Catalog={1};Integrated Security=True", server, dbInit.cmdValue));
+            return con;
+        }
+
+        private void cmbVersion_DropDownClosed(object sender, EventArgs e)
+        {
+            if (cmbVersion.SelectedIndex > -1)
+            {
+                DataRowView drv = (DataRowView)cmbVersion.SelectedItem;
+                string gId = drv.Row["fileFormatVersion"].ToString();
+                SqlConnection con = sqlCon();
+                SqlDataAdapter da = new SqlDataAdapter(string.Format("select tabletype from MrTableAllColumns where fileFormatVersion='{0}' group by tabletype", gId), con);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "type");
+                DataTable dtType = ds.Tables["type"];
+                cmbType.DisplayMember = "tabletype";
+                cmbType.ValueMember = "tabletype";
+                cmbType.DataSource = dtType;
+
+            }
+        }
+
+        private void cmbType_DropDown(object sender, EventArgs e)
+        {
+
+            if (cmbType.SelectedIndex > -1)
+            {
+                DataRowView drv1 = (DataRowView)cmbVersion.SelectedItem;
+                string gId1 = drv1.Row["fileFormatVersion"].ToString();
+                DataRowView drv = (DataRowView)cmbType.SelectedItem;
+                string gId = drv.Row["tabletype"].ToString();
+                SqlConnection con = sqlCon();
+                SqlDataAdapter da = new SqlDataAdapter(string.Format("select mrName from MrTableAllColumns where tabletype='{0}' and fileFormatVersion='{1}' group by mrName", gId, gId1), con);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "table");
+                DataTable dtTable = ds.Tables["table"];
+
+                cmbTable.DisplayMember = "mrName";
+                cmbTable.ValueMember = "mrName";
+                cmbTable.DataSource = dtTable;
+
+            }
+        }
+
+        private void cmbTable_DropDownClosed(object sender, EventArgs e)
+        {
+            if (cmbTable.SelectedIndex > -1)
+            {
+                DataRowView drv = (DataRowView)cmbTable.SelectedItem;
+                string gId = drv.Row["mrName"].ToString();
+                DataRowView drv1 = (DataRowView)cmbVersion.SelectedItem;
+                string gId1 = drv1.Row["fileFormatVersion"].ToString();
+                DataRowView drv2 = (DataRowView)cmbType.SelectedItem;
+                string gId2 = drv2.Row["tabletype"].ToString();
+                SqlConnection con = sqlCon();
+                SqlDataAdapter da = new SqlDataAdapter(string.Format("select smrList from MrTableAllColumns where mrName='{0}' and tabletype='{1}' and fileFormatVersion='{2}' group by smrList", gId, gId2, gId1), con);
+                DataSet ds = new DataSet();
+                da.Fill(ds, "indictor");
+                DataTable dtIndictor = ds.Tables["indictor"];
+                //DataSet newDs = new DataSet();
+                string[] counterLst;
+                string counter = "";
+                foreach (DataRow row in dtIndictor.Rows)
+                {
+                    counter = Convert.ToString(row["smrList"]);
+                    break;
+
+                }
+
+                counterLst = counter.Split(' ');
+                Array.IndexOf(counterLst, counterLst[0]);
+                cmbCounter.DataSource = counterLst;
+
+            }
         }
     }
 }

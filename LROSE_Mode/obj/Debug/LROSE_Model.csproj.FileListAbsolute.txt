@@ -17,3 +17,4 @@ E:\myGitProject\LROSE\LROSE_Mode\bin\Debug\EntityFramework.SqlServer.xml
 E:\myGitProject\LROSE\LROSE_Mode\obj\Debug\LROSE_Model.dll
 E:\myGitProject\LROSE\LROSE_Mode\obj\Debug\LROSE_Model.pdb
 E:\myGitProject\LROSE\LROSE_Mode\obj\Debug\LROSE_Model.csprojResolveAssemblyReference.cache
+E:\GitHub\Git\learngit\LROSE_Mode\obj\Debug\LROSE_Model.csprojResolveAssemblyReference.cache

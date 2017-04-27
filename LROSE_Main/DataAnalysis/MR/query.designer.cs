@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(query));
             this.lblTable = new System.Windows.Forms.Label();
             this.lblType = new System.Windows.Forms.Label();
@@ -47,7 +50,9 @@
             this.cmbDateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.ShowDataGridView = new System.Windows.Forms.DataGridView();
             this.cmbDateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.ShowDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTable
@@ -110,6 +115,7 @@
             this.cmbVersion.Size = new System.Drawing.Size(94, 20);
             this.cmbVersion.TabIndex = 5;
             this.cmbVersion.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cmbVersion.DropDownClosed += new System.EventHandler(this.cmbVersion_DropDownClosed);
             // 
             // cmbCounter
             // 
@@ -140,6 +146,7 @@
             this.cmbTable.Size = new System.Drawing.Size(109, 20);
             this.cmbTable.TabIndex = 11;
             this.cmbTable.SelectedIndexChanged += new System.EventHandler(this.cmbTable_SelectedIndexChanged);
+            this.cmbTable.DropDownClosed += new System.EventHandler(this.cmbTable_DropDownClosed);
             // 
             // cmbType
             // 
@@ -149,6 +156,7 @@
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(122, 20);
             this.cmbType.TabIndex = 12;
+            this.cmbType.DropDown += new System.EventHandler(this.cmbType_DropDown);
             this.cmbType.SelectedIndexChanged += new System.EventHandler(this.cmbType_SelectedIndexChanged);
             // 
             // label1
@@ -229,11 +237,28 @@
             this.cmbDateTimePicker2.TabIndex = 22;
             this.cmbDateTimePicker2.ValueChanged += new System.EventHandler(this.cmbDateTimePicker2_ValueChanged);
             // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(98, 145);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(384, 300);
+            this.chart1.TabIndex = 23;
+            this.chart1.Text = "chart1";
+            // 
             // query
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 494);
+            this.ClientSize = new System.Drawing.Size(909, 494);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.cmbDateTimePicker2);
             this.Controls.Add(this.ShowDataGridView);
             this.Controls.Add(this.cmbDateTimePicker1);
@@ -258,6 +283,7 @@
             this.Text = "数据查询";
             this.Load += new System.EventHandler(this.analysis_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ShowDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,6 +309,7 @@
         private System.Windows.Forms.DateTimePicker cmbDateTimePicker1;
         private System.Windows.Forms.DataGridView ShowDataGridView;
         private System.Windows.Forms.DateTimePicker cmbDateTimePicker2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
 
     }
 }

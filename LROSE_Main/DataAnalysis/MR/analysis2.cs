@@ -271,8 +271,10 @@ namespace LROSE_Main.DataAnalysis.MR
 
         private void cmbType1_DropDownClosed_1(object sender, EventArgs e)
         {
+            //类型下拉框
             if (cmbType1.SelectedIndex > -1)
             {
+                //版本
                 DataRowView drv1 = (DataRowView)cmbVer1.SelectedItem;
                 string gId1 = drv1.Row["fileFormatVersion"].ToString();
                 DataRowView drv = (DataRowView)cmbType1.SelectedItem;
@@ -282,7 +284,7 @@ namespace LROSE_Main.DataAnalysis.MR
                 DataSet ds = new DataSet();
                 da.Fill(ds, "table");
                 DataTable dtTable = ds.Tables["table"];
-
+                //表
                 cmbTable1.DisplayMember = "mrName";
                 cmbTable1.ValueMember = "mrName";
                 cmbTable1.DataSource = dtTable;
@@ -363,6 +365,11 @@ namespace LROSE_Main.DataAnalysis.MR
         private void analysis_SizeChanged(object sender, EventArgs e)
         {
             asc.controlAutoSize(this);
+        }
+
+        private void cmbType1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

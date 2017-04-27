@@ -22,7 +22,6 @@ E:\GitHub\Git\learngit\LROSE_Main\obj\x86\Debug\PMDataOperation.Properties.Resou
 E:\GitHub\Git\learngit\LROSE_Main\obj\x86\Debug\LROSE_Main.csproj.GenerateResource.Cache
 E:\GitHub\Git\learngit\LROSE_Main\obj\x86\Debug\PMDataOperation.exe
 E:\GitHub\Git\learngit\LROSE_Main\obj\x86\Debug\PMDataOperation.pdb
-E:\GitHub\Git\learngit\LROSE_Main\obj\x86\Debug\LROSE_Main.query.resources
 E:\myGitProject\LROSE\LROSE_Main\bin\Debug\PMDataOperation.exe.config
 E:\myGitProject\LROSE\LROSE_Main\obj\x86\Debug\PMDataOperation.exe
 E:\myGitProject\LROSE\LROSE_Main\obj\x86\Debug\PMDataOperation.pdb
@@ -48,3 +47,4 @@ E:\myGitProject\LROSE\LROSE_Main\obj\x86\Debug\LROSE_Main.main.resources
 E:\myGitProject\LROSE\LROSE_Main\obj\x86\Debug\PMDataOperation.Properties.Resources.resources
 E:\myGitProject\LROSE\LROSE_Main\obj\x86\Debug\LROSE_Main.csproj.GenerateResource.Cache
 E:\myGitProject\LROSE\LROSE_Main\obj\x86\Debug\LROSE_Main.DataAnalysis.MR.query.resources
+E:\GitHub\Git\learngit\LROSE_Main\obj\x86\Debug\LROSE_Main.DataAnalysis.MR.query.resources
