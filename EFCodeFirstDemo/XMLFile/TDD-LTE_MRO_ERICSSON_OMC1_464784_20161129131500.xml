@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bulkPmMrDataFile>
+    <fileHeader fileFormatVersion="1.0.0" reportTime="2016-11-29T13:36:21.460" startTime="2016-11-29T13:15:00.000" endTime="2016-11-29T13:30:00.000" period="15" jobid="1"/>
+    <eNB userLabel="CDT0298" id="464784">
+        <measurement>
+            <smr>MR.LteScRSRP MR.LteNcRSRP MR.LteScRSRQ MR.LteNcRSRQ MR.LteScTadv MR.LteScPHR MR.LteScAOA MR.LteScSinrUL MR.LteScUeRxTxTD MR.LteSceEuRxTxTD MR.LteScEarfcn MR.LteScPci MR.LteScCgi MR.LteNcEarfcn MR.LteNcPci MR.LteFddNcRSRP MR.LteFddNcRSRQ MR.LteFddNcEarfcn MR.LteFddNcPci MR.LteTddNcRSRP MR.LteTddNcRSRQ MR.LteTddNcEarfcn MR.LteTddNcPci</smr>
+        </measurement>
+        <measurement>
+            <smr>MR.LteScRIP</smr>
+            <object id="118984765:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:15:56.320">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:15:56.320">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:16:57.760">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:16:57.760">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:17:59.200">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:17:59.200">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:18:55.520">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:18:55.520">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:19:56.960">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:19:56.960">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:20:58.400">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:20:58.400">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:21:54.720">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:21:54.720">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:22:56.160">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:22:56.160">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:23:57.600">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:23:57.600">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:24:59.040">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:24:59.040">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:25:55.360">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:25:55.360">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:26:56.800">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:26:56.800">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:27:58.240">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:27:58.240">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:28:54.560">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:28:54.560">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:29:56.000">
+                <v>511</v>
+            </object>
+            <object id="118984765:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:29:56.000">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:15:56.320">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:15:56.320">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:16:57.760">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:16:57.760">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:17:59.200">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:17:59.200">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:18:55.520">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:18:55.520">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:19:56.960">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:19:56.960">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:20:58.400">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:20:58.400">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:21:54.720">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:21:54.720">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:22:56.160">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:22:56.160">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:23:57.600">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:23:57.600">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:24:59.040">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:24:59.040">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:25:55.360">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:25:55.360">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:26:56.800">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:26:56.800">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:27:58.240">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:27:58.240">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:28:54.560">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:28:54.560">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:29:56.000">
+                <v>511</v>
+            </object>
+            <object id="118984766:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:29:56.000">
+                <v>511</v>
+            </object>
+            <object id="118984767:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:15:56.320">
+                <v>478</v>
+            </object>
+            <object id="118984767:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:15:56.320">
+                <v>477</v>
+            </object>
+            <object id="118984767:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:16:57.760">
+                <v>477</v>
+            </object>
+            <object id="118984767:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:16:57.760">
+                <v>476</v>
+            </object>
+            <object id="118984767:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:17:59.200">
+                <v>478</v>
+            </object>
+            <object id="118984767:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:17:59.200">
+                <v>478</v>
+            </object>
+            <object id="118984767:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:18:55.520">
+                <v>479</v>
+            </object>
+            <object id="118984767:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:18:55.520">
+                <v>479</v>
+            </object>
+            <object id="118984767:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:19:56.960">
+                <v>479</v>
+            </object>
+            <object id="118984767:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:19:56.960">
+                <v>479</v>
+            </object>
+            <object id="118984767:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:20:58.400">
+                <v>477</v>
+            </object>
+            <object id="118984767:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:20:58.400">
+                <v>476</v>
+            </object>
+            <object id="118984767:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:21:54.720">
+                <v>477</v>
+            </object>
+            <object id="118984767:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:21:54.720">
+                <v>477</v>
+            </object>
+            <object id="118984767:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:22:56.160">
+                <v>478</v>
+            </object>
+            <object id="118984767:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:22:56.160">
+                <v>478</v>
+            </object>
+            <object id="118984767:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:23:57.600">
+                <v>476</v>
+            </object>
+            <object id="118984767:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:23:57.600">
+                <v>476</v>
+            </object>
+            <object id="118984767:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:24:59.040">
+                <v>477</v>
+            </object>
+            <object id="118984767:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:24:59.040">
+                <v>477</v>
+            </object>
+            <object id="118984767:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:25:55.360">
+                <v>477</v>
+            </object>
+            <object id="118984767:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:25:55.360">
+                <v>477</v>
+            </object>
+            <object id="118984767:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:26:56.800">
+                <v>478</v>
+            </object>
+            <object id="118984767:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:26:56.800">
+                <v>478</v>
+            </object>
+            <object id="118984767:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:27:58.240">
+                <v>477</v>
+            </object>
+            <object id="118984767:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:27:58.240">
+                <v>478</v>
+            </object>
+            <object id="118984767:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:28:54.560">
+                <v>478</v>
+            </object>
+            <object id="118984767:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:28:54.560">
+                <v>477</v>
+            </object>
+            <object id="118984767:40340:2" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:29:56.000">
+                <v>477</v>
+            </object>
+            <object id="118984767:40340:7" MmeUeS1apId="NIL" MmeGroupId="NIL" MmeCode="NIL" TimeStamp="2016-11-29T13:29:56.000">
+                <v>476</v>
+            </object>
+        </measurement>
+    </eNB>
+</bulkPmMrDataFile>

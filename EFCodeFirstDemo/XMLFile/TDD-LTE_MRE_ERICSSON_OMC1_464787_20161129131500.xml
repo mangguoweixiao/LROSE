@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bulkPmMrDataFile>
+    <fileHeader fileFormatVersion="1.0.0" reportTime="2016-11-29T13:37:27.084" startTime="2016-11-29T13:15:00.000" endTime="2016-11-29T13:30:00.000" period="15" jobid="1"/>
+    <eNB userLabel="CDT6318" id="464787">
+        <measurement>
+            <smr>MR.LteScRSRP MR.LteNcRSRP MR.LteScRSRQ MR.LteNcRSRQ MR.LteScEarfcn MR.LteScPci MR.LteScCgi MR.LteNcEarfcn MR.LteNcPci MR.LteFddNcRSRP MR.LteFddNcRSRQ MR.LteFddNcEarfcn MR.LteFddNcPci MR.LteTddNcRSRP MR.LteTddNcRSRQ MR.LteTddNcEarfcn MR.LteTddNcPci</smr>
+            <object id="118985534" MmeUeS1apId="154193864" MmeGroupId="4218" MmeCode="0" EventType="A3" TimeStamp="2016-11-29T13:26:19.706">
+                <v>37 41 18 22 40340 218 118985534 40340 217 NIL NIL NIL NIL NIL NIL NIL NIL</v>
+            </object>
+            <object id="118985535" MmeUeS1apId="17519287" MmeGroupId="4218" MmeCode="0" EventType="A3" TimeStamp="2016-11-29T13:24:18.492">
+                <v>54 64 7 19 40340 217 118985535 40340 99 NIL NIL NIL NIL NIL NIL NIL NIL</v>
+            </object>
+            <object id="118985535" MmeUeS1apId="17519287" MmeGroupId="4218" MmeCode="0" EventType="A3" TimeStamp="2016-11-29T13:24:18.493">
+                <v>53 64 4 20 40340 217 118985535 40340 99 NIL NIL NIL NIL NIL NIL NIL NIL</v>
+                <v>53 60 4 11 40340 217 118985535 40340 101 NIL NIL NIL NIL NIL NIL NIL NIL</v>
+            </object>
+            <object id="118985535" MmeUeS1apId="20891844" MmeGroupId="4218" MmeCode="0" EventType="A3" TimeStamp="2016-11-29T13:28:22.206">
+                <v>30 36 20 17 40340 217 118985535 40340 36 NIL NIL NIL NIL NIL NIL NIL NIL</v>
+            </object>
+            <object id="118985535" MmeUeS1apId="32529336" MmeGroupId="4218" MmeCode="0" EventType="A3" TimeStamp="2016-11-29T13:29:56.296">
+                <v>28 33 20 19 40340 217 118985535 40340 36 NIL NIL NIL NIL NIL NIL NIL NIL</v>
+            </object>
+            <object id="118985534" MmeUeS1apId="46480182" MmeGroupId="4218" MmeCode="0" EventType="A3" TimeStamp="2016-11-29T13:15:29.641">
+                <v>30 35 16 19 40340 218 118985534 40340 290 NIL NIL NIL NIL NIL NIL NIL NIL</v>
+            </object>
+        </measurement>
+    </eNB>
+</bulkPmMrDataFile>
