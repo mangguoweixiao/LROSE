@@ -10,6 +10,10 @@ using System.Windows.Forms;
 using LROSE_DAL;
 using LROSE_Main.DbManagement;
 using LROSE_Main.DataAnalysis;
+using LROSE_Model.MrData;
+using LROSE_BLL.MR;
+
+using System.Globalization;
 
 
 
@@ -17,13 +21,18 @@ namespace LROSE_Main.DataAnalysis.MR
 {
     public partial class query : Form
     {
+        private DataTable dt;
+
         public query()
         {
+            
             InitializeComponent();
+            SingletonMrData singletonMrData = new SingletonMrData();
+            singletonMrData.MrInitializeComponent(DBname.dbName);
         }
 
         public static string getDataSource(){
-            string str1 = dbInit.cmdValue;
+            string str1 = DBname.dbName;
             string str2 = LROSRDbContext.GetEFConnctionString(str1);
             string[] sArray = str2.Split(new char[2] { '=', ';' });
             string strDataSource = sArray[1];
@@ -33,14 +42,15 @@ namespace LROSE_Main.DataAnalysis.MR
 
         private void analysis_Load(object sender, EventArgs e)
         {
-           
+
+             
             cmbType.Text = "---请选择---";
             cmbVersion.Text = "---请选择---";
             cmbTable.Text = "---请选择---";
             cmbCounter.Text = "-----请选择-----";
 
             string strDataSource = getDataSource();
-            SqlConnection con = new SqlConnection(string.Format("Data Source={0};Initial Catalog={1};Integrated Security=True", strDataSource, dbInit.cmdValue));
+            SqlConnection con = new SqlConnection(string.Format("Data Source={0};Initial Catalog={1};Integrated Security=True", strDataSource, DBname.dbName));
             //con.Open();
             SqlDataAdapter da = new SqlDataAdapter("select fileFormatVersion from MrTableAllColumns group by fileFormatVersion", con);
             DataSet ds = new DataSet();
@@ -51,6 +61,7 @@ namespace LROSE_Main.DataAnalysis.MR
             cmbVersion.DisplayMember = "fileFormatVersion";
             cmbVersion.ValueMember = "fileFormatVersion";
             cmbVersion.DataSource = dtVer;
+
 
             //con.Close();
 
@@ -95,15 +106,90 @@ namespace LROSE_Main.DataAnalysis.MR
         //开始按钮的事件
         private void StartButton_Click(object sender, EventArgs e)
         {
+            /*
             string startTimeStr = cmbDateTimePicker1.Value.ToString("yyyyMMddHHmm");
             string endTimeStr = cmbDateTimePicker2.Value.ToString("yyyyMMddHHmm");
             double startTime = Convert.ToDouble(startTimeStr);
             double endTime = Convert.ToDouble(endTimeStr);
+            */
+            if (cmbTextBox1.Text == "" || cmbTextBox2.Text == "" || cmbCounter.Text=="")
+            {
+                MessageBox.Show("请选择指标或输入门限值!!!");
+                return;
+            }
+            DateTime startTime = cmbDateTimePicker1.Value;
+            DateTime endTime = cmbDateTimePicker2.Value;
 
             string minStr = cmbTextBox1.Text;
             string maxStr = cmbTextBox2.Text;
+            double mindb = Convert.ToDouble(minStr);
+            double maxdb = Convert.ToDouble(maxStr);
+
+            //临时变量取到类型和表名
+            string tabelType = cmbType.Text;
+            string tabelName = cmbTable.Text;
 
 
+            MRTableList mRTableList = new MRTableList();//
+            mRTableList.tabletype = tabelType;
+            mRTableList.tableName = tabelName;
+
+            MrDataShow mrDataShow = new MrDataShow();
+            //这dt装着所有的数据
+            dt = mrDataShow.GetTableData(mRTableList);
+            //指标
+            string convert = cmbCounter.Text;
+            //新建表dt1
+            DataTable dtNew = dt.Clone();
+
+            List<DataRow> aList = new List<DataRow>();
+            for (int i = 0;i<dt.Rows.Count;i++){
+                //start大于;end小于
+                string startTime1 = dt.Rows[i]["startTime"].ToString();
+                string endTime1 = dt.Rows[i]["endTime"].ToString();
+                startTime1.Remove(16);
+                endTime1.Remove(16);
+                DateTime startTmDate;
+                DateTime endTmDate;
+                DateTimeFormatInfo dtFormat = new System.Globalization.DateTimeFormatInfo();
+
+                dtFormat.ShortDatePattern = "yyyy-MM-ddThh:mm";
+
+                startTmDate = Convert.ToDateTime(startTime1, dtFormat);
+                endTmDate = Convert.ToDateTime(endTime1, dtFormat);
+
+                string convertStr = dt.Rows[i][convert].ToString();
+                //将得到的值转化为double
+                double converDouble;
+                if (double.TryParse(convertStr, out converDouble) == true)
+                {
+                    if ((startTmDate >= startTime) && (endTmDate <= endTime) && (converDouble >= mindb) && (converDouble <= maxdb))
+                    {
+                        aList.Add(dt.Rows[i]);
+                    }
+
+                }              
+            }
+            //新表赋值
+            for(int i = 0;i<aList.Count;i++){
+                dtNew.ImportRow(aList[i]);
+            }
+            //新表提取数据
+            DataTable dtNew1 = dtNew.DefaultView.ToTable(false, new string[] { "id", convert });
+            ShowDataGridView.DataSource = dtNew1;
+
+            List<string> idList = new List<string>();
+            List<double> conlist = new List<double>();
+            foreach(DataRow rowTemp in dtNew1.Rows){
+                idList.Add((string)rowTemp[0]);
+                double data;
+                if (double.TryParse((string)rowTemp[1], out data) == true)
+                {
+                    conlist.Add(data);
+                }
+            }
+
+            chart1.Series[0].Points.DataBindXY(idList, conlist);
 
         }
 
@@ -147,7 +233,7 @@ namespace LROSE_Main.DataAnalysis.MR
         public static SqlConnection sqlCon()
         {
             string server = getDataSource();
-            SqlConnection con = new SqlConnection(string.Format("Data Source={0};Initial Catalog={1};Integrated Security=True", server, dbInit.cmdValue));
+            SqlConnection con = new SqlConnection(string.Format("Data Source={0};Initial Catalog={1};Integrated Security=True", server, DBname.dbName));
             return con;
         }
 

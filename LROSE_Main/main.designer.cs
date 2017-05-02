@@ -86,14 +86,14 @@
             // mRToolStripMenuItem
             // 
             this.mRToolStripMenuItem.Name = "mRToolStripMenuItem";
-            this.mRToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.mRToolStripMenuItem.Size = new System.Drawing.Size(82, 22);
             this.mRToolStripMenuItem.Text = "MR";
             this.mRToolStripMenuItem.Click += new System.EventHandler(this.mRToolStripMenuItem_Click);
             // 
             // pMToolStripMenuItem
             // 
             this.pMToolStripMenuItem.Name = "pMToolStripMenuItem";
-            this.pMToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pMToolStripMenuItem.Size = new System.Drawing.Size(82, 22);
             this.pMToolStripMenuItem.Text = "PM";
             this.pMToolStripMenuItem.Click += new System.EventHandler(this.pMToolStripMenuItem_Click);
             // 
@@ -110,14 +110,14 @@
             // mRToolStripMenuItem1
             // 
             this.mRToolStripMenuItem1.Name = "mRToolStripMenuItem1";
-            this.mRToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.mRToolStripMenuItem1.Size = new System.Drawing.Size(82, 22);
             this.mRToolStripMenuItem1.Text = "MR";
             this.mRToolStripMenuItem1.Click += new System.EventHandler(this.mRToolStripMenuItem1_Click);
             // 
             // pMToolStripMenuItem1
             // 
             this.pMToolStripMenuItem1.Name = "pMToolStripMenuItem1";
-            this.pMToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.pMToolStripMenuItem1.Size = new System.Drawing.Size(82, 22);
             this.pMToolStripMenuItem1.Text = "PM";
             this.pMToolStripMenuItem1.Click += new System.EventHandler(this.pMToolStripMenuItem1_Click);
             // 
@@ -137,26 +137,29 @@
             this.一维分析ToolStripMenuItem,
             this.二维分析ToolStripMenuItem});
             this.pM分析ToolStripMenuItem.Name = "pM分析ToolStripMenuItem";
-            this.pM分析ToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
+            this.pM分析ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pM分析ToolStripMenuItem.Text = "PM分析";
             // 
             // 一维分析ToolStripMenuItem
             // 
             this.一维分析ToolStripMenuItem.Name = "一维分析ToolStripMenuItem";
-            this.一维分析ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.一维分析ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.一维分析ToolStripMenuItem.Text = "一维分析";
+            this.一维分析ToolStripMenuItem.Click += new System.EventHandler(this.一维分析ToolStripMenuItem_Click);
             // 
             // 二维分析ToolStripMenuItem
             // 
             this.二维分析ToolStripMenuItem.Name = "二维分析ToolStripMenuItem";
-            this.二维分析ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.二维分析ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.二维分析ToolStripMenuItem.Text = "二维分析";
+            this.二维分析ToolStripMenuItem.Click += new System.EventHandler(this.二维分析ToolStripMenuItem_Click);
             // 
             // mR分析ToolStripMenuItem
             // 
             this.mR分析ToolStripMenuItem.Name = "mR分析ToolStripMenuItem";
-            this.mR分析ToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
+            this.mR分析ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.mR分析ToolStripMenuItem.Text = "MR分析";
+            this.mR分析ToolStripMenuItem.Click += new System.EventHandler(this.mR分析ToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 
@@ -168,12 +171,12 @@
             this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dbToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(105, 32);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(93, 26);
             // 
             // dbToolStripMenuItem
             // 
             this.dbToolStripMenuItem.Name = "dbToolStripMenuItem";
-            this.dbToolStripMenuItem.Size = new System.Drawing.Size(104, 28);
+            this.dbToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.dbToolStripMenuItem.Text = "db";
             // 
             // panel1

@@ -62,15 +62,6 @@ namespace LROSE_Main
         private void tsmQuery_Click(object sender, EventArgs e)
         {
             DataView queryf = new DataView();
-            //queryf.MdiParent = this;
-            //queryf.WindowState = FormWindowState.Maximized;
-            //queryf.Show();
-            //打开查询的界面
-            //if (queryf.IsDisposed)
-            //    queryf = new MRShow();
-            //queryf.MdiParent = this;
-            //queryf.WindowState = FormWindowState.Maximized;
-            //queryf.Show();
         }
 
         private void tsmAnalysis_Click(object sender, EventArgs e)
@@ -81,7 +72,7 @@ namespace LROSE_Main
         private void tsmAnalysis1_Click(object sender, EventArgs e)
         {
         }
-       
+
         private void tsmAnalysis2_Click(object sender, EventArgs e)
         {
             anaf2 = new analysis();
@@ -89,12 +80,6 @@ namespace LROSE_Main
             if (anaf2.IsDisposed)
                 anaf2 = new analysis();
             // 关闭活动的子窗体
-            //Form activeChild = this.ActiveMdiChild;
-            //while (activeChild != null)
-            //{
-            //    activeChild.Close();
-            //    activeChild = this.ActiveMdiChild;
-            //}
             // 打开新的子窗体
             anaf2.MdiParent = this;
             anaf2.WindowState = FormWindowState.Maximized;
@@ -129,6 +114,40 @@ namespace LROSE_Main
             tsmAnalysis.Enabled = true;
         }
 
+        private void 一维分析ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (DBname.dbName == "" || DBname.dbName == "请选择数据库")
+            {
+                MessageBox.Show("一维分析之前请先选择数据库!!!");
+                return;
+            }
+            query anaf1 = new query();
+            //打开一维分析的界面
+            //if (anaf1.IsDisposed)
+            //    anaf1 = new query();
+  
+            // 打开新的子窗体
+            // anaf1.MdiParent = this;
+            //anaf1.WindowState = FormWindowState.Maximized;
+            anaf1.Show();
+        }
+
+        private void mR分析ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 二维分析ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            analysis anaf2 = new analysis();
+            //打开二维分析的界面
+            //if (anaf2.IsDisposed)
+              //  anaf2 = new analysis();
+            // 打开新的子窗体
+            //anaf2.MdiParent = this;
+            //anaf2.WindowState = FormWindowState.Maximized;
+            anaf2.Show();
+        }
     }
 
     public class DBname
