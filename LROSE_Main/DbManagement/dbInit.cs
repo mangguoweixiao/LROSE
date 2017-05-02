@@ -18,6 +18,8 @@ namespace LROSE_Main.DbManagement
 {
     public partial class dbInit : Form
     {
+
+        DataToDb dtbf;
         //数据库下拉框默认选中最后一个数据库，异常情况：没有数据库
         public dbInit()
         {
@@ -26,9 +28,6 @@ namespace LROSE_Main.DbManagement
             //cmbDb.SelectedIndex = cmbDb.Items.Count-1;
             //MessageBox.Show("下拉框数量" + cmbDb.Items.Count);
         }
-
-
-        public static string cmdValue = "";
 
         public void bindComboBox()
         {
@@ -174,12 +173,12 @@ namespace LROSE_Main.DbManagement
             }
             try
             {
-                using (var db = new LROSRDbContext(cmdValue))
+                using (var db = new LROSRDbContext())
                 {
                     //db.Database.ExecuteSqlCommand("select 'truncate table ' + Name + ';' from sysobjects where xtype='U' order by name asc;");
                     //db.ExecuteStoreCommand("DELETE " + db.students.EntitySet.ElementType.Name);
                     db.Database.ExecuteSqlCommand("truncate table MrTableAllColumns");
-                    MessageBox.Show(string.Format("数据库{0}初始化成功", cmdValue));
+                    MessageBox.Show(string.Format("数据库{0}初始化成功", DBname.dbName));
                 }
             }
             catch (ArgumentException)
@@ -189,7 +188,7 @@ namespace LROSE_Main.DbManagement
             catch (Exception ex)
             {
                 //throw (ex);
-                MessageBox.Show(string.Format("数据库{0}初始化失败\r\n{1}", cmdValue, ex.Message));
+                MessageBox.Show(string.Format("数据库{0}初始化失败\r\n{1}", DBname.dbName, ex.Message));
             }
 
             
@@ -206,10 +205,10 @@ namespace LROSE_Main.DbManagement
             }
             try
             {
-                using (var db = new LROSRDbContext(cmdValue))
+                using (var db = new LROSRDbContext(DBname.dbName))
                 {
                     db.Database.Delete();
-                    MessageBox.Show(string.Format("数据库{0}删除成功", cmdValue));
+                    MessageBox.Show(string.Format("数据库{0}删除成功", DBname.dbName));
                 }
             }
             catch (ArgumentException)
@@ -218,7 +217,7 @@ namespace LROSE_Main.DbManagement
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format("数据库{0}删除失败\r\n{1}", cmdValue, ex.Message));
+                MessageBox.Show(string.Format("数据库{0}删除失败\r\n{1}", DBname.dbName, ex.Message));
             }
             
         }
@@ -239,10 +238,11 @@ namespace LROSE_Main.DbManagement
             //仅仅是显示作用，没有实际功能
         }
 
-        DataToDb dtbf = new DataToDb();
+      
         //main mf = new main();
         private void btnNext_Click(object sender, EventArgs e)
         {
+            dtbf = new DataToDb();
             //打开数据解析的界面
             //tsmDataToDb
             //if (mf.IsDisposed)
@@ -292,14 +292,34 @@ namespace LROSE_Main.DbManagement
 
         private void cmbDb_TextChanged(object sender, EventArgs e)
         {
-            cmdValue = cmbDb.Text;
+            if (cmbDb.Text != "请选择数据库")
+            {
+                DBname.dbName = cmbDb.Text; 
+            }
+            
+
         }
 
         private void cmbDb_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void btnSure_Click(object sender, EventArgs e)
+        {
+            if (cmbDb.Text != "请选择数据库")    
+            {
+                string dbnNme = cmbDb.Text;
+                this.Close();
+                MessageBox.Show("数据库名称：" + dbnNme);
+            }
+            else
+            {
+                MessageBox.Show("请选择数据库");
+            }           
+        }
     }
+
     public class AppConfigHelper
     {
         public static string GetValueByKey(string key)

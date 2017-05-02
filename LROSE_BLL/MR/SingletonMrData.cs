@@ -14,47 +14,50 @@ namespace LROSE_BLL.MR
     /// </summary>
     public class SingletonMrData
     {
-        public static List<MrTableAllColumn> mrAllcolumnL = new List<MrTableAllColumn>() ;
-        public static List<MRTableList> mrTableL = new List<MRTableList> ();
+        public static List<MrTableAllColumn> mrAllcolumnL = new List<MrTableAllColumn>();
+        public static List<MRTableList> mrTableL = new List<MRTableList>();
 
         /// <summary>
+<<<<<<< HEAD
         /// 得到，表数据表头信息
+=======
+        /// 表，表头信息赋值
+>>>>>>> 3433116c3e34488a65e64e717f76b37a4ba8f871
         /// </summary>
         public void MrInitializeComponent(string dbname)
         {
-            if (mrAllcolumnL.Count() == 0 || mrTableL.Count() == 0)
+            mrAllcolumnL.Clear();
+            mrTableL.Clear() ;
+            using (var db = new LROSRDbContext(dbname))
             {
-                using (var db = new LROSRDbContext(dbname))
+                var column = from q in db.MrTableAllColumn select q;
+                var table1 = from q in column
+                             group q by new
+                             {
+                                 q.fileFormatVersion,
+                                 q.tabletype,
+                                 q.mrName
+                             }
+                                 into m
+                                 select m.Key;
+                var table2 = from q in table1
+                             select new MRTableList
+                             {
+                                 tabletype = q.tabletype,
+                                 Version = q.fileFormatVersion,
+                                 tableName = q.mrName
+                             };
+
+                foreach (MrTableAllColumn item in column)
                 {
-                    var column = from q in db.MrTableAllColumn select q;
-                    var table1 = from q in column
-                                 group q by new
-                                 {
-                                     q.fileFormatVersion,
-                                     q.tabletype,
-                                     q.mrName
-                                 }
-                                     into m
-                                     select m.Key;
-                    var table2 = from q in table1
-                                 select new MRTableList
-                                 {
-                                     tabletype = q.tabletype,
-                                     Version = q.fileFormatVersion,
-                                     tableName = q.mrName
-                                 };
-                    
-                    foreach (MrTableAllColumn item in column)
-                    {
-                        MrTableAllColumn mrTableAllColumn = SingletonMrData.DeepCopy<MrTableAllColumn>(item);
-                        mrAllcolumnL.Add(mrTableAllColumn);
-                    }
-                   
-                    foreach(MRTableList item in table2 )
-                    {
-                        MRTableList mRTableList = SingletonMrData.DeepCopy<MRTableList>(item);
-                        mrTableL.Add(item);    
-                    }
+                    MrTableAllColumn mrTableAllColumn = SingletonMrData.DeepCopy<MrTableAllColumn>(item);
+                    mrAllcolumnL.Add(mrTableAllColumn);
+                }
+
+                foreach (MRTableList item in table2)
+                {
+                    MRTableList mRTableList = SingletonMrData.DeepCopy<MRTableList>(item);
+                    mrTableL.Add(item);
                 }
             }
         }
@@ -63,18 +66,18 @@ namespace LROSE_BLL.MR
         /// 深拷贝(使用反射的方式)
         /// </summary>
         public static T DeepCopy<T>(T serializableObject)
-       {
-           object objCopy = null;
+        {
+            object objCopy = null;
 
-           MemoryStream stream = new MemoryStream();
-           BinaryFormatter binFormatter = new BinaryFormatter();
-           binFormatter.Serialize(stream, serializableObject);
-           stream.Position = 0;
-           objCopy = (T)binFormatter.Deserialize(stream);
-           stream.Close();
-           return (T)objCopy;
+            MemoryStream stream = new MemoryStream();
+            BinaryFormatter binFormatter = new BinaryFormatter();
+            binFormatter.Serialize(stream, serializableObject);
+            stream.Position = 0;
+            objCopy = (T)binFormatter.Deserialize(stream);
+            stream.Close();
+            return (T)objCopy;
 
-       }
+        }
 
 
 

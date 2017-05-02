@@ -181,11 +181,6 @@ namespace LROSE_BLL.MR
         public bool MrInput(string path,string deName)      
         {
 
-            //using (var db = new LROSRDbContext(deName))
-            //{
-            //    int asd=db.MrTableAllColumn.Count();
-            //}
-
             int xmlNumber = 0;
             int dbNUmber = 0;
             //初始化XML文件夹
