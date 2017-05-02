@@ -11,6 +11,7 @@ using LROSE_DAL;
 using System.Data.Entity;
 using System.Xml;
 using System.Configuration;
+using System.Globalization;
 
 
 namespace EFCodeFirstDemo
@@ -19,20 +20,30 @@ namespace EFCodeFirstDemo
     {
         static void Main(string[] args)
         {
-            string asd = "Data Source=I1HLPK93QO6EFE9;Initial Catalog=asdqwer;Integrated Security=True";;
-            string asd1 = "asdads";
-            using (var db = new LROSRDbContext())
-            {
-                db.Configuration.AutoDetectChangesEnabled = false;
-                db.Configuration.ValidateOnSaveEnabled = false;
+            DateTime dt;
 
-                MrTableAllColumn mr = new MrTableAllColumn ();
-                mr.KPid =1;
-                db.MrTableAllColumn.Add(mr);
-                db.SaveChanges();
-                int du=db.MrTableAllColumn.Count();
+            DateTimeFormatInfo dtFormat = new System.Globalization.DateTimeFormatInfo();
 
-            }
+            dtFormat.ShortDatePattern = "yyyy-MM-ddThh:mm";
+
+            dt = Convert.ToDateTime("2017-03-07T23:45", dtFormat);
+            Console.WriteLine(dt);
+
+
+            //string asd = "Data Source=I1HLPK93QO6EFE9;Initial Catalog=asdqwer;Integrated Security=True";;
+            //string asd1 = "asdads";
+            //using (var db = new LROSRDbContext())
+            //{
+            //    db.Configuration.AutoDetectChangesEnabled = false;
+            //    db.Configuration.ValidateOnSaveEnabled = false;
+
+            //    MrTableAllColumn mr = new MrTableAllColumn ();
+            //    mr.KPid =1;
+            //    db.MrTableAllColumn.Add(mr);
+            //    db.SaveChanges();
+            //    int du=db.MrTableAllColumn.Count();
+
+            //}
 
 
 
@@ -87,7 +98,7 @@ namespace EFCodeFirstDemo
             //    string error = e.Message;
 
             //}
-            Console.WriteLine();
+            Console.ReadKey();
 
         }
 

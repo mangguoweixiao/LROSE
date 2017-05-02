@@ -64,7 +64,7 @@ namespace LROSE_Main
 
         private void tsmDbInit_Click(object sender, EventArgs e)
         {
-            tsmDataToDb.Enabled = false;
+            tsmDataToDb.Enabled = true;
             tsmDbInit.Enabled = true;
             tsmQuery.Enabled = true;
             tsmAnalysis.Enabled = true;
@@ -118,10 +118,16 @@ namespace LROSE_Main
         
         private void tsmAnalysis1_Click(object sender, EventArgs e)
         {
+
             tsmDataToDb.Enabled = true;
-            tsmDbInit.Enabled = false;
+            tsmDbInit.Enabled = true;
             tsmQuery.Enabled = true;
             tsmAnalysis.Enabled = true;
+            if (dbInit.cmdValue == "" || dbInit.cmdValue=="请选择数据库")
+            {
+                MessageBox.Show("一维分析之前请先选择数据库!!!");
+                return;
+            }
             query anaf1 = new query();
             //打开一维分析的界面
             if (anaf1.IsDisposed)
@@ -144,7 +150,7 @@ namespace LROSE_Main
         private void tsmAnalysis2_Click(object sender, EventArgs e)
         {
             tsmDataToDb.Enabled = true;
-            tsmDbInit.Enabled = false;
+            tsmDbInit.Enabled = true;
             tsmQuery.Enabled = true;
             tsmAnalysis.Enabled = true;
             analysis anaf2 = new analysis();
@@ -167,7 +173,7 @@ namespace LROSE_Main
 
         private void mRToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            tsmDataToDb.Enabled = false;
+            tsmDataToDb.Enabled = true;
             tsmDbInit.Enabled = true;
             tsmQuery.Enabled = true;
             tsmAnalysis.Enabled = true;
@@ -185,7 +191,7 @@ namespace LROSE_Main
 
         private void pMToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            tsmDataToDb.Enabled = false;
+            tsmDataToDb.Enabled = true;
             tsmDbInit.Enabled = true;
             tsmQuery.Enabled = true;
             tsmAnalysis.Enabled = true;

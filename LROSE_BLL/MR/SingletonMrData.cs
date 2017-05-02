@@ -18,7 +18,7 @@ namespace LROSE_BLL.MR
         public static List<MRTableList> mrTableL = new List<MRTableList> ();
 
         /// <summary>
-        /// 得到表数据，表头信息
+        /// 得到，表数据表头信息
         /// </summary>
         public void MrInitializeComponent(string dbname)
         {
