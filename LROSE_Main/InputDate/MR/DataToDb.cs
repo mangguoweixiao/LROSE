@@ -15,10 +15,9 @@ namespace LROSE_Main.InputDate.MR
     public partial class DataToDb : Form
     {
         public DataToDb()
-        {
+        {     
             InitializeComponent();
-
-
+            this.Text = string.Format("MR解析 库:{0}",DBname.dbName);
         }
 
         private delegate bool GetInputOperation(string[] str);
@@ -47,9 +46,7 @@ namespace LROSE_Main.InputDate.MR
                 return;
             }
 
-
-            string dbName = dbInit.cmdValue;
-            str1[1] = dbName;
+            str1[1] = DBname.dbName;
 
             GetInputOperation gIO = new GetInputOperation(myAnalysis);
             IAsyncResult result = gIO.BeginInvoke(str1, null, null);

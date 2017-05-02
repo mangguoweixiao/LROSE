@@ -33,16 +33,11 @@
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("MRO");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("MRS");
             this.label8 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.编辑检索条件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.导出结果ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -61,49 +56,6 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "编辑过滤条件";
             this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.Control;
-            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.ForeColor = System.Drawing.Color.Blue;
-            this.label5.Location = new System.Drawing.Point(658, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(15, 14);
-            this.label5.TabIndex = 16;
-            this.label5.Text = ">";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.Control;
-            this.label7.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.ForeColor = System.Drawing.Color.Blue;
-            this.label7.Location = new System.Drawing.Point(614, 11);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(15, 14);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "1";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.Control;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label4.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.ForeColor = System.Drawing.Color.Blue;
-            this.label4.Location = new System.Drawing.Point(568, 11);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(15, 14);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "<";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // dataGridView1
             // 
@@ -124,19 +76,19 @@
             this.编辑检索条件ToolStripMenuItem,
             this.导出结果ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(169, 52);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(149, 48);
             // 
             // 编辑检索条件ToolStripMenuItem
             // 
             this.编辑检索条件ToolStripMenuItem.Name = "编辑检索条件ToolStripMenuItem";
-            this.编辑检索条件ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
+            this.编辑检索条件ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.编辑检索条件ToolStripMenuItem.Text = "编辑检索条件";
             this.编辑检索条件ToolStripMenuItem.Click += new System.EventHandler(this.编辑检索条件ToolStripMenuItem_Click);
             // 
             // 导出结果ToolStripMenuItem
             // 
             this.导出结果ToolStripMenuItem.Name = "导出结果ToolStripMenuItem";
-            this.导出结果ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
+            this.导出结果ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.导出结果ToolStripMenuItem.Text = "导出结果";
             this.导出结果ToolStripMenuItem.Click += new System.EventHandler(this.导出结果ToolStripMenuItem_Click);
             // 
@@ -159,27 +111,8 @@
             treeNode3});
             this.treeView1.Size = new System.Drawing.Size(299, 385);
             this.treeView1.TabIndex = 11;
-            this.treeView1.Click += new System.EventHandler(this.treeView1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 12);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "版本：";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(60, 8);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(129, 20);
-            this.comboBox1.TabIndex = 20;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            //this.treeView1.Click += new System.EventHandler(this.treeView1_Click);
             // 
             // label2
             // 
@@ -195,18 +128,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 434);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MRShow";
-            this.Text = "DataView";
-            this.Load += new System.EventHandler(this.DataView_Load);
+            this.Text = "MR数据呈现";
+            this.Load += new System.EventHandler(this.MRShow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -217,16 +145,11 @@
         #endregion
 
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 编辑检索条件ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 导出结果ToolStripMenuItem;
         private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
     }
 }

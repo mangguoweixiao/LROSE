@@ -46,9 +46,11 @@
             this.grpStandard.Controls.Add(this.rdoFd);
             this.grpStandard.Controls.Add(this.rdoTdd);
             this.grpStandard.Controls.Add(this.rdoFdd);
-            this.grpStandard.Location = new System.Drawing.Point(208, 114);
+            this.grpStandard.Location = new System.Drawing.Point(139, 76);
+            this.grpStandard.Margin = new System.Windows.Forms.Padding(2);
             this.grpStandard.Name = "grpStandard";
-            this.grpStandard.Size = new System.Drawing.Size(484, 122);
+            this.grpStandard.Padding = new System.Windows.Forms.Padding(2);
+            this.grpStandard.Size = new System.Drawing.Size(323, 81);
             this.grpStandard.TabIndex = 0;
             this.grpStandard.TabStop = false;
             this.grpStandard.Text = "文件类型";
@@ -56,9 +58,10 @@
             // rdoTd
             // 
             this.rdoTd.AutoSize = true;
-            this.rdoTd.Location = new System.Drawing.Point(272, 52);
+            this.rdoTd.Location = new System.Drawing.Point(181, 35);
+            this.rdoTd.Margin = new System.Windows.Forms.Padding(2);
             this.rdoTd.Name = "rdoTd";
-            this.rdoTd.Size = new System.Drawing.Size(51, 22);
+            this.rdoTd.Size = new System.Drawing.Size(35, 16);
             this.rdoTd.TabIndex = 3;
             this.rdoTd.TabStop = true;
             this.rdoTd.Text = "TD";
@@ -67,9 +70,10 @@
             // rdoFd
             // 
             this.rdoFd.AutoSize = true;
-            this.rdoFd.Location = new System.Drawing.Point(384, 52);
+            this.rdoFd.Location = new System.Drawing.Point(256, 35);
+            this.rdoFd.Margin = new System.Windows.Forms.Padding(2);
             this.rdoFd.Name = "rdoFd";
-            this.rdoFd.Size = new System.Drawing.Size(51, 22);
+            this.rdoFd.Size = new System.Drawing.Size(35, 16);
             this.rdoFd.TabIndex = 2;
             this.rdoFd.TabStop = true;
             this.rdoFd.Text = "FD";
@@ -78,9 +82,10 @@
             // rdoTdd
             // 
             this.rdoTdd.AutoSize = true;
-            this.rdoTdd.Location = new System.Drawing.Point(48, 52);
+            this.rdoTdd.Location = new System.Drawing.Point(32, 35);
+            this.rdoTdd.Margin = new System.Windows.Forms.Padding(2);
             this.rdoTdd.Name = "rdoTdd";
-            this.rdoTdd.Size = new System.Drawing.Size(60, 22);
+            this.rdoTdd.Size = new System.Drawing.Size(41, 16);
             this.rdoTdd.TabIndex = 1;
             this.rdoTdd.TabStop = true;
             this.rdoTdd.Text = "TDD";
@@ -89,9 +94,10 @@
             // rdoFdd
             // 
             this.rdoFdd.AutoSize = true;
-            this.rdoFdd.Location = new System.Drawing.Point(160, 52);
+            this.rdoFdd.Location = new System.Drawing.Point(107, 35);
+            this.rdoFdd.Margin = new System.Windows.Forms.Padding(2);
             this.rdoFdd.Name = "rdoFdd";
-            this.rdoFdd.Size = new System.Drawing.Size(60, 22);
+            this.rdoFdd.Size = new System.Drawing.Size(41, 16);
             this.rdoFdd.TabIndex = 0;
             this.rdoFdd.TabStop = true;
             this.rdoFdd.Text = "FDD";
@@ -99,9 +105,10 @@
             // 
             // btnToDb
             // 
-            this.btnToDb.Location = new System.Drawing.Point(396, 345);
+            this.btnToDb.Location = new System.Drawing.Point(264, 230);
+            this.btnToDb.Margin = new System.Windows.Forms.Padding(2);
             this.btnToDb.Name = "btnToDb";
-            this.btnToDb.Size = new System.Drawing.Size(98, 34);
+            this.btnToDb.Size = new System.Drawing.Size(65, 23);
             this.btnToDb.TabIndex = 1;
             this.btnToDb.Text = "文件解析";
             this.btnToDb.UseVisualStyleBackColor = true;
@@ -109,29 +116,33 @@
             // 
             // pgbToDb
             // 
-            this.pgbToDb.Location = new System.Drawing.Point(208, 279);
+            this.pgbToDb.Location = new System.Drawing.Point(139, 186);
+            this.pgbToDb.Margin = new System.Windows.Forms.Padding(2);
             this.pgbToDb.Name = "pgbToDb";
-            this.pgbToDb.Size = new System.Drawing.Size(484, 22);
+            this.pgbToDb.Size = new System.Drawing.Size(323, 15);
             this.pgbToDb.TabIndex = 2;
             // 
             // txtShowPro
             // 
-            this.txtShowPro.Location = new System.Drawing.Point(209, 424);
+            this.txtShowPro.Location = new System.Drawing.Point(139, 283);
+            this.txtShowPro.Margin = new System.Windows.Forms.Padding(2);
             this.txtShowPro.Multiline = true;
             this.txtShowPro.Name = "txtShowPro";
-            this.txtShowPro.Size = new System.Drawing.Size(483, 144);
+            this.txtShowPro.Size = new System.Drawing.Size(323, 97);
             this.txtShowPro.TabIndex = 5;
             // 
             // DataToDb
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(904, 580);
+            this.ClientSize = new System.Drawing.Size(603, 387);
             this.Controls.Add(this.txtShowPro);
             this.Controls.Add(this.pgbToDb);
             this.Controls.Add(this.btnToDb);
             this.Controls.Add(this.grpStandard);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "DataToDb";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "数据解析入库";

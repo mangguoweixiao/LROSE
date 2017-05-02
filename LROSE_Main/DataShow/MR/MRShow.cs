@@ -19,62 +19,37 @@ namespace LROSE_Main.DataShow.MR
     public partial class MRShow : Form
     {  
         private DataTable dt;
-        private string dbName = dbInit.cmdValue;
         public MRShow()
         {
-            if (dbName == "" || dbName == string.Empty)
-            {
-                MessageBox.Show("请选择相应的数据库", "警告");
-                return;
-            }
             InitializeComponent();
-            InitializeComponent2();
         }
 
-        private void InitializeComponent2()
+        private void MRShow_Load(object sender, EventArgs e)
         {
             //初始化列表
             SingletonMrData singletonMrData = new SingletonMrData();
-            singletonMrData.MrInitializeComponent(dbName);
+            singletonMrData.MrInitializeComponent(DBname.dbName);
             var mrTable1 = SingletonMrData.mrTableL;
+            //treeView1.Nodes.Clear();
             foreach (var item in mrTable1)
             {
                 treeView1.Nodes[item.tabletype].Nodes.Add(item.tableName);
             }
-        }
 
-        private void DataView_Load(object sender, EventArgs e)
-        {
-
-        }
-        void bindTable()
-        {
-         
-        }
-        private void initTree()
-        {
-           
         }
 
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-           
-        }
-
+        //编辑检索条件
         private void label8_Click(object sender, EventArgs e)
         {
-           
+            Search search = new Search(dt);
+            search.Show();         
         }
 
         private void 编辑检索条件ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            Search search = new Search(dt);
+            search.Show();              
         }
 
         private void 导出结果ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,12 +79,12 @@ namespace LROSE_Main.DataShow.MR
         }
 
       
-
-        private void treeView1_Click(object sender, EventArgs e)
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             List<MRTableList> mrTable1 = SingletonMrData.mrTableL;
+
             string tabelName = treeView1.SelectedNode.Text;
-            List<string> tableTypeL = new List<string>(){"MRE","MRO","MRS"};
+            List<string> tableTypeL = new List<string>() { "MRE", "MRO", "MRS" };
             if (tableTypeL.Contains(tabelName))
             {
                 return;
@@ -122,8 +97,12 @@ namespace LROSE_Main.DataShow.MR
 
             MrDataShow mrDataShow = new MrDataShow();
             dt = mrDataShow.GetTableData(mRTableList);
+            dt.TableName = tabelName;
             dataGridView1.DataSource = dt;
 
+            this.Text = string.Format("MR数据呈现  {0}", tabelName);
         }
+
+        
     }
 }

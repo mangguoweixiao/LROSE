@@ -16,7 +16,7 @@ namespace LROSE_DAL
  
     public partial class LROSRDbContext: DbContext
     {
-        public static string GetEFConnctionString(string dbName)
+        private static string GetEFConnctionString(string dbName)
         {
             string enString = ConfigurationManager.ConnectionStrings["MyStrConn"].ConnectionString.ToString();
             string[]  t = enString.Split(';');

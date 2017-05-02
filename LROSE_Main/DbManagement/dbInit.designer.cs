@@ -37,16 +37,18 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.txtDbInit = new System.Windows.Forms.TextBox();
-            this.lblDb = new System.Windows.Forms.Label();
-            this.pgbDbInit = new System.Windows.Forms.ProgressBar();
             this.btnNext = new System.Windows.Forms.Button();
+            this.btnSure = new System.Windows.Forms.Button();
+            this.grpStandard = new System.Windows.Forms.GroupBox();
+            this.grpStandard.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnNewDb
             // 
-            this.btnNewDb.Location = new System.Drawing.Point(197, 40);
+            this.btnNewDb.Location = new System.Drawing.Point(131, 27);
+            this.btnNewDb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNewDb.Name = "btnNewDb";
-            this.btnNewDb.Size = new System.Drawing.Size(522, 28);
+            this.btnNewDb.Size = new System.Drawing.Size(348, 19);
             this.btnNewDb.TabIndex = 0;
             this.btnNewDb.Text = "新建数据库";
             this.btnNewDb.UseVisualStyleBackColor = true;
@@ -54,9 +56,10 @@
             // 
             // btnDbInit
             // 
-            this.btnDbInit.Location = new System.Drawing.Point(534, 118);
+            this.btnDbInit.Location = new System.Drawing.Point(19, 67);
+            this.btnDbInit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDbInit.Name = "btnDbInit";
-            this.btnDbInit.Size = new System.Drawing.Size(75, 29);
+            this.btnDbInit.Size = new System.Drawing.Size(79, 21);
             this.btnDbInit.TabIndex = 1;
             this.btnDbInit.Text = "初始化";
             this.btnDbInit.UseVisualStyleBackColor = true;
@@ -64,9 +67,10 @@
             // 
             // btnDbDelete
             // 
-            this.btnDbDelete.Location = new System.Drawing.Point(644, 118);
+            this.btnDbDelete.Location = new System.Drawing.Point(251, 67);
+            this.btnDbDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDbDelete.Name = "btnDbDelete";
-            this.btnDbDelete.Size = new System.Drawing.Size(75, 29);
+            this.btnDbDelete.Size = new System.Drawing.Size(79, 21);
             this.btnDbDelete.TabIndex = 2;
             this.btnDbDelete.Text = "删除数据库";
             this.btnDbDelete.UseVisualStyleBackColor = true;
@@ -77,9 +81,10 @@
             this.cmbDb.FormattingEnabled = true;
             this.cmbDb.Items.AddRange(new object[] {
             "请选择数据库"});
-            this.cmbDb.Location = new System.Drawing.Point(271, 121);
+            this.cmbDb.Location = new System.Drawing.Point(109, 18);
+            this.cmbDb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbDb.Name = "cmbDb";
-            this.cmbDb.Size = new System.Drawing.Size(226, 26);
+            this.cmbDb.Size = new System.Drawing.Size(152, 20);
             this.cmbDb.TabIndex = 3;
             this.cmbDb.Text = "请选择数据库";
             this.cmbDb.SelectedIndexChanged += new System.EventHandler(this.cmbDb_SelectedIndexChanged);
@@ -91,59 +96,67 @@
             // 
             // txtDbInit
             // 
-            this.txtDbInit.Location = new System.Drawing.Point(197, 290);
+            this.txtDbInit.Location = new System.Drawing.Point(131, 193);
+            this.txtDbInit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDbInit.Multiline = true;
             this.txtDbInit.Name = "txtDbInit";
-            this.txtDbInit.Size = new System.Drawing.Size(522, 178);
+            this.txtDbInit.Size = new System.Drawing.Size(349, 120);
             this.txtDbInit.TabIndex = 4;
             this.txtDbInit.TextChanged += new System.EventHandler(this.txtDbInit_TextChanged);
             // 
-            // lblDb
-            // 
-            this.lblDb.AutoSize = true;
-            this.lblDb.Location = new System.Drawing.Point(197, 129);
-            this.lblDb.Name = "lblDb";
-            this.lblDb.Size = new System.Drawing.Size(62, 18);
-            this.lblDb.TabIndex = 5;
-            this.lblDb.Text = "数据库";
-            this.lblDb.Click += new System.EventHandler(this.lblDb_Click);
-            // 
-            // pgbDbInit
-            // 
-            this.pgbDbInit.Location = new System.Drawing.Point(197, 205);
-            this.pgbDbInit.Name = "pgbDbInit";
-            this.pgbDbInit.Size = new System.Drawing.Size(522, 23);
-            this.pgbDbInit.TabIndex = 6;
-            this.pgbDbInit.Click += new System.EventHandler(this.pgbDbInit_Click);
-            // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(422, 510);
+            this.btnNext.Location = new System.Drawing.Point(269, 332);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(75, 31);
+            this.btnNext.Size = new System.Drawing.Size(50, 21);
             this.btnNext.TabIndex = 7;
             this.btnNext.Text = "下一步";
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
+            // btnSure
+            // 
+            this.btnSure.Location = new System.Drawing.Point(138, 67);
+            this.btnSure.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSure.Name = "btnSure";
+            this.btnSure.Size = new System.Drawing.Size(79, 21);
+            this.btnSure.TabIndex = 8;
+            this.btnSure.Text = "确认";
+            this.btnSure.UseVisualStyleBackColor = true;
+            this.btnSure.Click += new System.EventHandler(this.btnSure_Click);
+            // 
+            // grpStandard
+            // 
+            this.grpStandard.Controls.Add(this.btnSure);
+            this.grpStandard.Controls.Add(this.btnDbDelete);
+            this.grpStandard.Controls.Add(this.cmbDb);
+            this.grpStandard.Controls.Add(this.btnDbInit);
+            this.grpStandard.Location = new System.Drawing.Point(131, 68);
+            this.grpStandard.Margin = new System.Windows.Forms.Padding(2);
+            this.grpStandard.Name = "grpStandard";
+            this.grpStandard.Padding = new System.Windows.Forms.Padding(2);
+            this.grpStandard.Size = new System.Drawing.Size(348, 104);
+            this.grpStandard.TabIndex = 9;
+            this.grpStandard.TabStop = false;
+            this.grpStandard.Text = "数据库";
+            // 
             // dbInit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 595);
+            this.ClientSize = new System.Drawing.Size(633, 397);
             this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.pgbDbInit);
-            this.Controls.Add(this.lblDb);
             this.Controls.Add(this.txtDbInit);
-            this.Controls.Add(this.cmbDb);
-            this.Controls.Add(this.btnDbDelete);
-            this.Controls.Add(this.btnDbInit);
             this.Controls.Add(this.btnNewDb);
+            this.Controls.Add(this.grpStandard);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "dbInit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "数据解析入库";
             this.Load += new System.EventHandler(this.dbInit_Load);
+            this.grpStandard.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,8 +171,8 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.TextBox txtDbInit;
-        private System.Windows.Forms.Label lblDb;
-        private System.Windows.Forms.ProgressBar pgbDbInit;
         private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnSure;
+        private System.Windows.Forms.GroupBox grpStandard;
     }
 }
