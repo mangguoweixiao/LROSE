@@ -102,8 +102,9 @@ namespace LROSE_Main.DataAnalysis.MR
             #region 获取界面的指标值
             string indicator1 = cmbIndictor1.SelectedItem.ToString();
             string indicator2 = cmbIndictor2.SelectedItem.ToString();
-            int initValue = (int)Math.Pow(2, 33);
-            int thresholdS1 = -initValue, thresholdS2 = -initValue, thresholdE1 = initValue, thresholdE2 = initValue;
+            //int initValue = -(int)Math.Pow(2, 31);
+            int initValue = int.MaxValue;
+            int thresholdS1 = 0, thresholdS2 = 0, thresholdE1 = initValue, thresholdE2 = initValue;
 
             DataRowView drv = (DataRowView)cmbTable1.SelectedItem;
             string table1 = drv.Row["mrName"].ToString();
@@ -181,7 +182,13 @@ namespace LROSE_Main.DataAnalysis.MR
             foreach (DataRow row in dtIndictor.Rows)
             {
                 int value = splitStr((string)row["vList"], index);
-                DateTime timeStamp = timeConvert((string)row["timeStamp"]);
+                DateTime timeStamp = new DateTime();
+                if (row["timeStamp"] != System.DBNull.Value)
+                {
+                    timeStamp = timeConvert((string)row["timeStamp"]);
+                }
+                //string test = (string)row["timeStamp"];
+                
 
                 if (DateTime.Compare(timeStamp, startTime) >= 0 && DateTime.Compare(timeStamp, endTime) <= 0)
                 {
@@ -252,8 +259,11 @@ namespace LROSE_Main.DataAnalysis.MR
             foreach (DataRow row in dtIndictor1.Rows)
             {
                 int value = splitStr((string)row["vList"], index1);
-                DateTime timeStamp = timeConvert((string)row["timeStamp"]);
-
+                DateTime timeStamp = new DateTime();
+                if (row["timeStamp"] != System.DBNull.Value)
+                {
+                    timeStamp = timeConvert((string)row["timeStamp"]);
+                }
                 if (DateTime.Compare(timeStamp, startTime) >= 0 && DateTime.Compare(timeStamp, endTime) <= 0)
                 {
                     if (value == thresholdS2)
@@ -348,8 +358,8 @@ namespace LROSE_Main.DataAnalysis.MR
             string counterValue = valueLst[index];
             if (counterValue == "NIL")
             {
-                int x = (int)Math.Pow(2,33);
-                return x;
+                //int x = (int)Math.Pow(2,33);
+                return 0;
             }
             return int.Parse(counterValue);
         }
