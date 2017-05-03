@@ -145,14 +145,16 @@ namespace LROSE_Main
               //  anaf2 = new analysis();
             // 打开新的子窗体
             //anaf2.MdiParent = this;
-            //anaf2.WindowState = FormWindowState.Maximized;
+            anaf2.WindowState = FormWindowState.Maximized;
             anaf2.Show();
         }
     }
 
     public class DBname
     {
+        public static bool dbIsChange ;//数据库是否更改
         public static string dbName;
+
     }
 
 }
