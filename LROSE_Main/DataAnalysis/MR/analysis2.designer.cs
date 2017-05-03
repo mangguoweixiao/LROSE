@@ -92,7 +92,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 233);
+            this.label6.Location = new System.Drawing.Point(13, 235);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 18);
             this.label6.TabIndex = 24;
@@ -173,7 +173,7 @@
             // cmbTable2
             // 
             this.cmbTable2.FormattingEnabled = true;
-            this.cmbTable2.Location = new System.Drawing.Point(72, 83);
+            this.cmbTable2.Location = new System.Drawing.Point(88, 83);
             this.cmbTable2.Name = "cmbTable2";
             this.cmbTable2.Size = new System.Drawing.Size(237, 26);
             this.cmbTable2.TabIndex = 39;
@@ -190,7 +190,7 @@
             // cmbVer2
             // 
             this.cmbVer2.FormattingEnabled = true;
-            this.cmbVer2.Location = new System.Drawing.Point(72, 28);
+            this.cmbVer2.Location = new System.Drawing.Point(88, 28);
             this.cmbVer2.Name = "cmbVer2";
             this.cmbVer2.Size = new System.Drawing.Size(237, 26);
             this.cmbVer2.TabIndex = 33;
@@ -248,7 +248,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(825, 195);
+            this.groupBox1.Size = new System.Drawing.Size(825, 210);
             this.groupBox1.TabIndex = 42;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "指标1";
@@ -293,7 +293,7 @@
             this.groupBox2.Controls.Add(this.cmbIndictor2);
             this.groupBox2.Location = new System.Drawing.Point(994, 22);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(768, 185);
+            this.groupBox2.Size = new System.Drawing.Size(768, 200);
             this.groupBox2.TabIndex = 43;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "指标2";
@@ -333,7 +333,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(739, 242);
+            this.label8.Location = new System.Drawing.Point(692, 253);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 18);
             this.label8.TabIndex = 44;
@@ -346,7 +346,7 @@
             "无限制",
             "按小时统计",
             "按天统计"});
-            this.cmbStandard.Location = new System.Drawing.Point(846, 233);
+            this.cmbStandard.Location = new System.Drawing.Point(799, 244);
             this.cmbStandard.Name = "cmbStandard";
             this.cmbStandard.Size = new System.Drawing.Size(121, 26);
             this.cmbStandard.TabIndex = 45;
@@ -354,7 +354,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(88, 247);
+            this.dateTimePicker1.Location = new System.Drawing.Point(88, 249);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 28);
             this.dateTimePicker1.TabIndex = 46;
@@ -362,7 +362,7 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(429, 247);
+            this.dateTimePicker2.Location = new System.Drawing.Point(429, 249);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 28);
             this.dateTimePicker2.TabIndex = 47;
@@ -371,7 +371,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(326, 224);
+            this.label13.Location = new System.Drawing.Point(326, 226);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(35, 18);
             this.label13.TabIndex = 48;
@@ -379,7 +379,7 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(1106, 232);
+            this.btnLoad.Location = new System.Drawing.Point(982, 235);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(75, 54);
             this.btnLoad.TabIndex = 49;
@@ -389,7 +389,7 @@
             // 
             // btnExcel
             // 
-            this.btnExcel.Location = new System.Drawing.Point(1310, 233);
+            this.btnExcel.Location = new System.Drawing.Point(1111, 236);
             this.btnExcel.Name = "btnExcel";
             this.btnExcel.Size = new System.Drawing.Size(75, 53);
             this.btnExcel.TabIndex = 50;
@@ -412,14 +412,14 @@
             // 
             // txtTimeS
             // 
-            this.txtTimeS.Location = new System.Drawing.Point(88, 213);
+            this.txtTimeS.Location = new System.Drawing.Point(88, 215);
             this.txtTimeS.Name = "txtTimeS";
             this.txtTimeS.Size = new System.Drawing.Size(200, 28);
             this.txtTimeS.TabIndex = 52;
             // 
             // txtTimeE
             // 
-            this.txtTimeE.Location = new System.Drawing.Point(429, 213);
+            this.txtTimeE.Location = new System.Drawing.Point(429, 215);
             this.txtTimeE.Name = "txtTimeE";
             this.txtTimeE.Size = new System.Drawing.Size(200, 28);
             this.txtTimeE.TabIndex = 53;
