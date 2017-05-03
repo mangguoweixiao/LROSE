@@ -26,9 +26,13 @@ namespace LROSE_Main.DataShow.MR
 
         private void MRShow_Load(object sender, EventArgs e)
         {
-            //初始化列表
-            SingletonMrData singletonMrData = new SingletonMrData();
-            singletonMrData.MrInitializeComponent(DBname.dbName);
+            if (DBname.dbIsChange)
+            {
+                //初始化列表
+                SingletonMrData singletonMrData = new SingletonMrData();
+                singletonMrData.MrInitializeComponent(DBname.dbName);
+                DBname.dbIsChange = false;
+            }
             var mrTable1 = SingletonMrData.mrTableL;
             //treeView1.Nodes.Clear();
             foreach (var item in mrTable1)
