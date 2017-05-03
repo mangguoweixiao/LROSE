@@ -27,8 +27,12 @@ namespace LROSE_Main.DataAnalysis.MR
         {
             
             InitializeComponent();
-            SingletonMrData singletonMrData = new SingletonMrData();
-            singletonMrData.MrInitializeComponent(DBname.dbName);
+            if (DBname.dbIsChange)
+            {
+                SingletonMrData singletonMrData = new SingletonMrData();
+                singletonMrData.MrInitializeComponent(DBname.dbName);
+                DBname.dbIsChange = false;
+            }
         }
 
         public static string getDataSource(){
