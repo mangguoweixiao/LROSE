@@ -292,11 +292,19 @@ namespace LROSE_Main.DbManagement
 
         private void cmbDb_TextChanged(object sender, EventArgs e)
         {
+
             if (cmbDb.Text != "请选择数据库")
             {
-                DBname.dbName = cmbDb.Text; 
+                DBname.dbName = cmbDb.Text;
+                if (DBname.dbName == "")
+                {
+                    DBname.dbIsChange = false;
+                }
+                else
+                {
+                    DBname.dbIsChange = true;
+                }
             }
-            
 
         }
 
