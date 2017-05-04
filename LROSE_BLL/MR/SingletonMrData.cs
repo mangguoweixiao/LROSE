@@ -26,6 +26,8 @@ namespace LROSE_BLL.MR
             mrTableL.Clear() ;
             using (var db = new LROSRDbContext(dbname))
             {
+                db.Configuration.AutoDetectChangesEnabled = false;
+                db.Configuration.ValidateOnSaveEnabled = false;
                 var column = from q in db.MrTableAllColumn select q;
                 var table1 = from q in column
                              group q by new
