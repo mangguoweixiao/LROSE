@@ -26,12 +26,11 @@ namespace LROSE_BLL.MR
         public DataTable GetTableData(MRTableList mRTa )
         {
             List<MrTableAllColumn> mrAllcolumnList = SingletonMrData.mrAllcolumnL;//得到对应的dataTable
-            MrTableAllColumn onemrTableAllcolumn = mrAllcolumnList.First();//第一条数据
-            string[] smrList = onemrTableAllcolumn.smrList.Split();
             List<MrTableAllColumn> oneTable = (from q in mrAllcolumnList
                       where q.mrName == mRTa.tableName && q.tabletype == mRTa.tabletype
                       select q).ToList();
-            //DataSet ds = new DataSet();
+
+            string[] smrList =oneTable.First().smrList.Split();//得到该表的第一条数据
             DataTable dt = new DataTable();
 
             List<string> deleteCloumn = new List<string>
