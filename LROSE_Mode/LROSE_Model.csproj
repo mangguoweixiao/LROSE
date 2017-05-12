@@ -50,9 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MrData\MrTableAllColumn.cs" />
-    <Compile Include="MrData\MrTableBasic.cs" />
     <Compile Include="MrData\MRTableList.cs" />
-    <Compile Include="MrData\PSRP.cs" />
+    <Compile Include="PMData\PMALLData.cs" />
+    <Compile Include="PMData\PMTableListColumn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,7 +63,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Basic\" />
-    <Folder Include="PMData\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

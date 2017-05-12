@@ -11,6 +11,10 @@ using LROSE_DAL;
 using System.Data.Entity;
 using System.Xml;
 using System.Configuration;
+using LROSE_BLL.PMData;
+using LROSE_BLL.Basis;
+using System.IO;
+using System.Data;
 
 
 namespace EFCodeFirstDemo
@@ -19,77 +23,53 @@ namespace EFCodeFirstDemo
     {
         static void Main(string[] args)
         {
-            string asd = "Data Source=I1HLPK93QO6EFE9;Initial Catalog=asdqwer;Integrated Security=True";;
-            string asd1 = "asdads";
-            using (var db = new LROSRDbContext())
-            {
-                db.Configuration.AutoDetectChangesEnabled = false;
-                db.Configuration.ValidateOnSaveEnabled = false;
 
-                MrTableAllColumn mr = new MrTableAllColumn ();
-                mr.KPid =1;
-                db.MrTableAllColumn.Add(mr);
-                db.SaveChanges();
-                int du=db.MrTableAllColumn.Count();
+           // string path = @"D:\MyWork\五月工作内容\PM个人工具\pmData程序、文档和源代码\STS结构表";
+           // string[] xmlFiles = Directory.GetFiles(path, "*.*", SearchOption.AllDirectories);
+           // DataSet ds = new DataSet();
+           // int asd = xmlFiles.Count();
+           // InputData inputData = new InputData();
 
-            }
+           // DataTable dsTest = new DataTable();
+           // dsTest.Columns.Add("Filename");
+           // dsTest.Columns.Add("MO");
+           // foreach (string file in xmlFiles)
+           //{
+           //    string fileName = Path.GetFileNameWithoutExtension(file);              
+           //         if (Path.GetExtension(file) == ".csv")
+           //         {
 
+           //             //mrTableAllColumn.AddRange(GetMrtable(file));
+           //             DataTable dt = new DataTable();
+           //             dt=inputData.OpenCSV(file);
+           //             string du = dt.TableName;
 
+           //             DataRow dr = dsTest.NewRow();
+           //             object[] objs = { fileName, du };
+           //             dr.ItemArray = objs;
+           //             dsTest.Rows.Add(dr);
 
-            //using (var db = new LROSRDbContext())
-            //{
-            //    var a = db.MrTableAllColumn.FirstOrDefault();
-            //    int b = db.MrTableAllColumn.Count();
-            //}
+           //             try
+           //             {
+           //                 ds.Tables.Add(dt);
+           //             }
+           //             catch
+           //             {
+           //             }
+           //         }
+           //}
+           
+           // //导出数据对比
+           // OutPutFile outPutFile = new OutPutFile();
+           // string xmlPath = @"E:\duTest.csv";//路径xml文件夹
+           // outPutFile.ExportToExcel(dsTest, xmlPath);
+           // int asdqwe = ds.Tables.Count;
 
-            //string AppKey = "name";
-            //string AppValue = "this";
-            //try
-            //{
-            //    XmlDocument xDoc = new XmlDocument();
-            //    //获取App.config文件绝对路径
-            //    String basePath = System.AppDomain.CurrentDomain.SetupInformation.ApplicationBase;
-            //    basePath = basePath.Substring(0, basePath.Length - 10);
-            //    String path = basePath + "App.config";
-            //    xDoc.Load(path);
-
-            //    XmlNode xNode;
-            //    XmlElement xElem1;
-            //    XmlElement xElem2;
-            //    //修改完文件内容，还需要修改缓存里面的配置内容，使得刚修改完即可用
-            //    //如果不修改缓存，需要等到关闭程序，在启动，才可使用修改后的配置信息
-            //    Configuration cfa = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            //    xNode = xDoc.SelectSingleNode("configuration/connectionStrings");
-            //    xElem1 = (XmlElement)xNode.SelectSingleNode("add[@name='" + AppKey + "']");
-            //    if (xElem1 != null)
-            //    {
-            //        xElem1.SetAttribute("connectionString", AppValue);
-            //        cfa.AppSettings.Settings["AppKey"].Value = AppValue;
-            //    }
-            //    else
-            //    {
-            //        xElem2 = xDoc.CreateElement("add");
-            //        xElem2.SetAttribute("name", AppKey);
-            //        xElem2.SetAttribute("connectionString", AppValue);
-            //        xNode.AppendChild(xElem2);
-            //        cfa.AppSettings.Settings.Add(AppKey, AppValue);
-            //    }
-            //    //改变缓存中的配置文件信息（读取出来才会是最新的配置）
-            //    cfa.Save();
-            //    ConfigurationManager.RefreshSection("configuration/connectionStrings");
-
-            //    xDoc.Save(path);
-
-            //    //Properties.Settings.Default.Reload();
-            //}
-            //catch (Exception e)
-            //{
-            //    string error = e.Message;
-
-            //}
-            Console.WriteLine();
+            string path = @"F:\PMTest文本测试";
+           PMInputData PMInputData = new PMInputData();
+           bool asd = PMInputData.PMInput(path,"duhanxu6");
 
         }
-
+        
     }
 }

@@ -57,12 +57,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basis\InputData.cs" />
     <Compile Include="Basis\OutPutFile.cs" />
     <Compile Include="Basis\TtoDataTable.cs" />
     <Compile Include="MR\MrDataShow.cs" />
     <Compile Include="MR\MrInputData.cs" />
     <Compile Include="MR\SingletonMrData.cs" />
-    <Compile Include="PMData\MrTableBasic.cs" />
+    <Compile Include="PMData\PMInputData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

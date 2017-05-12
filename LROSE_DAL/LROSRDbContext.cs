@@ -5,6 +5,7 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Data.Entity;
 using LROSE_Model.MrData;
+using LROSE_Model.PMData;
 using System.Configuration;
 using LROSE_Model;
 
@@ -16,6 +17,7 @@ namespace LROSE_DAL
  
     public partial class LROSRDbContext: DbContext
     {
+        // public List<string> tableType { get; set; }//判断是哪个模块的数据
         public static string GetEFConnctionString(string dbName)
         {
             string enString = ConfigurationManager.ConnectionStrings["MyStrConn"].ConnectionString.ToString();
@@ -44,8 +46,12 @@ namespace LROSE_DAL
             : base("name=MyStrConn")
         {
         }
-
         public DbSet<MrTableAllColumn> MrTableAllColumn { get; set; }
+        public DbSet<PMALLData> PMALLData { get; set; }
+        public DbSet<PMTableListColumn> PMTableListColumn1 { get; set; }
+      
+
+
     }
 
 }

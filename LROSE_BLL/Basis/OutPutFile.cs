@@ -10,10 +10,16 @@ using Microsoft.Office.Interop;
 namespace LROSE_BLL.Basis
 {
     /// <summary>
-    /// 将dataTable的值导出，生成Excel
+    /// 将dataTable的值导出
     /// </summary>
     public class OutPutFile
     {
+        /// <summary>
+        /// dataTable数据导出  可导出成xls，csv,xlsx 文件
+        /// </summary>
+        /// <param name="dt">dt</param>
+        /// <param name="filePath">文件路径，包含后缀名</param>
+        /// <returns>报错信息</returns>
         public string  ExportToExcel(DataTable dt, string filePath)
         {
             string str = null;
@@ -70,6 +76,7 @@ namespace LROSE_BLL.Basis
             }
             return null;
         }
-        
+
+
     }
 }
