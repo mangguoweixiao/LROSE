@@ -13,6 +13,7 @@ using System.Configuration;
 using System.Reflection;
 using LROSE_DAL;
 using LROSE_Main.InputDate.MR;
+using PMDataOperation.InputDate.PM;
 
 namespace LROSE_Main.DbManagement
 {
@@ -20,7 +21,8 @@ namespace LROSE_Main.DbManagement
     {
 
         DataToDb dtbf;
-        //数据库下拉框默认选中最后一个数据库，异常情况：没有数据库
+        PMIntoDb pmtoDb;
+        
         public dbInit()
         {
             InitializeComponent();
@@ -238,8 +240,46 @@ namespace LROSE_Main.DbManagement
             //仅仅是显示作用，没有实际功能
         }
 
+        //PM数据入库按钮点击事件
+        private void PMIntoBtn_Click(object sender, EventArgs e)
+        {
+            
+            pmtoDb = new PMIntoDb();
+            //打开数据解析的界面
+            
+            if (cmbDb.Text == "请选择数据库" || cmbDb.Text == "")
+            {
+                MessageBox.Show("请选择数据库或创建一个新的数据库");
+                return;
+            }
+
+
+            if (pmtoDb != null)
+            {
+                if (pmtoDb.IsDisposed)
+                    pmtoDb = new PMIntoDb();
+
+                // 关闭活动的子窗体
+                Form activeChild = this.ActiveMdiChild;
+                while (activeChild != null)
+                {
+                    activeChild.Close();
+                    activeChild = this.ActiveMdiChild;
+                }
+                this.Dispose();
+                pmtoDb.WindowState = FormWindowState.Normal;
+                pmtoDb.Show();
+            }
+            else
+            {
+                pmtoDb = new PMIntoDb();
+                pmtoDb.WindowState = FormWindowState.Normal;
+                pmtoDb.Show();
+            }
+
+        }
       
-        //main mf = new main();
+        //MR数据入库按钮点击事件
         private void btnNext_Click(object sender, EventArgs e)
         {
             dtbf = new DataToDb();
@@ -248,7 +288,7 @@ namespace LROSE_Main.DbManagement
             //if (mf.IsDisposed)
             //    mf = new main();
             //mf.ContextMenuStrip.Items["tsmDataToDb"].Enabled = false;
-            if (cmbDb.Text == "请选择数据库")
+            if (cmbDb.Text == "请选择数据库" || cmbDb.Text == "")
             {
                 MessageBox.Show("请选择数据库或创建一个新的数据库");
                 return;
@@ -318,14 +358,16 @@ namespace LROSE_Main.DbManagement
             if (cmbDb.Text != "请选择数据库")    
             {
                 string dbnNme = cmbDb.Text;
-                this.Close();
-                MessageBox.Show("数据库名称：" + dbnNme);
+                string tempStr = "已经选中数据库:" + dbnNme;
+                txtDbInit.Text = tempStr;
             }
             else
             {
                 MessageBox.Show("请选择数据库");
             }           
         }
+
+        
     }
 
     public class AppConfigHelper

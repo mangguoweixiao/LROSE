@@ -7,6 +7,7 @@ using LROSE_Model.PMData;
 using System.Xml.Linq;
 using LROSE_DAL;
 using System.Xml;
+using LROSE_BLL.MR;
 
 namespace LROSE_BLL.PMData
 {
@@ -14,8 +15,9 @@ namespace LROSE_BLL.PMData
     {
         public bool PMInput(string path, string dbName)
         {
-            bool a = PMMoidInput(path, dbName);
+            
             bool b= PMTableListInput(path, dbName);
+            bool a = PMMoidInput(path, dbName);
             //bool a = PMMoidInput(path, dbName);
             //bool a = true;
             if (a && b)
@@ -27,6 +29,104 @@ namespace LROSE_BLL.PMData
                 return false;
             }
         }
+
+         public bool PMZipInput(string path, string dbName){
+             bool b = PMTableListZipInput(path, dbName);
+             bool a = PMMoidZipInput(path, dbName);
+             if (a && b)
+             {
+                 return true;
+             }
+             else
+             {
+                 return false;
+             }
+
+         }
+
+
+        private bool PMMoidZipInput(string path, string dbName)
+        {
+            //初始化XML文件夹
+            string xmlPath = @"..\..\XMLFile";//路径xml文件夹
+            MrInputData mrclass = new MrInputData();
+            mrclass.ClearXMLFile(xmlPath);
+
+            //解压
+            bool a = false;//解压是否成功
+            string[] files = Directory.GetFiles(path, "*.*", SearchOption.AllDirectories);
+            if (files.Length == 0)
+            {
+                return false;
+            }
+            foreach (string file in files)
+            {
+                if (Path.GetExtension(file) == ".zip")
+                {
+                    a = mrclass.Decompress(file, xmlPath);
+                    if (!a)
+                    {
+                        return false;
+                    }
+                }
+
+            }
+            //
+            List<PMALLData> pMALLData = new List<PMALLData>();
+            string[] xmlFiles = Directory.GetFiles(xmlPath, "*.*", SearchOption.AllDirectories);
+            if (xmlFiles.Length == 0)
+            {
+                return false;
+            }
+
+            //读取XML
+            foreach (string file in xmlFiles)
+            {
+                if (Path.GetExtension(file) == ".xml")
+                {
+                    GetPMMo(file, pMALLData);
+                }
+            }
+            int xmlNumber = pMALLData.Count();
+
+            using (var db = new LROSRDbContext(dbName))
+            {
+                db.Configuration.AutoDetectChangesEnabled = false;
+                db.Configuration.ValidateOnSaveEnabled = false;
+
+                int KPid = 0;//设置主键ID
+                ///!!!
+                int columnNumber = db.PMALLData.Count();
+                if (columnNumber != 0)
+                {
+                    KPid = db.PMALLData.Select(q => q.KPid).Max() + 1;
+                }
+
+                foreach (PMALLData item in pMALLData)
+                {
+                    item.KPid = KPid;
+                    KPid++;
+                }
+                db.PMALLData.AddRange(pMALLData);
+                try
+                {
+                    int dbNUmber = db.SaveChanges();
+                    if (dbNUmber != xmlNumber)
+                    {
+                        return false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+
+            }
+            return true;
+            
+        }
+
+
 
         /// <summary>
         /// PM moid数据入库
@@ -43,6 +143,8 @@ namespace LROSE_BLL.PMData
             {
                 return false;
             }
+
+            //读取XML
             foreach (string file in xmlFiles)
             {
                 if (Path.GetExtension(file) == ".xml")
@@ -58,6 +160,7 @@ namespace LROSE_BLL.PMData
                 db.Configuration.ValidateOnSaveEnabled = false;
 
                 int KPid = 0;//设置主键ID
+                ///!!!
                 int columnNumber = db.PMALLData.Count();
                 if (columnNumber != 0)
                 {
@@ -138,6 +241,96 @@ namespace LROSE_BLL.PMData
             return pMALLData;
 
         }
+
+
+
+
+        public bool PMTableListZipInput(string path, string deName)
+        {
+            int xmlNumber = 0;
+            int dbNUmber = 0;
+
+            string xmlPath = @"..\..\XMLFile";//路径xml文件夹
+            MrInputData mrclass = new MrInputData();
+            mrclass.ClearXMLFile(xmlPath);
+
+            //解压
+            bool a = false;//解压是否成功
+            string[] files = Directory.GetFiles(path, "*.*", SearchOption.AllDirectories);
+            if (files.Length == 0)
+            {
+                return false;
+            }
+            foreach (string file in files)
+            {
+                if (Path.GetExtension(file) == ".zip")
+                {
+                    a = mrclass.Decompress(file, xmlPath);
+                    if (!a)
+                    {
+                        return false;
+                    }
+                }
+
+            }
+
+            string[] filenames = Directory.GetFiles(xmlPath);
+            List<PMTableListColumn> PMTableList = new List<PMTableListColumn>();
+            if (filenames.Length == 0)
+            {
+                return false;
+            }
+            //解析XML
+            foreach (string file in filenames)
+            {
+                if (Path.GetExtension(file) == ".xml")
+                {
+                    PMTableList.Add(GetPMTable(file));
+                }
+            }
+            xmlNumber = PMTableList.Count;
+
+            //数据入库
+            using (var db = new LROSRDbContext(deName))
+            {
+                db.Configuration.AutoDetectChangesEnabled = false;
+                db.Configuration.ValidateOnSaveEnabled = false;
+                //db.anto
+
+                int KPid = 0;//设置主键ID
+                int columnNumber = db.PMTableListColumn1.Count();
+                if (columnNumber != 0)
+                {
+                    KPid = db.PMTableListColumn1.Select(q => q.KPid).Max() + 1;
+                }
+
+                foreach (PMTableListColumn item in PMTableList)
+                {
+                    item.KPid = KPid;
+                    KPid++;
+                }
+                db.PMTableListColumn1.AddRange(PMTableList);
+                //db.PMTableListColumn.AddRange()
+                try
+                {
+                    dbNUmber = db.SaveChanges();
+                    if (dbNUmber != xmlNumber)
+                    {
+                        return false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
+            return true;
+
+        }
+
+
+
+
 
         /// <summary>
         /// PM  表头数据入库

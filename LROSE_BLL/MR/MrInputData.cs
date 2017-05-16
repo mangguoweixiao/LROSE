@@ -554,7 +554,7 @@ namespace LROSE_BLL.MR
         /// 初始化XML文件夹
         /// </summary>
         /// <param name="path">文件夹路径</param>
-        private void ClearXMLFile(string path)
+        public void ClearXMLFile(string path)
         {
             if (!Directory.Exists(path))
             {
@@ -579,7 +579,7 @@ namespace LROSE_BLL.MR
         /// </summary>
         /// <param name="sourceFile">源文件</param>
         /// <param name="targetPath">目标路经</param>
-        private bool Decompress(string sourceFile, string targetPath)
+        public bool Decompress(string sourceFile, string targetPath)
         {
             if (!File.Exists(sourceFile))
             {

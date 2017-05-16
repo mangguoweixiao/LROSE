@@ -69,6 +69,10 @@ namespace EFCodeFirstDemo
            PMInputData PMInputData = new PMInputData();
            bool asd = PMInputData.PMInput(path,"duhanxu6");
 
+           
+
+            
+
         }
         
     }
