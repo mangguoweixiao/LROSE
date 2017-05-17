@@ -17,12 +17,8 @@ namespace LROSE_BLL.PMData
         {
             
             bool b= PMTableListInput(path, dbName);
-<<<<<<< HEAD
-=======
             bool a = PMMoidInput(path, dbName);
-            //bool a = PMMoidInput(path, dbName);
-            //bool a = true;
->>>>>>> de349bc03ee38162e2468a11eb595bb7660a253b
+
             if (a && b)
             {
                 return true;
