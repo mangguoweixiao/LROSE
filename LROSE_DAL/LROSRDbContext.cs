@@ -17,7 +17,6 @@ namespace LROSE_DAL
  
     public partial class LROSRDbContext: DbContext
     {
-        // public List<string> tableType { get; set; }//判断是哪个模块的数据
         public static string GetEFConnctionString(string dbName)
         {
             string enString = ConfigurationManager.ConnectionStrings["MyStrConn"].ConnectionString.ToString();
@@ -46,11 +45,16 @@ namespace LROSE_DAL
             : base("name=MyStrConn")
         {
         }
+
         public DbSet<MrTableAllColumn> MrTableAllColumn { get; set; }
         public DbSet<PMALLData> PMALLData { get; set; }
         public DbSet<PMTableListColumn> PMTableListColumn1 { get; set; }
-      
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            //modelBuilder.Configurations
+        }
 
     }
 

@@ -34,7 +34,6 @@ namespace LROSE_BLL.Basis
             //标示是否是读取的第一行
             bool IsFirst = true;
 
-            int a = 1;
             //逐行读取CSV中的数据
             while ((strLine = sr.ReadLine()) != null)
             {
@@ -46,37 +45,29 @@ namespace LROSE_BLL.Basis
                     //创建列
                     for (int i = 0; i < columnCount; i++)
                     {
-                        DataColumn dc = new DataColumn(tableHead[i].ToString().Replace("\"","").Trim());
+                        DataColumn dc = new DataColumn(tableHead[i].ToString().Replace("\"", "").Trim());
                         dt.Columns.Add(dc);
                     }
-                    a++;
                 }
                 else
                 {
-                    if (a == 2)
+                    aryLine = SplitCsv(strLine);
+                    DataRow dr = dt.NewRow();
+                    for (int j = 0; j < columnCount; j++)
                     {
-                        aryLine = SplitCsv(strLine);
-                        DataRow dr = dt.NewRow();
-                        for (int j = 0; j < columnCount; j++)
-                        {
-                            dr[j] = aryLine[j].Replace("\"","").Trim();
-                        }
-                        dt.Rows.Add(dr);
-                        a++;
+                        dr[j] = aryLine[j].Replace("\"", "").Trim();
                     }
+                    dt.Rows.Add(dr);
                 }
             }
-            if (aryLine != null && aryLine.Length > 0)
-            {
-                dt.DefaultView.Sort = tableHead[0] + " " + "asc";
-            }
+
 
             sr.Close();
             fs.Close();
-            
+
             if (dt.Rows.Count == 0)
             {
-                 dt.TableName = Path.GetFileNameWithoutExtension(filePath);
+                dt.TableName = Path.GetFileNameWithoutExtension(filePath);
 
             }
             else
@@ -93,7 +84,7 @@ namespace LROSE_BLL.Basis
                     dt.TableName = moidKey.Remove(moidKey.Length - 1, 1);
                 }
                 //删除某一行
-                dt.Rows.Remove(dt.Rows[0]);
+                //dt.Rows.Remove(dt.Rows[0]);
             }
             return dt;
         }

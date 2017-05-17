@@ -60,6 +60,7 @@
     <Compile Include="Basis\InputData.cs" />
     <Compile Include="Basis\OutPutFile.cs" />
     <Compile Include="Basis\TtoDataTable.cs" />
+    <Compile Include="Basis\导入成XML.cs" />
     <Compile Include="MR\MrDataShow.cs" />
     <Compile Include="MR\MrInputData.cs" />
     <Compile Include="MR\SingletonMrData.cs" />
