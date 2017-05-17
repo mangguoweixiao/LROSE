@@ -10,6 +10,7 @@ using LROSE_Main.DbManagement;
 using LROSE_Main.DataAnalysis.MR;
 using LROSE_Main.InputDate.MR;
 using LROSE_Main.DataShow.MR;
+using PMDataOperation.InputDate.PM;
 
 namespace LROSE_Main
 {
@@ -19,6 +20,7 @@ namespace LROSE_Main
         MRShow msShow;//数据呈现
         analysis anaf2;//分析
         DataToDb dtToBb ;
+        PMIntoDb pmIntoDb;
  
         public main()
         {
@@ -47,6 +49,13 @@ namespace LROSE_Main
         private void pMToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //打开PM界面，和MR界面不同
+            if (DBname.dbName == "" || DBname.dbName == null)
+            {
+                MessageBox.Show("请选择相应的数据库", "警告");
+                return;
+            }
+            pmIntoDb = new PMIntoDb();
+            pmIntoDb.Show();
         }
 
 

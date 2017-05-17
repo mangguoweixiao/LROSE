@@ -35,7 +35,6 @@
             this.rdoTdd = new System.Windows.Forms.RadioButton();
             this.rdoFdd = new System.Windows.Forms.RadioButton();
             this.btnToDb = new System.Windows.Forms.Button();
-            this.pgbToDb = new System.Windows.Forms.ProgressBar();
             this.txtShowPro = new System.Windows.Forms.TextBox();
             this.grpStandard.SuspendLayout();
             this.SuspendLayout();
@@ -46,7 +45,7 @@
             this.grpStandard.Controls.Add(this.rdoFd);
             this.grpStandard.Controls.Add(this.rdoTdd);
             this.grpStandard.Controls.Add(this.rdoFdd);
-            this.grpStandard.Location = new System.Drawing.Point(139, 76);
+            this.grpStandard.Location = new System.Drawing.Point(139, 87);
             this.grpStandard.Margin = new System.Windows.Forms.Padding(2);
             this.grpStandard.Name = "grpStandard";
             this.grpStandard.Padding = new System.Windows.Forms.Padding(2);
@@ -105,22 +104,14 @@
             // 
             // btnToDb
             // 
-            this.btnToDb.Location = new System.Drawing.Point(264, 230);
+            this.btnToDb.Location = new System.Drawing.Point(246, 199);
             this.btnToDb.Margin = new System.Windows.Forms.Padding(2);
             this.btnToDb.Name = "btnToDb";
-            this.btnToDb.Size = new System.Drawing.Size(65, 23);
+            this.btnToDb.Size = new System.Drawing.Size(109, 45);
             this.btnToDb.TabIndex = 1;
-            this.btnToDb.Text = "文件解析";
+            this.btnToDb.Text = "解析入库";
             this.btnToDb.UseVisualStyleBackColor = true;
             this.btnToDb.Click += new System.EventHandler(this.btnToDb_Click);
-            // 
-            // pgbToDb
-            // 
-            this.pgbToDb.Location = new System.Drawing.Point(139, 186);
-            this.pgbToDb.Margin = new System.Windows.Forms.Padding(2);
-            this.pgbToDb.Name = "pgbToDb";
-            this.pgbToDb.Size = new System.Drawing.Size(323, 15);
-            this.pgbToDb.TabIndex = 2;
             // 
             // txtShowPro
             // 
@@ -137,7 +128,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 387);
             this.Controls.Add(this.txtShowPro);
-            this.Controls.Add(this.pgbToDb);
             this.Controls.Add(this.btnToDb);
             this.Controls.Add(this.grpStandard);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -145,7 +135,8 @@
             this.MaximizeBox = false;
             this.Name = "DataToDb";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "数据解析入库";
+            this.Text = "MR数据解析入库";
+            this.Load += new System.EventHandler(this.DataToDb_Load);
             this.grpStandard.ResumeLayout(false);
             this.grpStandard.PerformLayout();
             this.ResumeLayout(false);
@@ -161,7 +152,6 @@
         private System.Windows.Forms.RadioButton rdoTdd;
         private System.Windows.Forms.RadioButton rdoFdd;
         private System.Windows.Forms.Button btnToDb;
-        private System.Windows.Forms.ProgressBar pgbToDb;
         private System.Windows.Forms.TextBox txtShowPro;
 
         public System.EventHandler dataToDb_Load { get; set; }

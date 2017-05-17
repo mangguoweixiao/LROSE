@@ -10,6 +10,7 @@ using LROSE_BLL.MR;
 using System.Threading;
 using LROSE_Main.DbManagement;
 
+
 namespace LROSE_Main.InputDate.MR
 {
     public partial class DataToDb : Form
@@ -17,7 +18,7 @@ namespace LROSE_Main.InputDate.MR
         public DataToDb()
         {     
             InitializeComponent();
-            this.Text = string.Format("MR解析 库:{0}",DBname.dbName);
+            this.Text = string.Format("MR解析 数据库为:{0}",DBname.dbName);
         }
 
         private delegate bool GetInputOperation(string[] str);
@@ -68,6 +69,11 @@ namespace LROSE_Main.InputDate.MR
             MrInputData MROpe = new MrInputData();
             bool test = MROpe.MrInput(str[0],str[1]);
             return test;              
+        }
+
+        private void DataToDb_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

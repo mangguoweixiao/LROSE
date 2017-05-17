@@ -98,6 +98,12 @@
     <Compile Include="DbManagement\dbInit.designer.cs">
       <DependentUpon>dbInit.cs</DependentUpon>
     </Compile>
+    <Compile Include="InputDate\PM\PMIntoDb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputDate\PM\PMIntoDb.Designer.cs">
+      <DependentUpon>PMIntoDb.cs</DependentUpon>
+    </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DbManagement\dbInit.resx">
       <DependentUpon>dbInit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputDate\PM\PMIntoDb.resx">
+      <DependentUpon>PMIntoDb.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
@@ -158,7 +167,6 @@
     <Folder Include="data2db\" />
     <Folder Include="DataAnalysis\PM\" />
     <Folder Include="DataShow\PM\" />
-    <Folder Include="InputDate\PM\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LROSE_BLL\LROSE_BLL.csproj">
