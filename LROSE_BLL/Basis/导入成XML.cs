@@ -49,9 +49,7 @@ namespace LROSE_BLL.Basis
            }
            xdoc2.Save(@"E:/PM.xml");
         }
-
-
-        public string getmoidKey(string moid)
+        private string getmoidKey(string moid)
         {
             string[] moidArray = moid.Split(';');
             string moidKey = "";
