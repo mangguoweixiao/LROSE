@@ -164,7 +164,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="data2db\" />
     <Folder Include="DataAnalysis\PM\" />
     <Folder Include="DataShow\PM\" />
   </ItemGroup>
