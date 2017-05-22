@@ -29,7 +29,8 @@ namespace LROSE_BLL.PMData
             }
         }
 
-         public bool PMZipInput(string path, string dbName){
+         public bool PMZipInput(string path, string dbName)
+         {
              bool b = PMTableListZipInput(path, dbName);
              bool a = PMMoidZipInput(path, dbName);
              if (a && b)
@@ -71,7 +72,7 @@ namespace LROSE_BLL.PMData
 
             }
             //
-            List<PMALLData> pMALLData = new List<PMALLData>();
+            List<PMAllMoid> pMALLData = new List<PMAllMoid>();
             string[] xmlFiles = Directory.GetFiles(xmlPath, "*.*", SearchOption.AllDirectories);
             if (xmlFiles.Length == 0)
             {
@@ -95,18 +96,18 @@ namespace LROSE_BLL.PMData
 
                 int KPid = 0;//设置主键ID
                 ///!!!
-                int columnNumber = db.PMALLData.Count();
+                int columnNumber = db.PMAllMoid.Count();
                 if (columnNumber != 0)
                 {
-                    KPid = db.PMALLData.Select(q => q.KPid).Max() + 1;
+                    KPid = db.PMAllMoid.Select(q => q.KPid).Max() + 1;
                 }
 
-                foreach (PMALLData item in pMALLData)
+                foreach (PMAllMoid item in pMALLData)
                 {
                     item.KPid = KPid;
                     KPid++;
                 }
-                db.PMALLData.AddRange(pMALLData);
+                db.PMAllMoid.AddRange(pMALLData);
                 try
                 {
                     int dbNUmber = db.SaveChanges();
@@ -136,7 +137,7 @@ namespace LROSE_BLL.PMData
         private bool PMMoidInput(string path, string dbName)
         {
             //读取XML
-            List<PMALLData> pMALLData = new List<PMALLData>();
+            List<PMAllMoid> pMALLData = new List<PMAllMoid>();
             string[] xmlFiles = Directory.GetFiles(path, "*.*", SearchOption.AllDirectories);
             if (xmlFiles.Length == 0)
             {
@@ -160,18 +161,18 @@ namespace LROSE_BLL.PMData
 
                 int KPid = 0;//设置主键ID
                 ///!!!
-                int columnNumber = db.PMALLData.Count();
+                int columnNumber = db.PMAllMoid.Count();
                 if (columnNumber != 0)
                 {
-                    KPid = db.PMALLData.Select(q => q.KPid).Max() + 1;
+                    KPid = db.PMAllMoid.Select(q => q.KPid).Max() + 1;
                 }
 
-                foreach (PMALLData item in pMALLData)
+                foreach (PMAllMoid item in pMALLData)
                 {
                     item.KPid = KPid;
                     KPid++;
                 }
-                db.PMALLData.AddRange(pMALLData);
+                db.PMAllMoid.AddRange(pMALLData);
                 try
                 {
                     int dbNUmber = db.SaveChanges();
@@ -188,11 +189,12 @@ namespace LROSE_BLL.PMData
             }
             return true;
         }
-        private List<PMALLData> GetPMMo(string path, List<PMALLData> pMALLData)
+        private List<PMAllMoid> GetPMMo(string path, List<PMAllMoid> pMALLData)
         {
             XDocument xml = XDocument.Load(path);
             IEnumerable<XElement> md = from q in xml.Descendants("md") select q;
             string MeContext = xml.Descendants("sn").FirstOrDefault().Value.Split(',')[2].Split('=')[1];
+            string cbt = xml.Descendants("cbt").FirstOrDefault().Value;
             foreach (XElement oneNode in md)
             {
                 IEnumerable<XElement> mtList = from q in oneNode.DescendantsAndSelf("mt") select q;
@@ -201,7 +203,7 @@ namespace LROSE_BLL.PMData
                 {
                     foreach (XElement itemNode in mvList)
                     {
-                        PMALLData pMALLD = new PMALLData();
+                        PMAllMoid pMALLD = new PMAllMoid();
                         string moid = itemNode.DescendantsAndSelf("moid").FirstOrDefault().Value;
                         IEnumerable<XElement> rList = from q in itemNode.DescendantsAndSelf("r") select q;
 
@@ -233,6 +235,8 @@ namespace LROSE_BLL.PMData
                         pMALLD.moidKey = moidKey.Remove(moidKey.Length - 1, 1);
                         pMALLD.moidValue = moidValue.Remove(moidValue.Length - 1, 1);
                         pMALLD.MeContext = MeContext;
+                        pMALLD.cbt = cbt;
+                        pMALLD.moid = moid;
                         pMALLData.Add(pMALLD);
                     }
                 }
@@ -297,10 +301,10 @@ namespace LROSE_BLL.PMData
                 //db.anto
 
                 int KPid = 0;//设置主键ID
-                int columnNumber = db.PMTableListColumn1.Count();
+                int columnNumber = db.PMTableListColumn.Count();
                 if (columnNumber != 0)
                 {
-                    KPid = db.PMTableListColumn1.Select(q => q.KPid).Max() + 1;
+                    KPid = db.PMTableListColumn.Select(q => q.KPid).Max() + 1;
                 }
 
                 foreach (PMTableListColumn item in PMTableList)
@@ -308,7 +312,7 @@ namespace LROSE_BLL.PMData
                     item.KPid = KPid;
                     KPid++;
                 }
-                db.PMTableListColumn1.AddRange(PMTableList);
+                db.PMTableListColumn.AddRange(PMTableList);
                 //db.PMTableListColumn.AddRange()
                 try
                 {
@@ -326,10 +330,6 @@ namespace LROSE_BLL.PMData
             return true;
 
         }
-
-
-
-
 
         /// <summary>
         /// PM  表头数据入库
@@ -365,10 +365,10 @@ namespace LROSE_BLL.PMData
                 //db.anto
 
                 int KPid = 0;//设置主键ID
-                int columnNumber = db.PMTableListColumn1.Count();
+                int columnNumber = db.PMTableListColumn.Count();
                 if (columnNumber != 0)
                 {
-                    KPid = db.PMTableListColumn1.Select(q => q.KPid).Max() + 1;
+                    KPid = db.PMTableListColumn.Select(q => q.KPid).Max() + 1;
                 }
 
                 foreach (PMTableListColumn item in PMTableList)
@@ -376,7 +376,7 @@ namespace LROSE_BLL.PMData
                     item.KPid = KPid;
                     KPid++;
                 }
-                db.PMTableListColumn1.AddRange(PMTableList);
+                db.PMTableListColumn.AddRange(PMTableList);
                 //db.PMTableListColumn.AddRange()
                 try
                 {
