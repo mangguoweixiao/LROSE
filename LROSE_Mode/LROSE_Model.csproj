@@ -51,7 +51,8 @@
   <ItemGroup>
     <Compile Include="MrData\MrTableAllColumn.cs" />
     <Compile Include="MrData\MRTableList.cs" />
-    <Compile Include="PMData\PMALLData.cs" />
+    <Compile Include="PMData\PMAllMoid.cs" />
+    <Compile Include="PMData\PMAllMd.cs" />
     <Compile Include="PMData\PMTableListColumn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -63,6 +64,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Basic\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PMData\PM_STS.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
