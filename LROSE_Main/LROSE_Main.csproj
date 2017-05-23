@@ -77,6 +77,12 @@
     <Compile Include="DataShow\MR\Search.Designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataShow\PM\PMDataShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataShow\PM\PMDataShow.Designer.cs">
+      <DependentUpon>PMDataShow.cs</DependentUpon>
+    </Compile>
     <Compile Include="InputDate\MR\DataToDb.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DataShow\MR\Search.resx">
       <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataShow\PM\PMDataShow.resx">
+      <DependentUpon>PMDataShow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InputDate\MR\DataToDb.resx">
       <DependentUpon>DataToDb.cs</DependentUpon>
@@ -166,7 +175,6 @@
   <ItemGroup>
     <Folder Include="data2db\" />
     <Folder Include="DataAnalysis\PM\" />
-    <Folder Include="DataShow\PM\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LROSE_BLL\LROSE_BLL.csproj">

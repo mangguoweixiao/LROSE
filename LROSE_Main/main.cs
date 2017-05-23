@@ -11,13 +11,15 @@ using LROSE_Main.DataAnalysis.MR;
 using LROSE_Main.InputDate.MR;
 using LROSE_Main.DataShow.MR;
 using PMDataOperation.InputDate.PM;
+using PMDataOperation.DataShow.PM;
 
 namespace LROSE_Main
 {
     public partial class main : Form
     {
         dbInit dbf ;//选择数据库
-        MRShow msShow;//数据呈现
+        MRShow msShow;//MR数据呈现
+        PMDataShow pmShow;//PM数据呈现
         analysis anaf2;//分析
         DataToDb dtToBb ;
         PMIntoDb pmIntoDb;
@@ -121,6 +123,14 @@ namespace LROSE_Main
             tsmDbInit.Enabled = true;
             tsmQuery.Enabled = true;
             tsmAnalysis.Enabled = true;
+            if (DBname.dbName == "" || DBname.dbName == null)
+            {
+                MessageBox.Show("请选择相应的数据库", "警告");
+                return;
+            }
+
+            pmShow = new PMDataShow();
+            pmShow.Show();
         }
 
         private void 一维分析ToolStripMenuItem_Click(object sender, EventArgs e)
