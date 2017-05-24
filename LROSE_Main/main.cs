@@ -12,6 +12,7 @@ using LROSE_Main.InputDate.MR;
 using LROSE_Main.DataShow.MR;
 using PMDataOperation.InputDate.PM;
 using PMDataOperation.DataShow.PM;
+using LROSE_BLL.PMData;
 
 namespace LROSE_Main
 {
@@ -119,15 +120,16 @@ namespace LROSE_Main
 
         private void pMToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            tsmDataToDb.Enabled = false;
-            tsmDbInit.Enabled = true;
-            tsmQuery.Enabled = true;
-            tsmAnalysis.Enabled = true;
             if (DBname.dbName == "" || DBname.dbName == null)
             {
                 MessageBox.Show("请选择相应的数据库", "警告");
                 return;
             }
+            //if (SingletonPMData.pmAllMd == null || SingletonPMData.pmAllMd.Count == 0)
+            //{
+            //    MessageBox.Show("请导入数据", "警告");
+            //    return;
+            //}
 
             pmShow = new PMDataShowPage();
             pmShow.Show();
