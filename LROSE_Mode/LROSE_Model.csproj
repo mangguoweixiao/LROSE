@@ -66,6 +66,7 @@
     <Folder Include="Basic\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="PMData\counter.xml" />
     <Content Include="PMData\PM_STS.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
