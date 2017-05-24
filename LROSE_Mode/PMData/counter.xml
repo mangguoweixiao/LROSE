@@ -1,0 +1,1030 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <item>
+    <counter>RRC连接建立请求次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRrcConnEstabAtt - pmRrcConnEstabAttReatt</algorithm>
+  </item>
+  <item>
+    <counter>RRC连接建立成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRrcConnEstabSucc</algorithm>
+  </item>
+  <item>
+    <counter>UE发起的RRC连接建立请求次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRrcConnEstabAttEm+pmRrcConnEstabAttHpa+pmRrcConnEstabAttMod+pmRrcConnEstabAttMos</algorithm>
+  </item>
+  <item>
+    <counter>UE发起的RRC连接建立成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRrcConnEstabSuccEm+pmRrcConnEstabSuccHpa+pmRrcConnEstabSuccMos+pmRrcConnEstabSuccMod</algorithm>
+  </item>
+  <item>
+    <counter>网络发起的RRC连接建立请求次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRrcConnEstabAttMta</algorithm>
+  </item>
+  <item>
+    <counter>网络发起的RRC连接建立成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRrcConnEstabSuccMta</algorithm>
+  </item>
+  <item>
+    <counter>RRC连接重建请求次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRrcConnReestAtt</algorithm>
+  </item>
+  <item>
+    <counter>RRC连接重建成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRrcConnReestSucc</algorithm>
+  </item>
+  <item>
+    <counter>RRC连接建立失败次数（UE无应答）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRrcConnEstabFailFailureInRadioProcedure</algorithm>
+  </item>
+  <item>
+    <counter>RRC连接建立失败次数（小区拒绝）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRrcConnEstabFailLic+
+pmRrcConnEstabFailLicActiveUsers+
+pmRrcConnEstabFailMpOverload+
+pmRrcConnEstabFailDuIntens+
+pmRrcConnEstabFailCellIntensDLC+
+pmRrcConnEstabFailCellIntensStat+
+pmRrcConnEstabFailCellLatency+
+pmRrcConnEstabFailMISigQCong+
+pmRrcConnEst</algorithm>
+  </item>
+  <item>
+    <counter>RRC连接平均数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRrcConnLevSum/pmRrcConnLevSamp</algorithm>
+  </item>
+  <item>
+    <counter>RRC连接最大数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRrcConnMax</algorithm>
+  </item>
+  <item>
+    <counter>RRC连接建立失败次数（资源分配失败）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRrcConnEstabFailLackOfResources</algorithm>
+  </item>
+  <item>
+    <counter>E-RAB建立请求次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmErabEstabAttInit+pmErabEstabAttAdded</algorithm>
+  </item>
+  <item>
+    <counter>E-RAB建立成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmErabEstabSuccInit+pmErabEstabSuccAdded</algorithm>
+  </item>
+  <item>
+    <counter>初始E-RAB建立请求次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmErabEstabAttInit</algorithm>
+  </item>
+  <item>
+    <counter>初始E-RAB建立成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmErabEstabSuccInit</algorithm>
+  </item>
+  <item>
+    <counter>E-RAB请求修改次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>ΣpmErabModAttQci</algorithm>
+  </item>
+  <item>
+    <counter>E-RAB修改成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>ΣpmErabModSuccQci</algorithm>
+  </item>
+  <item>
+    <counter>E-RAB建立拥塞次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmErabEstabFailAddedRnlS1Cause25  + pmErabEstabFailInitRnlS1Cause25+ pmErabEstabFailAddedTranS1Cause0 + pmErabEstabFailInitTranS1Cause0</algorithm>
+  </item>
+  <item>
+    <counter>无线资源受限导致的E-RAB建立拥塞次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmErabEstabFailAddedRnlS1Cause25  + pmErabEstabFailInitRnlS1Cause25</algorithm>
+  </item>
+  <item>
+    <counter>传输资源拥塞导致的E-RAB建立拥塞次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmErabEstabFailAddedTranS1Cause0 + pmErabEstabFailInitTranS1Cause0</algorithm>
+  </item>
+  <item>
+    <counter>E-RAB建立失败次数（UE无响应）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmErabEstabFailInitRnlS1Cause26 + pmErabEstabFailAddedRnlS1Cause26</algorithm>
+  </item>
+  <item>
+    <counter>E-RAB建立失败次数（安全模式配置失败）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmErabEstabFailInitRnlS1Cause32 +pmErabEstabFailAddedRnlS1Cause32</algorithm>
+  </item>
+  <item>
+    <counter>寻呼消息发送成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPagReceived - pmPagDiscarded</algorithm>
+  </item>
+  <item>
+    <counter>寻呼消息发送拥塞次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPagDiscarded</algorithm>
+  </item>
+  <item>
+    <counter>寻呼响应次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRrcConnEstabAttMta</algorithm>
+  </item>
+  <item>
+    <counter>eNodeb接收到来自核心网寻呼请求次数</counter>
+    <type>eNodeB</type>
+    <algorithm>pmPagS1Received</algorithm>
+  </item>
+  <item>
+    <counter>S1信令连接建立尝试次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmS1SigConnEstabAtt</algorithm>
+  </item>
+  <item>
+    <counter>S1信令连接建立成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmS1SigConnEstabSucc</algorithm>
+  </item>
+  <item>
+    <counter>随机接入冲突解决次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRaSuccCbra</algorithm>
+  </item>
+  <item>
+    <counter>非竞争模式随机接入成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRaSuccCfra</algorithm>
+  </item>
+  <item>
+    <counter>小区收到的随机接入前导次数（竞争模式）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRaAttCbra </algorithm>
+  </item>
+  <item>
+    <counter>小区收到的随机接入前导次数（非竞争模式）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRaAttCfra</algorithm>
+  </item>
+  <item>
+    <counter>RRC连接释放次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmUeCtxtRelMme + pmUeCtxtRelAbnormalEnb + pmUeCtxtRelNormalEnb + pmRrcConnReestAtt - pmRrcConnReestAttHo</algorithm>
+  </item>
+  <item>
+    <counter>CSFB触发的RRC连接释放次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmUeCtxtRelCsfbGsm+ pmUeCtxtRelCsfbWcdma+ pmUeCtxtRelCsfbGsmEm+ pmUeCtxtRelCsfbWcdmaEm</algorithm>
+  </item>
+  <item>
+    <counter>E-RAB正常释放次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmErabRelNormalEnb + pmErabRelMme + pmErabRelAbnormalEnb</algorithm>
+  </item>
+  <item>
+    <counter>E-RAB异常释放次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmErabRelAbnormalEnbAct</algorithm>
+  </item>
+  <item>
+    <counter>UE上下文异常释放次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmUeCtxtRelAbnormalEnbAct+pmUeCtxtRelAbnormalMmeAct</algorithm>
+  </item>
+  <item>
+    <counter>UE上下文正常释放次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmUeCtxtRelNormalEnb + pmUeCtxtRelMme + pmUeCtxtRelAbnormalEnb - pmUeCtxtRelAbnormalEnbAct</algorithm>
+  </item>
+  <item>
+    <counter>E-RAB异常释放次数（核心网问题）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmErabRelAbnormalMmeAct</algorithm>
+  </item>
+  <item>
+    <counter>E-RAB异常释放次数（传输层问题）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmErabRelAbnormalEnbActTnFail</algorithm>
+  </item>
+  <item>
+    <counter>E-RAB异常释放次数（无线层问题）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmErabRelAbnormalEnbActUeLost</algorithm>
+  </item>
+  <item>
+    <counter>E-RAB异常释放次数（网络拥塞）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmErabRelAbnormalEnbActPe</algorithm>
+  </item>
+  <item>
+    <counter>最大E-RAB数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmErabMax</algorithm>
+  </item>
+  <item>
+    <counter>平均E-RAB数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmErabLevSum/pmErabLevSamp</algorithm>
+  </item>
+  <item>
+    <counter>每用户平均E-RAB数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmErabLevSum/pmErabLevSamp/(pmRrcConnLevSum/pmRrcConnLevSamp)</algorithm>
+  </item>
+  <item>
+    <counter>eNB间切入失败次数（无线资源受限）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmHoPrepInS1RejRnlS1Cause12+pmHoPrepInX2RejRnlX2Cause12</algorithm>
+  </item>
+  <item>
+    <counter>eNB间切入失败次数（传输资源受限）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmHoPrepInS1RejTranS1Cause0+pmHoPrepInX2RejTranX2Cause0</algorithm>
+  </item>
+  <item>
+    <counter>eNB内切换请求次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>ΣEUtranCellRelation::(pmHoExeAttLteIntraF+pmHoExeAttLteInterF)
+在MO class EUtranCellRelation查看属性neighborCellRef，取值为EUtranCellFDD/EUtranCellTDD时，认为是eNB内切换</algorithm>
+  </item>
+  <item>
+    <counter>eNB内切换成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>ΣEutrancellRelation::(pmHoExeSuccLteIntraF+pmHoExeSuccLteInterF)
+在MO class EUtranCellRelation查看属性neighborCellRef，取值为EUtranCellFDD/EUtranCellTDD时，认为是eNB内切换
+</algorithm>
+  </item>
+  <item>
+    <counter>eNB间S1切换出请求次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmHoPrepOutS1AttInterEnb</algorithm>
+  </item>
+  <item>
+    <counter>eNB间S1切换出准备成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmHoPrepOutS1SuccInterEnb</algorithm>
+  </item>
+  <item>
+    <counter>eNB间S1切换出执行请求次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmHoExecOutS1AttInterEnb</algorithm>
+  </item>
+  <item>
+    <counter>eNB间S1切换出成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmHoExecOutS1SuccInterEnb</algorithm>
+  </item>
+  <item>
+    <counter>eNB间S1切换出取消次数</counter>
+    <type>Eutrancell</type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>eNB间X2切换出请求次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmHoPrepOutX2AttInterEnb
+</algorithm>
+  </item>
+  <item>
+    <counter>eNB间X2切换出准备成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmHoPrepOutX2SuccInterEnb</algorithm>
+  </item>
+  <item>
+    <counter>eNB间X2切换出执行请求次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmHoExecOutX2AttInterEnb</algorithm>
+  </item>
+  <item>
+    <counter>eNB间X2切换出成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmHoExecOutX2SuccInterEnb</algorithm>
+  </item>
+  <item>
+    <counter>eNB间切换出失败次数（无线资源受限）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmHoPrepOutS1RejInterEnbIntraFreqRnlS1Cause12+pmHoPrepOutS1RejInterEnbInterFreqRnlS1Cause12+pmHoPrepOutX2RejInterEnbIntraFreqRnlX2Cause12+pmHoPrepOutX2RejInterEnbInterFreqRnlX2Cause12</algorithm>
+  </item>
+  <item>
+    <counter>eNB间切换出失败次数（传输资源受限）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmHoPrepOutS1RejInterEnbIntraFreqTranS1Cause0+pmHoPrepOutS1RejInterEnbInterFreqTranS1Cause0+pmHoPrepOutX2RejInterEnbIntraFreqTranX2Cause0+pmHoPrepOutX2RejInterEnbInterFreqTranX2Cause0</algorithm>
+  </item>
+  <item>
+    <counter>同频切换出执行请求次数</counter>
+    <type>Eutrancell</type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>同频切换出成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>异频切换出执行请求次数</counter>
+    <type>Eutrancell</type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>异频切换出成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>切换至3G请求次数</counter>
+    <type>Eutrancell</type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>切换至3G准备成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>切换至3G成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>3G切入请求次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmHoPrepInAttUtran</algorithm>
+  </item>
+  <item>
+    <counter>3G切入准备成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmHoPrepInSuccUtran</algorithm>
+  </item>
+  <item>
+    <counter>3G切入成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmHoExeInSuccUtran</algorithm>
+  </item>
+  <item>
+    <counter>TD LTE切换到LTE FDD请求次数</counter>
+    <type>Eutrancell</type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>TD LTE切换到LTE FDD成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>LTE FDD切换到TD LTE请求次数</counter>
+    <type>Eutrancell</type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>LTE FDD切换到TD LTE成功次数</counter>
+    <type>Eutrancell</type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>LTE-UTRAN系统间重定向请求次数(CSFB)</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmUeCtxtRelCsfbWcdma + pmUeCtxtRelCsfbWcdmaEm</algorithm>
+  </item>
+  <item>
+    <counter>LTE-UTRAN系统间重定向请求次数（盲重定向）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmUeCtxtRelSCWcdma
+在UtanCellRelation中存在coverageIndicator为cover的WCDMA小区</algorithm>
+  </item>
+  <item>
+    <counter>LTE-UTRAN系统间重定向请求次数（非盲重定向）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmUeCtxtRelSCWcdma
+在UtanCellRelation中不存在coverageIndicator为cover的WCDMA小区</algorithm>
+  </item>
+  <item>
+    <counter>LTE-GSM系统间重定向请求次数(盲重定向)</counter>
+    <type>Eutrancell</type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>LTE-GSM系统间重定向请求次数(非盲重定向)</counter>
+    <type>Eutrancell</type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>LTE-GSM系统间重定向请求次数(CSFB)</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmUeCtxtRelCsfbGsm + pmUeCtxtRelCsfbGsmEm</algorithm>
+  </item>
+  <item>
+    <counter>上行PDCP SDU丢包数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpPktLostUl</algorithm>
+  </item>
+  <item>
+    <counter>上行PDCP SDU包总数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpPktLostUl+pmPdcpPktReceivedUl</algorithm>
+  </item>
+  <item>
+    <counter>下行PDCP SDU丢包数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpPktDiscDlPelrUu</algorithm>
+  </item>
+  <item>
+    <counter>下行PDCP SDU包总数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpPktReceivedDl</algorithm>
+  </item>
+  <item>
+    <counter>下行PDCP SDU弃包数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpPktDiscDlPelr</algorithm>
+  </item>
+  <item>
+    <counter>物理层上行平均速率</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRadioThpVolUl/1000/统计时长(s)</algorithm>
+  </item>
+  <item>
+    <counter>物理层下行平均速率</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRadioThpVolDl/1000/统计时长(s)</algorithm>
+  </item>
+  <item>
+    <counter>用户面PDCP层上行平均速率</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpVolUlDrb/pmSchedActivityCellUl</algorithm>
+  </item>
+  <item>
+    <counter>用户面PDCP层上行峰值速率</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpBitrateUlDrbMax/1000</algorithm>
+  </item>
+  <item>
+    <counter>用户面PDCP层下行平均速率</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpVolDlDrb/pmSchedActivityCellDl</algorithm>
+  </item>
+  <item>
+    <counter>用户面PDCP层下行峰值速率</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpBitrateDlDrbMax/1000</algorithm>
+  </item>
+  <item>
+    <counter>IP层上行平均速率</counter>
+    <type>Eutrancell</type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>IP层上行峰值速率</counter>
+    <type>Eutrancell</type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>IP层下行平均速率</counter>
+    <type>Eutrancell</type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>IP层下行峰值速率</counter>
+    <type>Eutrancell</type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>下行平均无线承载效率</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRadioThpVolDl*1000/pmPrbUsedDlDtch</algorithm>
+  </item>
+  <item>
+    <counter>上行平均无线承载效率</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRadioThpVolUl*1000/pmPrbUsedUlDtch</algorithm>
+  </item>
+  <item>
+    <counter>上行数据传输时长</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmUeThpTimeUl</algorithm>
+  </item>
+  <item>
+    <counter>下行数据传输时长</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmUeThpTimeDl</algorithm>
+  </item>
+  <item>
+    <counter>eRAB连接数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmErabLevSum/pmErabLevSamp</algorithm>
+  </item>
+  <item>
+    <counter>UE会话时长</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmSessionTimeUe</algorithm>
+  </item>
+  <item>
+    <counter>DRB会话时长</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmSessionTimeDrb</algorithm>
+  </item>
+  <item>
+    <counter>有数传的RRC连接用户数平均值</counter>
+    <type></type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>有数传的RRC连接用户数峰值</counter>
+    <type></type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>下行激活eRAB数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmActiveDrbDlSum/1000/统计时长(s)</algorithm>
+  </item>
+  <item>
+    <counter>上行激活eRAB数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmActiveDrbUlSum/1000/统计时长(s)</algorithm>
+  </item>
+  <item>
+    <counter>下行正在数传eRAB数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmSchedActivityUeDl/1000/统计时长(s)*pmActiveDrbDlSum/pmActiveUeDlSum</algorithm>
+  </item>
+  <item>
+    <counter>上行正在数传eRAB数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmSchedActivityUeUl/1000/统计时长(s)*pmActiveDrbUlSum/pmActiveUeUlSum</algorithm>
+  </item>
+  <item>
+    <counter>VoLTE用户数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmErabQciMax[1]</algorithm>
+  </item>
+  <item>
+    <counter>eNB以太网接口接收的流量</counter>
+    <type>eNodeB</type>
+    <algorithm>(pmIfInOctetsLink1Hi*(2^31)+pmIfInOctetsLink1Lo)/(10^6)</algorithm>
+  </item>
+  <item>
+    <counter>eNB以太网接口接收的平均速率</counter>
+    <type>eNodeB</type>
+    <algorithm>(pmIfInOctetsLink1Hi*(2^31)+pmIfInOctetsLink1Lo)/(10^6)/统计时长(s)*8</algorithm>
+  </item>
+  <item>
+    <counter>eNB以太网接口接收的峰值速率</counter>
+    <type>eNodeB</type>
+    <algorithm>pmIpFlowMaxInBitrate/1000</algorithm>
+  </item>
+  <item>
+    <counter>eNB以太网接口发送的流量</counter>
+    <type>eNodeB</type>
+    <algorithm>(pmIfOutOctetsLink1Hi*(2^31)+pmIfOutOctetsLink1Lo)/(10^6)</algorithm>
+  </item>
+  <item>
+    <counter>eNB以太网接口发送的平均速率</counter>
+    <type>eNodeB</type>
+    <algorithm>(pmIfOutOctetsLink1Hi*(2^31)+pmIfOutOctetsLink1Lo)/(10^6)/统计时长(s)*8</algorithm>
+  </item>
+  <item>
+    <counter>eNB以太网接口发送的峰值速率</counter>
+    <type>eNodeB</type>
+    <algorithm>pmIpFlowMaxOutBitrate/1000</algorithm>
+  </item>
+  <item>
+    <counter>S1接口接收业务流量</counter>
+    <type>eNodeB</type>
+    <algorithm>Σ(pmPdcpVolDlDrb * 1000/8+ pmPdcpPktReceivedDl * 8)/10^6</algorithm>
+  </item>
+  <item>
+    <counter>S1接口接收平均速率</counter>
+    <type>eNodeB</type>
+    <algorithm>（Σ(pmPdcpVolDlDrb * 1000/8+ pmPdcpPktReceivedDl * 8)/10^6）/900</algorithm>
+  </item>
+  <item>
+    <counter>S1接口发送业务流量</counter>
+    <type>eNodeB</type>
+    <algorithm>Σ(pmPdcpVolUlDrb * 1000/8+ pmPdcpPktReceivedUl * 8)/10^6</algorithm>
+  </item>
+  <item>
+    <counter>S1接口发送平均速率</counter>
+    <type>eNodeB</type>
+    <algorithm>（Σ(pmPdcpVolUlDrb * 1000/8+ pmPdcpPktReceivedUl * 8)/10^6）/900</algorithm>
+  </item>
+  <item>
+    <counter>空口上行业务流量</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpVolUlDrb/8000</algorithm>
+  </item>
+  <item>
+    <counter>空口下行业务流量</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpVolDlDrb/8000</algorithm>
+  </item>
+  <item>
+    <counter>会话类语音业务空口上行流量（QCI1）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpVolUlDrbQci[1]/8000</algorithm>
+  </item>
+  <item>
+    <counter>会话类语音业务空口下行流量（QCI1）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpVolDlDrbQci[1]/8000</algorithm>
+  </item>
+  <item>
+    <counter>会话类直播视频流业务空口上行流量（QCI2）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpVolUlDrbQci[2]/8000</algorithm>
+  </item>
+  <item>
+    <counter>会话类直播视频流业务空口下行流量（QCI2）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpVolDlDrbQci[2]/8000</algorithm>
+  </item>
+  <item>
+    <counter>实时游戏业务空口上行流量（QCI3）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpVolUlDrbQci[3]/8000</algorithm>
+  </item>
+  <item>
+    <counter>实时游戏业务空口下行流量（QCI3）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpVolDlDrbQci[3]/8000</algorithm>
+  </item>
+  <item>
+    <counter>非会话类有缓冲的视频流业务空口上行流量（QCI4）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpVolUlDrbQci[4]/8000</algorithm>
+  </item>
+  <item>
+    <counter>非会话类有缓冲的视频流业务空口下行流量（QCI4）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpVolDlDrbQci[4]/8000</algorithm>
+  </item>
+  <item>
+    <counter>IMS信令空口上行流量（QCI5）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpVolUlDrbQci[5]/8000</algorithm>
+  </item>
+  <item>
+    <counter>IMS信令空口下行流量（QCI5）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpVolDlDrbQci[5]/8000</algorithm>
+  </item>
+  <item>
+    <counter>空口上行业务流量（QCI6-基于TCP的www、email、ftp、p2p等）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpVolUlDrbQci[6]/8000</algorithm>
+  </item>
+  <item>
+    <counter>空口下行业务流量（QCI6-基于TCP的www、email、ftp、p2p等）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpVolDlDrbQci[6]/8000</algorithm>
+  </item>
+  <item>
+    <counter>空口上行业务流量（QCI7-语音、直播视频流业务、交互游戏）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpVolUlDrbQci[7]/8000</algorithm>
+  </item>
+  <item>
+    <counter>空口下行业务流量（QCI7-语音、直播视频流业务、交互游戏）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpVolDlDrbQci[7]/8000</algorithm>
+  </item>
+  <item>
+    <counter>空口上行业务流量（QCI8-基于TCP的www、email、ftp、p2p等）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpVolUlDrbQci[8]/8000</algorithm>
+  </item>
+  <item>
+    <counter>空口下行业务流量（QCI8-基于TCP的www、email、ftp、p2p等）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpVolDlDrbQci[8]/8000</algorithm>
+  </item>
+  <item>
+    <counter>空口上行业务流量（QCI9-基于TCP的www、email、ftp、p2p等）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpVolUlDrbQci[9]/8000</algorithm>
+  </item>
+  <item>
+    <counter>空口下行业务流量（QCI9-基于TCP的www、email、ftp、p2p等）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcpVolDlDrbQci[9]/8000</algorithm>
+  </item>
+  <item>
+    <counter>上行传输TB数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmMacHarqUlSucc16qam+pmMacHarqUlSuccQpsk+pmMacHarqUlFail16qam+pmMacHarqUlFailQpsk+pmMacHarqUlDtx16qam+pmMacHarqUlDtxQpsk</algorithm>
+  </item>
+  <item>
+    <counter>上行传输初始TB数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmMacHarqUlSucc16qam+pmMacHarqUlSuccQpsk+pmMacHarqUlFail16qam+pmMacHarqUlFailQpsk+pmMacHarqUlDtx16qam+pmMacHarqUlDtxQpsk</algorithm>
+  </item>
+  <item>
+    <counter>上行成功传输初始TB数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmMacHarqUlSucc16qam+pmMacHarqUlSuccQpsk</algorithm>
+  </item>
+  <item>
+    <counter>下行传输TB数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmMacHarqDlAck16qam+
+pmMacHarqDlAck64qam+
+pmMacHarqDlAckQpsk+
+pmMacHarqDlDtx16qam+
+pmMacHarqDlDtx64qam+
+pmMacHarqDlDtxQpsk+
+pmMacHarqDlNack16qam+
+pmMacHarqDlNack64qam+
+pmMacHarqDlNackQpsk</algorithm>
+  </item>
+  <item>
+    <counter>单流模式下行传输TB数</counter>
+    <type>Eutrancell</type>
+    <algorithm>(pmMacHarqDlAck16qam+
+pmMacHarqDlAck64qam+
+pmMacHarqDlAckQpsk+
+pmMacHarqDlDtx16qam+
+pmMacHarqDlDtx64qam+
+pmMacHarqDlDtxQpsk+
+pmMacHarqDlNack16qam+
+pmMacHarqDlNack64qam+
+pmMacHarqDlNackQpsk)*((pmRadioTxRankDistr[0]+pmRadioTxRankDistr[1]+pmRadioTxRankDistr[</algorithm>
+  </item>
+  <item>
+    <counter>双流模式下行传输TB数</counter>
+    <type>Eutrancell</type>
+    <algorithm>(pmMacHarqDlAck16qam+
+pmMacHarqDlAck64qam+
+pmMacHarqDlAckQpsk+
+pmMacHarqDlDtx16qam+
+pmMacHarqDlDtx64qam+
+pmMacHarqDlDtxQpsk+
+pmMacHarqDlNack16qam+
+pmMacHarqDlNack64qam+
+pmMacHarqDlNackQpsk)*((pmRadioTxRankDistr[2]+pmRadioTxRankDistr[4]+pmRadioTxRankDistr[</algorithm>
+  </item>
+  <item>
+    <counter>TM k模式下行传输TB数</counter>
+    <type>Eutrancell</type>
+    <algorithm>TM2： (pmMacHarqDlAck16qam+ pmMacHarqDlAck64qam+ pmMacHarqDlAckQpsk+ pmMacHarqDlDtx16qam+ pmMacHarqDlDtx64qam+ pmMacHarqDlDtxQpsk+ pmMacHarqDlNack16qam+ pmMacHarqDlNack64qam+ pmMacHarqDlNackQpsk)*((pmRadioTxRankDistr[0])/sum(pmRadioTxRankDistr[0…7]))
+
+TM3：</algorithm>
+  </item>
+  <item>
+    <counter>下行传输初始TB数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmMacHarqDlAck16qam+
+pmMacHarqDlAck64qam+
+pmMacHarqDlAckQpsk+
+pmMacHarqDlDtx16qam+
+pmMacHarqDlDtx64qam+
+pmMacHarqDlDtxQpsk+
+pmMacHarqDlNack16qam+
+pmMacHarqDlNack64qam+
+pmMacHarqDlNackQpsk</algorithm>
+  </item>
+  <item>
+    <counter>下行成功传输初始TB数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmMacHarqDlAck16qam+
+pmMacHarqDlAck64qam+
+pmMacHarqDlAckQpsk</algorithm>
+  </item>
+  <item>
+    <counter>最大CPU占用率</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmProcessorLoadMax</algorithm>
+  </item>
+  <item>
+    <counter>平均CPU占用率</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmProcessorLoadSum/pmProcessorLoadSamp
+</algorithm>
+  </item>
+  <item>
+    <counter>小区最大发射功率</counter>
+    <type>Eutrancell</type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>小区平均发射功率</counter>
+    <type>Eutrancell</type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>上行业务信息占用PRB平均数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPrbUsedUlDtch/统计时长(ms)</algorithm>
+  </item>
+  <item>
+    <counter>上行控制信息占用CCE平均数</counter>
+    <type>Eutrancell</type>
+    <algorithm>ΣpmPdcchCceUsedUlQci[i]/统计时长(ms)</algorithm>
+  </item>
+  <item>
+    <counter>下行业务信息占用PRB平均数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPrbUsedDlDtch/统计时长(ms)</algorithm>
+  </item>
+  <item>
+    <counter>下行控制信息占用CCE平均数</counter>
+    <type>Eutrancell</type>
+    <algorithm>ΣpmPdcchCceUsedDlQci/统计时长(ms)</algorithm>
+  </item>
+  <item>
+    <counter>上行PRB占用平均数</counter>
+    <type>Eutrancell</type>
+    <algorithm>(pmPrbUsedUlDtch+pmPrbUsedUlSrb)/统计时长(ms)</algorithm>
+  </item>
+  <item>
+    <counter>上行可用PRB数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPrbAvailUl/统计时长(ms)</algorithm>
+  </item>
+  <item>
+    <counter>下行PRB占用平均数</counter>
+    <type>Eutrancell</type>
+    <algorithm>[pmPrbUsedDlDtch+ pmPrbUsedDlBcch+ pmPrbUsedDlPcch+pmPrbUsedDlSrbFirstTrans*(1+pmPrbUsedDlReTrans/pmPrbUsedDlFirstTrans)]/统计时长(ms)</algorithm>
+  </item>
+  <item>
+    <counter>下行可用PRB数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPrbAvailDl/统计时长(ms)</algorithm>
+  </item>
+  <item>
+    <counter>TM k模式下的PRB使用个数</counter>
+    <type>Eutrancell</type>
+    <algorithm></algorithm>
+  </item>
+  <item>
+    <counter>下行PDCCH信道CCE占用个数</counter>
+    <type>Eutrancell</type>
+    <algorithm>ΣpmPdcchCceUsedDlQci/统计时长(ms)</algorithm>
+  </item>
+  <item>
+    <counter>LTE小区退服时长</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmCellDowntimeAuto+pmCellDowntimeMan</algorithm>
+  </item>
+  <item>
+    <counter>LTE小区退服次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmCellDownLockAuto</algorithm>
+  </item>
+  <item>
+    <counter>SCTP链路断链次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmShutdowns</algorithm>
+  </item>
+  <item>
+    <counter>SCTP链路可用性</counter>
+    <type>Eutrancell</type>
+    <algorithm>（统计时长(s)-pmTimeUnavail）/统计时长(s)*100%</algorithm>
+  </item>
+  <item>
+    <counter>小区下行TB块错误数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmMacHarqDlNack16qam+
+pmMacHarqDlNack64qam+
+pmMacHarqDlNackQpsk</algorithm>
+  </item>
+  <item>
+    <counter>小区下行TB块总数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmMacHarqDlAck16qam+
+pmMacHarqDlAck64qam+
+pmMacHarqDlAckQpsk+
+pmMacHarqDlDtx16qam+
+pmMacHarqDlDtx64qam+
+pmMacHarqDlDtxQpsk+
+pmMacHarqDlNack16qam+
+pmMacHarqDlNack64qam+
+pmMacHarqDlNackQpsk</algorithm>
+  </item>
+  <item>
+    <counter>小区上行TB块错误数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmMacHarqUlFail16qam+
+pmMacHarqUlFailQpsk+</algorithm>
+  </item>
+  <item>
+    <counter>小区上行TB块总数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmMacHarqUlSucc16qam+
+pmMacHarqUlSuccQpsk+
+pmMacHarqUlFail16qam+
+pmMacHarqUlFailQpsk+
+pmMacHarqUlDtx16qam+
+pmMacHarqUlDtxQpsk</algorithm>
+  </item>
+  <item>
+    <counter>CQI k数量</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRadioUeRepCqiDistr [i]</algorithm>
+  </item>
+  <item>
+    <counter>UE从上行同步态转换为上行失步态的次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmPdcchResyncAtt</algorithm>
+  </item>
+  <item>
+    <counter>无线链路失步时长</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRrcConnLevSumUlOutOfSync * 5000</algorithm>
+  </item>
+  <item>
+    <counter>平均每PRB干扰噪声功率</counter>
+    <type>Eutrancell</type>
+    <algorithm>10log(Σ1 to n(pmRadioRecInterferencePwrPrb[x]/(统计时长(ms)/40))/n)-132</algorithm>
+  </item>
+  <item>
+    <counter>RLC AM模式基站下行RLC PDU重传次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRlcArqDlNack</algorithm>
+  </item>
+  <item>
+    <counter>RLC AM模式基站上行RLC PDU重传次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRlcArqUlNack</algorithm>
+  </item>
+  <item>
+    <counter>RLC AM模式基站下行RLC PDU发送总次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRlcArqDlAck + pmRlcArqDlNack</algorithm>
+  </item>
+  <item>
+    <counter>RLC AM模式基站上行RLC PDU发送总次数</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmRlcArqUlAck + pmRlcArqUlNack</algorithm>
+  </item>
+  <item>
+    <counter>MAC层DL SCH信道重传TB数（QPSK）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmMacHarqDlNackQpsk</algorithm>
+  </item>
+  <item>
+    <counter>MAC层DL SCH信道重传TB数（16QAM）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmMacHarqDlNack16qam</algorithm>
+  </item>
+  <item>
+    <counter>MAC层DL SCH信道重传TB数（64QAM）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmMacHarqDlNack64qam</algorithm>
+  </item>
+  <item>
+    <counter>MAC层UL SCH信道重传TB数（QPSK）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmMacHarqUlFailQpsk</algorithm>
+  </item>
+  <item>
+    <counter>MAC层UL SCH信道重传TB数（16QAM）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmMacHarqUlFail16qam</algorithm>
+  </item>
+  <item>
+    <counter>MAC层UL SCH信道重传TB数（64QAM）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmMacHarqUlFail64qam</algorithm>
+  </item>
+  <item>
+    <counter>MAC层DL SCH信道传输TB总数（QPSK）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmMacHarqDlAckQpsk</algorithm>
+  </item>
+  <item>
+    <counter>MAC层DL SCH信道传输TB总数（16QAM）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmMacHarqDlAck16qam</algorithm>
+  </item>
+  <item>
+    <counter>MAC层DL SCH信道传输TB总数（64QAM）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmMacHarqDlAck64qam</algorithm>
+  </item>
+  <item>
+    <counter>MAC层UL SCH信道传输TB总数（QPSK）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmMacHarqUlSuccQpsk+pmMacHarqUlFailQpsk+pmMacHarqUlDtxQpsk</algorithm>
+  </item>
+  <item>
+    <counter>MAC层UL SCH信道传输TB总数（16QAM）</counter>
+    <type>Eutrancell</type>
+    <algorithm>pmMacHarqUlSucc16qam+pmMacHarqUlFail16qam+pmMacHarqUlDtx16qam</algorithm>
+  </item>
+  <item>
+    <counter>MAC层UL SCH信道传输TB总数（64QAM）</counter>
+    <type>Eutrancell</type>
+    <algorithm> pmMacHarqUlSucc64qam+pmMacHarqUlFail64qam+pmMacHarqUlDtx64qam</algorithm>
+  </item>
+</root>
