@@ -138,7 +138,7 @@
             this.二维分析ToolStripMenuItem});
             this.pM分析ToolStripMenuItem.Name = "pM分析ToolStripMenuItem";
             this.pM分析ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.pM分析ToolStripMenuItem.Text = "PM分析";
+            this.pM分析ToolStripMenuItem.Text = "MR分析";
             // 
             // 一维分析ToolStripMenuItem
             // 
@@ -158,7 +158,7 @@
             // 
             this.mR分析ToolStripMenuItem.Name = "mR分析ToolStripMenuItem";
             this.mR分析ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.mR分析ToolStripMenuItem.Text = "MR分析";
+            this.mR分析ToolStripMenuItem.Text = "PM分析";
             this.mR分析ToolStripMenuItem.Click += new System.EventHandler(this.mR分析ToolStripMenuItem_Click);
             // 
             // contextMenuStrip1

@@ -35,21 +35,26 @@
             // 
             // PMDataGridView
             // 
+            this.PMDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.PMDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PMDataGridView.Location = new System.Drawing.Point(374, 12);
+            this.PMDataGridView.Location = new System.Drawing.Point(343, 12);
             this.PMDataGridView.Name = "PMDataGridView";
             this.PMDataGridView.RowTemplate.Height = 23;
-            this.PMDataGridView.Size = new System.Drawing.Size(544, 459);
+            this.PMDataGridView.Size = new System.Drawing.Size(575, 459);
             this.PMDataGridView.TabIndex = 0;
             // 
             // listBox1
             // 
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.HorizontalScrollbar = true;
             this.listBox1.ItemHeight = 12;
             this.listBox1.Location = new System.Drawing.Point(7, 11);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(338, 460);
+            this.listBox1.Size = new System.Drawing.Size(298, 460);
             this.listBox1.TabIndex = 1;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
