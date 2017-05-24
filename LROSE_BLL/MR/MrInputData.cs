@@ -203,8 +203,7 @@ namespace LROSE_BLL.MR
                     {
                         return false;
                     }
-                }  
-             
+                }       
             }
 
             //读取XML
@@ -229,7 +228,6 @@ namespace LROSE_BLL.MR
                 db.Configuration.AutoDetectChangesEnabled = false;
                 db.Configuration.ValidateOnSaveEnabled =false;
                 //db.anto
-                
                 int KPid =0;//设置主键ID
                 int columnNumber = db.MrTableAllColumn.Count();
                 if (columnNumber != 0)
