@@ -1,19 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace LROSE_Model.PMData
 {
-    [Serializable]
-    public class PMTableListColumn
+    public class PMAllMd
     {
-        [Key]
-        public int KPid { get; set; } //主键
-        public string RecordTime { get; set; }
+        public int KPid { get; set; }
         public string ffv { get; set; }
+        public string RecordTime { get; set; }
         //public string sn_nedn { get; set; }
         //这是第一个SubNetwork
         public string SubNetwork { get; set; }
@@ -25,7 +21,11 @@ namespace LROSE_Model.PMData
         public string nesw { get; set; }
         public string gp { get; set; }
         public string neun { get; set; }
-        
 
+        public string moidKey { get; set; }//mo指标
+        public string moidValue { get; set; }//mo值
+        public string mtList { get; set; } //指标名称
+        public string rList { get; set; }//指标值
+        public string moid { get; set; }
     }
 }

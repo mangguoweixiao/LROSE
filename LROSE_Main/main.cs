@@ -19,7 +19,7 @@ namespace LROSE_Main
     {
         dbInit dbf ;//选择数据库
         MRShow msShow;//MR数据呈现
-        PMDataShow pmShow;//PM数据呈现
+        PMDataShowPage pmShow;//PM数据呈现
         analysis anaf2;//分析
         DataToDb dtToBb ;
         PMIntoDb pmIntoDb;
@@ -129,7 +129,7 @@ namespace LROSE_Main
                 return;
             }
 
-            pmShow = new PMDataShow();
+            pmShow = new PMDataShowPage();
             pmShow.Show();
         }
 

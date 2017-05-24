@@ -47,13 +47,12 @@ namespace LROSE_DAL
         }
 
         public DbSet<MrTableAllColumn> MrTableAllColumn { get; set; }
-        public DbSet<PMALLData> PMALLData { get; set; }
-        public DbSet<PMTableListColumn> PMTableListColumn1 { get; set; }
+        public DbSet<PMAllMoid> PMAllMoid { get; set; }
+        public DbSet<PMTableListColumn> PMTableListColumn { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            //modelBuilder.Configurations
         }
 
     }

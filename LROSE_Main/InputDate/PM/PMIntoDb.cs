@@ -113,11 +113,7 @@ namespace PMDataOperation.InputDate.PM
                 {
                     showTextBox.AppendText("解析失败!");
                 }
-
             }
-
-
-
         }
         public bool myAnalysis(string[] data)
         {
