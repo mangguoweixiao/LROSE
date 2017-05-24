@@ -28,6 +28,7 @@ namespace LROSE_BLL.PMData
                                    KPid =m.KPid,
                                    cbt = m.cbt,
                                    ffv = q.First().ffv,
+                                   RecordTime = q.First().RecordTime,
                                    gp = q.First().gp,
                                    MeContext = m.MeContext,
                                    moidKey = m.moidKey,

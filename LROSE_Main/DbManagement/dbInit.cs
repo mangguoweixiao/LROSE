@@ -23,6 +23,7 @@ namespace LROSE_Main.DbManagement
         DataToDb dtbf;
         PMIntoDb pmtoDb;
         
+        
         public dbInit()
         {
             InitializeComponent();
@@ -176,6 +177,73 @@ namespace LROSE_Main.DbManagement
         //    return cmdValue;
         //}
 
+        //初始化PM的数据库
+        private void initPMBtn_Click(object sender, EventArgs e)
+        {
+            //初始化对应的数据库
+            if (cmbDb.Text == "请选择数据库")
+            {
+                MessageBox.Show("请选择初始化的数据库");
+                return;
+            }
+            try
+            {
+                using (var db = new LROSRDbContext(DBname.dbName))
+                {
+                    //db.Database.ExecuteSqlCommand("select 'truncate table ' + Name + ';' from sysobjects where xtype='U' order by name asc;");
+                    //db.ExecuteStoreCommand("DELETE " + db.students.EntitySet.ElementType.Name);
+                    db.Database.ExecuteSqlCommand("truncate table PMALLDatas");
+                    //db.PMALLData.Remove();
+
+                    db.Database.ExecuteSqlCommand("truncate table PMTableListColumns");
+                    MessageBox.Show(string.Format("数据库{0}初始化成功", DBname.dbName));
+                }
+            }
+            catch (ArgumentException)
+            {
+                MessageBox.Show("请选择初始化的数据库");
+            }
+            catch (Exception ex)
+            {
+                //throw (ex);
+                MessageBox.Show(string.Format("数据库{0}初始化失败\r\n{1}", DBname.dbName, ex.Message));
+            }
+
+        }
+
+        //初始化MR的数据库
+        private void initMRBtn_Click(object sender, EventArgs e)
+        {
+            //初始化对应的数据库
+            if (cmbDb.Text == "请选择数据库")
+            {
+                MessageBox.Show("请选择初始化的数据库");
+                return;
+            }
+            try
+            {
+
+                using (var db = new LROSRDbContext(DBname.dbName))
+                {
+                    //db.Database.ExecuteSqlCommand("select 'truncate table ' + Name + ';' from sysobjects where xtype='U' order by name asc;");
+                    //db.ExecuteStoreCommand("DELETE " + db.students.EntitySet.ElementType.Name);
+                    db.Database.ExecuteSqlCommand("truncate table MrTableAllColumns");
+                    MessageBox.Show(string.Format("数据库{0}初始化成功", DBname.dbName));
+                }
+            }
+            catch (ArgumentException)
+            {
+                MessageBox.Show("请选择初始化的数据库");
+            }
+            catch (Exception ex)
+            {
+                //throw (ex);
+                MessageBox.Show(string.Format("数据库{0}初始化失败\r\n{1}", DBname.dbName, ex.Message));
+            }
+
+        }
+
+
         private void btnDbInit_Click(object sender, EventArgs e)
         {
             //初始化对应的数据库
@@ -186,11 +254,15 @@ namespace LROSE_Main.DbManagement
             }
             try
             {
-                using (var db = new LROSRDbContext())
+                using (var db = new LROSRDbContext(DBname.dbName))
                 {
                     //db.Database.ExecuteSqlCommand("select 'truncate table ' + Name + ';' from sysobjects where xtype='U' order by name asc;");
                     //db.ExecuteStoreCommand("DELETE " + db.students.EntitySet.ElementType.Name);
                     db.Database.ExecuteSqlCommand("truncate table MrTableAllColumns");
+                    db.Database.ExecuteSqlCommand("truncate table PMALLDatas");
+                    db.Database.ExecuteSqlCommand("truncate table PMTableListColumns");
+                    //int stn = db.Database.ExecuteSqlCommand("select * from PMTableListColumns");
+                    //MessageBox.Show(stn.ToString());
                     MessageBox.Show(string.Format("数据库{0}初始化成功", DBname.dbName));
                 }
             }
@@ -377,6 +449,8 @@ namespace LROSE_Main.DbManagement
                 MessageBox.Show("请选择数据库");
             }           
         }
+        
+        
 
         
     }

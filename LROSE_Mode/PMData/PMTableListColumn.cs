@@ -12,6 +12,7 @@ namespace LROSE_Model.PMData
     {
         [Key]
         public int KPid { get; set; } //主键
+        public string RecordTime { get; set; }
         public string ffv { get; set; }
         //public string sn_nedn { get; set; }
         //这是第一个SubNetwork
@@ -24,5 +25,7 @@ namespace LROSE_Model.PMData
         public string nesw { get; set; }
         public string gp { get; set; }
         public string neun { get; set; }
+        
+
     }
 }
