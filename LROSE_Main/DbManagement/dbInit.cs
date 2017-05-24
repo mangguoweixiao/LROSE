@@ -43,6 +43,16 @@ namespace LROSE_Main.DbManagement
             //flag = true;
         }
 
+        //事件处理方法
+        void dbf_TransfEvent()
+        {
+            cmbDb.SelectedIndex = -1;
+            //cmbDb.Items.Insert(0, "请选择"); 
+            cmbDb.ValueMember = "valuecolumn";
+            cmbDb.DisplayMember = "displaycolumn";
+            cmbDb.DataSource = getAllDbName();
+        }
+
         public SqlConnection getSqlConnection(string dbName)
         {
             dbCreate db = new dbCreate();
@@ -84,6 +94,7 @@ namespace LROSE_Main.DbManagement
         dbCreate dbf = new dbCreate();
         private void button1_Click(object sender, EventArgs e)
         {
+            dbf.TransfEvent += dbf_TransfEvent;
             //打开新建数据库窗口
             if (dbf.IsDisposed)
                 dbf = new dbCreate();
@@ -181,8 +192,8 @@ namespace LROSE_Main.DbManagement
                 {
                     //db.Database.ExecuteSqlCommand("select 'truncate table ' + Name + ';' from sysobjects where xtype='U' order by name asc;");
                     //db.ExecuteStoreCommand("DELETE " + db.students.EntitySet.ElementType.Name);
-                    db.Database.ExecuteSqlCommand("truncate table PMALLDatas");
-                    //db.PMALLData.Remove();
+                    db.Database.ExecuteSqlCommand("truncate table PMAllMoids");
+                    
 
                     db.Database.ExecuteSqlCommand("truncate table PMTableListColumns");
                     MessageBox.Show(string.Format("数据库{0}初始化成功", DBname.dbName));
@@ -248,7 +259,7 @@ namespace LROSE_Main.DbManagement
                     //db.Database.ExecuteSqlCommand("select 'truncate table ' + Name + ';' from sysobjects where xtype='U' order by name asc;");
                     //db.ExecuteStoreCommand("DELETE " + db.students.EntitySet.ElementType.Name);
                     db.Database.ExecuteSqlCommand("truncate table MrTableAllColumns");
-                    db.Database.ExecuteSqlCommand("truncate table PMALLDatas");
+                    db.Database.ExecuteSqlCommand("truncate table PMAllMoids");
                     db.Database.ExecuteSqlCommand("truncate table PMTableListColumns");
                     //int stn = db.Database.ExecuteSqlCommand("select * from PMTableListColumns");
                     //MessageBox.Show(stn.ToString());
