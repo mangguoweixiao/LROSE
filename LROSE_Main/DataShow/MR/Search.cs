@@ -15,7 +15,7 @@ namespace LROSE_Main.DataShow.MR
     {
         private DataTable dt;//未检索的表
         private DataTable dtSearchcondition = new DataTable();//检索条件
-        private DataTable searchResult =new DataTable();//检索后的结果
+        private DataTable searchResult = new DataTable();//检索后的结果
 
         private string lstColValue;//被检索字段
         private string lstTypeValue;//检索条件
@@ -31,6 +31,7 @@ namespace LROSE_Main.DataShow.MR
 
         private void Search_Load(object sender, EventArgs e)
         {
+
             this.Text = string.Format("检索  库:{0}  表:{1}", DBname.dbName, dt.TableName.ToString());
             //字段 DBname.dbName 
             foreach (DataColumn item in dt.Columns)
@@ -52,11 +53,11 @@ namespace LROSE_Main.DataShow.MR
 
             searchResult = dt.Clone();
 
-            
             lstL.Add("reportTime");
             lstL.Add("startTime");
             lstL.Add("endTime");
             lstL.Add("TimeStamp");
+
         }
 
         private void btn_add_Click(object sender, EventArgs e)
@@ -106,7 +107,7 @@ namespace LROSE_Main.DataShow.MR
             else
             {
                 txb_column.Text = "";
-            }  
+            }
         }
 
         private void lstType_SelectedIndexChanged(object sender, EventArgs e)
@@ -139,7 +140,7 @@ namespace LROSE_Main.DataShow.MR
 
         private void btn_search_Click(object sender, EventArgs e)
         {
-            searchResult= mrda.PerformASearch(dt, dtSearchcondition);
+            searchResult = mrda.PerformASearch(dt, dtSearchcondition);
             dgvResult.DataSource = searchResult;
         }
 
