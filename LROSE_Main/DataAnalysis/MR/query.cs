@@ -25,7 +25,7 @@ namespace LROSE_Main.DataAnalysis.MR
 
         public query()
         {
-            
+
             InitializeComponent();
             if (DBname.dbIsChange)
             {

@@ -405,7 +405,9 @@ namespace LROSE_BLL.PMData
             }
             //IEnumerable<string> elements = (from ele in xml.Elements("mfh").First().Attributes() select ele).Select(q => q.Value);
             //IEnumerable<XElement> du= from q in xml.Descendants("ffv") select q;
-            //string du2 = xml.Descendants("ffv").First().Value;
+            string[] tempArr = path.Split(new string[] { @"\A","+" }, StringSplitOptions.RemoveEmptyEntries);
+            string time = tempArr[1];
+            pmTableList.RecordTime = time;
             pmTableList.ffv = xml.Descendants("ffv").First().Value;
             string sn = xml.Descendants("sn").First().Value;
             string[] snArr = sn.Split(new char[2] { '=', ',' });

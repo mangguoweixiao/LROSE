@@ -40,6 +40,8 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.btnSure = new System.Windows.Forms.Button();
             this.grpStandard = new System.Windows.Forms.GroupBox();
+            this.initMRBtn = new System.Windows.Forms.Button();
+            this.initPMBtn = new System.Windows.Forms.Button();
             this.PMIntoBtn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -61,21 +63,21 @@
             // 
             // btnDbInit
             // 
-            this.btnDbInit.Location = new System.Drawing.Point(19, 67);
+            this.btnDbInit.Location = new System.Drawing.Point(18, 119);
             this.btnDbInit.Margin = new System.Windows.Forms.Padding(2);
             this.btnDbInit.Name = "btnDbInit";
-            this.btnDbInit.Size = new System.Drawing.Size(86, 21);
+            this.btnDbInit.Size = new System.Drawing.Size(90, 30);
             this.btnDbInit.TabIndex = 1;
-            this.btnDbInit.Text = "初始化数据库";
+            this.btnDbInit.Text = "初始化全部";
             this.btnDbInit.UseVisualStyleBackColor = true;
             this.btnDbInit.Click += new System.EventHandler(this.btnDbInit_Click);
             // 
             // btnDbDelete
             // 
-            this.btnDbDelete.Location = new System.Drawing.Point(141, 67);
+            this.btnDbDelete.Location = new System.Drawing.Point(18, 67);
             this.btnDbDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDbDelete.Name = "btnDbDelete";
-            this.btnDbDelete.Size = new System.Drawing.Size(79, 21);
+            this.btnDbDelete.Size = new System.Drawing.Size(122, 34);
             this.btnDbDelete.TabIndex = 2;
             this.btnDbDelete.Text = "删除数据库";
             this.btnDbDelete.UseVisualStyleBackColor = true;
@@ -91,7 +93,7 @@
             this.cmbDb.Name = "cmbDb";
             this.cmbDb.Size = new System.Drawing.Size(152, 20);
             this.cmbDb.TabIndex = 3;
-            this.cmbDb.Text = "--请选择相应数据库--";
+            this.cmbDb.Text = "请选择相应数据库";
             this.cmbDb.SelectedIndexChanged += new System.EventHandler(this.cmbDb_SelectedIndexChanged);
             this.cmbDb.TextChanged += new System.EventHandler(this.cmbDb_TextChanged);
             // 
@@ -101,7 +103,7 @@
             // 
             // txtDbInit
             // 
-            this.txtDbInit.Location = new System.Drawing.Point(131, 201);
+            this.txtDbInit.Location = new System.Drawing.Point(131, 275);
             this.txtDbInit.Margin = new System.Windows.Forms.Padding(2);
             this.txtDbInit.Multiline = true;
             this.txtDbInit.Name = "txtDbInit";
@@ -123,17 +125,19 @@
             // 
             // btnSure
             // 
-            this.btnSure.Location = new System.Drawing.Point(251, 67);
+            this.btnSure.Location = new System.Drawing.Point(179, 67);
             this.btnSure.Margin = new System.Windows.Forms.Padding(2);
             this.btnSure.Name = "btnSure";
-            this.btnSure.Size = new System.Drawing.Size(79, 21);
+            this.btnSure.Size = new System.Drawing.Size(138, 34);
             this.btnSure.TabIndex = 8;
-            this.btnSure.Text = "确认";
+            this.btnSure.Text = "确认数据库";
             this.btnSure.UseVisualStyleBackColor = true;
             this.btnSure.Click += new System.EventHandler(this.btnSure_Click);
             // 
             // grpStandard
             // 
+            this.grpStandard.Controls.Add(this.initMRBtn);
+            this.grpStandard.Controls.Add(this.initPMBtn);
             this.grpStandard.Controls.Add(this.btnSure);
             this.grpStandard.Controls.Add(this.btnDbDelete);
             this.grpStandard.Controls.Add(this.cmbDb);
@@ -142,10 +146,30 @@
             this.grpStandard.Margin = new System.Windows.Forms.Padding(2);
             this.grpStandard.Name = "grpStandard";
             this.grpStandard.Padding = new System.Windows.Forms.Padding(2);
-            this.grpStandard.Size = new System.Drawing.Size(348, 104);
+            this.grpStandard.Size = new System.Drawing.Size(348, 172);
             this.grpStandard.TabIndex = 9;
             this.grpStandard.TabStop = false;
             this.grpStandard.Text = "选择数据库";
+            // 
+            // initMRBtn
+            // 
+            this.initMRBtn.Location = new System.Drawing.Point(224, 119);
+            this.initMRBtn.Name = "initMRBtn";
+            this.initMRBtn.Size = new System.Drawing.Size(93, 30);
+            this.initMRBtn.TabIndex = 10;
+            this.initMRBtn.Text = "初始化MR";
+            this.initMRBtn.UseVisualStyleBackColor = true;
+            this.initMRBtn.Click += new System.EventHandler(this.initMRBtn_Click);
+            // 
+            // initPMBtn
+            // 
+            this.initPMBtn.Location = new System.Drawing.Point(122, 119);
+            this.initPMBtn.Name = "initPMBtn";
+            this.initPMBtn.Size = new System.Drawing.Size(86, 30);
+            this.initPMBtn.TabIndex = 9;
+            this.initPMBtn.Text = "初始化PM";
+            this.initPMBtn.UseVisualStyleBackColor = true;
+            this.initPMBtn.Click += new System.EventHandler(this.initPMBtn_Click);
             // 
             // PMIntoBtn
             // 
@@ -173,7 +197,7 @@
             this.groupBox2.Controls.Add(this.btnNext);
             this.groupBox2.Controls.Add(this.PMIntoBtn);
             this.groupBox2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox2.Location = new System.Drawing.Point(131, 329);
+            this.groupBox2.Location = new System.Drawing.Point(131, 403);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(349, 75);
             this.groupBox2.TabIndex = 12;
@@ -184,7 +208,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(633, 416);
+            this.ClientSize = new System.Drawing.Size(633, 544);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtDbInit);
@@ -218,5 +242,7 @@
         private System.Windows.Forms.Button PMIntoBtn;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button initMRBtn;
+        private System.Windows.Forms.Button initPMBtn;
     }
 }
