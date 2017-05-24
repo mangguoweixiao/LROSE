@@ -66,9 +66,12 @@
     <Folder Include="Basic\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="PMData\counter.xml" />
+    <Content Include="PMData\counter.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="PMData\PM_STS.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
