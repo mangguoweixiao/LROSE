@@ -15,6 +15,7 @@ using LROSE_BLL.Basis;
 using LROSE_Main.DbManagement;
 using System.IO;
 
+
 namespace LROSE_Main.DataShow.MR
 {
     public partial class MRShow : Form
@@ -67,6 +68,7 @@ namespace LROSE_Main.DataShow.MR
         private void 导出结果ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog sf = new SaveFileDialog();
+            sf.FileName = dt.TableName;
             if (sf.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 if (dt == null)
