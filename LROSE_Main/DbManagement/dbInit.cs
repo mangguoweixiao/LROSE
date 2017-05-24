@@ -43,6 +43,16 @@ namespace LROSE_Main.DbManagement
             //flag = true;
         }
 
+        //事件处理方法
+        void dbf_TransfEvent()
+        {
+            cmbDb.SelectedIndex = -1;
+            //cmbDb.Items.Insert(0, "请选择"); 
+            cmbDb.ValueMember = "valuecolumn";
+            cmbDb.DisplayMember = "displaycolumn";
+            cmbDb.DataSource = getAllDbName();
+        }
+
         public SqlConnection getSqlConnection(string dbName)
         {
             dbCreate db = new dbCreate();
@@ -84,6 +94,7 @@ namespace LROSE_Main.DbManagement
         dbCreate dbf = new dbCreate();
         private void button1_Click(object sender, EventArgs e)
         {
+            dbf.TransfEvent += dbf_TransfEvent;
             //打开新建数据库窗口
             if (dbf.IsDisposed)
                 dbf = new dbCreate();

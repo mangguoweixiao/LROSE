@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace LROSE_Main.DbManagement
 {
+    public delegate void TransfDelegate();
     public partial class dbCreate : Form
     {
         private Label lblPassword;
@@ -214,6 +215,7 @@ namespace LROSE_Main.DbManagement
             return txtServer.Text;
         }
 
+        public event TransfDelegate TransfEvent;
         private void btnNew_Click(object sender, EventArgs e)
         {
             string serverName = txtServer.Text;
@@ -263,6 +265,7 @@ namespace LROSE_Main.DbManagement
                 sqlProcess.Close();
             }
             
+            TransfEvent();
             this.Close();
 
         }
