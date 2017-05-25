@@ -38,10 +38,10 @@
             this.mRToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pMToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAnalysis = new System.Windows.Forms.ToolStripMenuItem();
-            this.pM分析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MR分析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.一维分析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.二维分析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mR分析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PM分析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -105,56 +105,56 @@
             // mRToolStripMenuItem1
             // 
             this.mRToolStripMenuItem1.Name = "mRToolStripMenuItem1";
-            this.mRToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.mRToolStripMenuItem1.Size = new System.Drawing.Size(82, 22);
             this.mRToolStripMenuItem1.Text = "MR";
             this.mRToolStripMenuItem1.Click += new System.EventHandler(this.mRToolStripMenuItem1_Click);
             // 
             // pMToolStripMenuItem1
             // 
             this.pMToolStripMenuItem1.Name = "pMToolStripMenuItem1";
-            this.pMToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.pMToolStripMenuItem1.Size = new System.Drawing.Size(82, 22);
             this.pMToolStripMenuItem1.Text = "PM";
             this.pMToolStripMenuItem1.Click += new System.EventHandler(this.pMToolStripMenuItem1_Click);
             // 
             // tsmAnalysis
             // 
             this.tsmAnalysis.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pM分析ToolStripMenuItem,
-            this.mR分析ToolStripMenuItem});
+            this.MR分析ToolStripMenuItem,
+            this.PM分析ToolStripMenuItem});
             this.tsmAnalysis.Name = "tsmAnalysis";
             this.tsmAnalysis.Size = new System.Drawing.Size(41, 22);
             this.tsmAnalysis.Text = "分析";
             this.tsmAnalysis.Click += new System.EventHandler(this.tsmAnalysis_Click);
             // 
-            // pM分析ToolStripMenuItem
+            // MR分析ToolStripMenuItem
             // 
-            this.pM分析ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MR分析ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.一维分析ToolStripMenuItem,
             this.二维分析ToolStripMenuItem});
-            this.pM分析ToolStripMenuItem.Name = "pM分析ToolStripMenuItem";
-            this.pM分析ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.pM分析ToolStripMenuItem.Text = "MR分析";
+            this.MR分析ToolStripMenuItem.Name = "MR分析ToolStripMenuItem";
+            this.MR分析ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.MR分析ToolStripMenuItem.Text = "MR分析";
             // 
             // 一维分析ToolStripMenuItem
             // 
             this.一维分析ToolStripMenuItem.Name = "一维分析ToolStripMenuItem";
-            this.一维分析ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.一维分析ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.一维分析ToolStripMenuItem.Text = "一维分析";
             this.一维分析ToolStripMenuItem.Click += new System.EventHandler(this.一维分析ToolStripMenuItem_Click);
             // 
             // 二维分析ToolStripMenuItem
             // 
             this.二维分析ToolStripMenuItem.Name = "二维分析ToolStripMenuItem";
-            this.二维分析ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.二维分析ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.二维分析ToolStripMenuItem.Text = "二维分析";
             this.二维分析ToolStripMenuItem.Click += new System.EventHandler(this.二维分析ToolStripMenuItem_Click);
             // 
-            // mR分析ToolStripMenuItem
+            // PM分析ToolStripMenuItem
             // 
-            this.mR分析ToolStripMenuItem.Name = "mR分析ToolStripMenuItem";
-            this.mR分析ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.mR分析ToolStripMenuItem.Text = "PM分析";
-            this.mR分析ToolStripMenuItem.Click += new System.EventHandler(this.mR分析ToolStripMenuItem_Click);
+            this.PM分析ToolStripMenuItem.Name = "PM分析ToolStripMenuItem";
+            this.PM分析ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.PM分析ToolStripMenuItem.Text = "PM分析";
+            this.PM分析ToolStripMenuItem.Click += new System.EventHandler(this.PM分析ToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -196,8 +196,8 @@
         private System.Windows.Forms.ToolStripMenuItem tsmAnalysis;
         private System.Windows.Forms.ToolStripMenuItem mRToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem pMToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem pM分析ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mR分析ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MR分析ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem PM分析ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 一维分析ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 二维分析ToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;

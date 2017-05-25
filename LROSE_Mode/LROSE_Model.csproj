@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="PMData\counter.xml">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="PMData\PM_STS.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

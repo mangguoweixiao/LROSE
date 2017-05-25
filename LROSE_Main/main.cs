@@ -154,13 +154,7 @@ namespace LROSE_Main
             anaf1.Show();
         }
 
-        private void mR分析ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            IndexParameterFrom pmAnalysis = new IndexParameterFrom();
-            pmAnalysis.WindowState = FormWindowState.Normal;
-            pmAnalysis.Show();
-        }
-
+      
         private void 二维分析ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             analysis anaf2 = new analysis();
@@ -171,6 +165,13 @@ namespace LROSE_Main
             //anaf2.MdiParent = this;
             anaf2.WindowState = FormWindowState.Maximized;
             anaf2.Show();
+        }
+
+        private void PM分析ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            IndexParameterFrom pmAnalysis = new IndexParameterFrom();
+            pmAnalysis.WindowState = FormWindowState.Normal;
+            pmAnalysis.Show();
         }
     }
 

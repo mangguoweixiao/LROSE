@@ -287,11 +287,6 @@ pmRrcConnEst</algorithm>
     <algorithm>pmHoExecOutS1SuccInterEnb</algorithm>
   </item>
   <item>
-    <counter>eNB间S1切换出取消次数</counter>
-    <type>Eutrancell</type>
-    <algorithm></algorithm>
-  </item>
-  <item>
     <counter>eNB间X2切换出请求次数</counter>
     <type>Eutrancell</type>
     <algorithm>pmHoPrepOutX2AttInterEnb
@@ -323,41 +318,6 @@ pmRrcConnEst</algorithm>
     <algorithm>pmHoPrepOutS1RejInterEnbIntraFreqTranS1Cause0+pmHoPrepOutS1RejInterEnbInterFreqTranS1Cause0+pmHoPrepOutX2RejInterEnbIntraFreqTranX2Cause0+pmHoPrepOutX2RejInterEnbInterFreqTranX2Cause0</algorithm>
   </item>
   <item>
-    <counter>同频切换出执行请求次数</counter>
-    <type>Eutrancell</type>
-    <algorithm></algorithm>
-  </item>
-  <item>
-    <counter>同频切换出成功次数</counter>
-    <type>Eutrancell</type>
-    <algorithm></algorithm>
-  </item>
-  <item>
-    <counter>异频切换出执行请求次数</counter>
-    <type>Eutrancell</type>
-    <algorithm></algorithm>
-  </item>
-  <item>
-    <counter>异频切换出成功次数</counter>
-    <type>Eutrancell</type>
-    <algorithm></algorithm>
-  </item>
-  <item>
-    <counter>切换至3G请求次数</counter>
-    <type>Eutrancell</type>
-    <algorithm></algorithm>
-  </item>
-  <item>
-    <counter>切换至3G准备成功次数</counter>
-    <type>Eutrancell</type>
-    <algorithm></algorithm>
-  </item>
-  <item>
-    <counter>切换至3G成功次数</counter>
-    <type>Eutrancell</type>
-    <algorithm></algorithm>
-  </item>
-  <item>
     <counter>3G切入请求次数</counter>
     <type>Eutrancell</type>
     <algorithm>pmHoPrepInAttUtran</algorithm>
@@ -371,26 +331,6 @@ pmRrcConnEst</algorithm>
     <counter>3G切入成功次数</counter>
     <type>Eutrancell</type>
     <algorithm>pmHoExeInSuccUtran</algorithm>
-  </item>
-  <item>
-    <counter>TD LTE切换到LTE FDD请求次数</counter>
-    <type>Eutrancell</type>
-    <algorithm></algorithm>
-  </item>
-  <item>
-    <counter>TD LTE切换到LTE FDD成功次数</counter>
-    <type>Eutrancell</type>
-    <algorithm></algorithm>
-  </item>
-  <item>
-    <counter>LTE FDD切换到TD LTE请求次数</counter>
-    <type>Eutrancell</type>
-    <algorithm></algorithm>
-  </item>
-  <item>
-    <counter>LTE FDD切换到TD LTE成功次数</counter>
-    <type>Eutrancell</type>
-    <algorithm></algorithm>
   </item>
   <item>
     <counter>LTE-UTRAN系统间重定向请求次数(CSFB)</counter>
@@ -408,16 +348,6 @@ pmRrcConnEst</algorithm>
     <type>Eutrancell</type>
     <algorithm>pmUeCtxtRelSCWcdma
 在UtanCellRelation中不存在coverageIndicator为cover的WCDMA小区</algorithm>
-  </item>
-  <item>
-    <counter>LTE-GSM系统间重定向请求次数(盲重定向)</counter>
-    <type>Eutrancell</type>
-    <algorithm></algorithm>
-  </item>
-  <item>
-    <counter>LTE-GSM系统间重定向请求次数(非盲重定向)</counter>
-    <type>Eutrancell</type>
-    <algorithm></algorithm>
   </item>
   <item>
     <counter>LTE-GSM系统间重定向请求次数(CSFB)</counter>
@@ -480,26 +410,6 @@ pmRrcConnEst</algorithm>
     <algorithm>pmPdcpBitrateDlDrbMax/1000</algorithm>
   </item>
   <item>
-    <counter>IP层上行平均速率</counter>
-    <type>Eutrancell</type>
-    <algorithm></algorithm>
-  </item>
-  <item>
-    <counter>IP层上行峰值速率</counter>
-    <type>Eutrancell</type>
-    <algorithm></algorithm>
-  </item>
-  <item>
-    <counter>IP层下行平均速率</counter>
-    <type>Eutrancell</type>
-    <algorithm></algorithm>
-  </item>
-  <item>
-    <counter>IP层下行峰值速率</counter>
-    <type>Eutrancell</type>
-    <algorithm></algorithm>
-  </item>
-  <item>
     <counter>下行平均无线承载效率</counter>
     <type>Eutrancell</type>
     <algorithm>pmRadioThpVolDl*1000/pmPrbUsedDlDtch</algorithm>
@@ -533,16 +443,6 @@ pmRrcConnEst</algorithm>
     <counter>DRB会话时长</counter>
     <type>Eutrancell</type>
     <algorithm>pmSessionTimeDrb</algorithm>
-  </item>
-  <item>
-    <counter>有数传的RRC连接用户数平均值</counter>
-    <type></type>
-    <algorithm></algorithm>
-  </item>
-  <item>
-    <counter>有数传的RRC连接用户数峰值</counter>
-    <type></type>
-    <algorithm></algorithm>
   </item>
   <item>
     <counter>下行激活eRAB数</counter>
@@ -812,16 +712,6 @@ pmMacHarqDlAckQpsk</algorithm>
 </algorithm>
   </item>
   <item>
-    <counter>小区最大发射功率</counter>
-    <type>Eutrancell</type>
-    <algorithm></algorithm>
-  </item>
-  <item>
-    <counter>小区平均发射功率</counter>
-    <type>Eutrancell</type>
-    <algorithm></algorithm>
-  </item>
-  <item>
     <counter>上行业务信息占用PRB平均数</counter>
     <type>Eutrancell</type>
     <algorithm>pmPrbUsedUlDtch/统计时长(ms)</algorithm>
@@ -860,11 +750,6 @@ pmMacHarqDlAckQpsk</algorithm>
     <counter>下行可用PRB数</counter>
     <type>Eutrancell</type>
     <algorithm>pmPrbAvailDl/统计时长(ms)</algorithm>
-  </item>
-  <item>
-    <counter>TM k模式下的PRB使用个数</counter>
-    <type>Eutrancell</type>
-    <algorithm></algorithm>
   </item>
   <item>
     <counter>下行PDCCH信道CCE占用个数</counter>
