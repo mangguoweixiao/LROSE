@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.chartDynamic = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.GridViewDynamic = new System.Windows.Forms.DataGridView();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,6 +40,7 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.labelTishi = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.chartDynamic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridViewDynamic)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -63,10 +63,10 @@
             this.chartDynamic.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea2.Name = "ChartArea1";
-            this.chartDynamic.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartDynamic.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chartDynamic.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartDynamic.Legends.Add(legend1);
             this.chartDynamic.Location = new System.Drawing.Point(12, 24);
             this.chartDynamic.Name = "chartDynamic";
             this.chartDynamic.Size = new System.Drawing.Size(921, 428);
@@ -93,7 +93,7 @@
             this.GridViewDynamic.RowTemplate.Height = 23;
             this.GridViewDynamic.Size = new System.Drawing.Size(452, 225);
             this.GridViewDynamic.TabIndex = 2;
-            this.GridViewDynamic.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.GridViewDynamic_CellMouseClick);
+            this.GridViewDynamic.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridViewDynamic_CellContentClick);
             // 
             // Column7
             // 
@@ -147,9 +147,14 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(173, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(173, 26);
             this.contextMenuStrip1.Text = "选择";
-            this.contextMenuStrip1.Click += new System.EventHandler(this.contextMenuStrip1_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(172, 22);
+            this.toolStripMenuItem1.Text = "导出为EXCEL文件";
             // 
             // labelTishi
             // 
@@ -169,7 +174,6 @@
             this.label1.Size = new System.Drawing.Size(17, 12);
             this.label1.TabIndex = 4;
             this.label1.Text = "<<";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -180,7 +184,6 @@
             this.label2.Size = new System.Drawing.Size(11, 12);
             this.label2.TabIndex = 5;
             this.label2.Text = "<";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -201,7 +204,6 @@
             this.label4.Size = new System.Drawing.Size(11, 12);
             this.label4.TabIndex = 7;
             this.label4.Text = ">";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -212,7 +214,6 @@
             this.label5.Size = new System.Drawing.Size(17, 12);
             this.label5.TabIndex = 8;
             this.label5.Text = ">>";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -241,7 +242,6 @@
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(463, 225);
             this.dataGridView1.TabIndex = 10;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Column2
             // 
@@ -267,12 +267,6 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(172, 22);
-            this.toolStripMenuItem1.Text = "导出为EXCEL文件";
-            // 
             // IndexParameterFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -290,7 +284,6 @@
             this.Controls.Add(this.chartDynamic);
             this.Name = "IndexParameterFrom";
             this.Text = "IndexParameterFrom";
-            this.Load += new System.EventHandler(this.IndexParameterFrom_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chartDynamic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridViewDynamic)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);

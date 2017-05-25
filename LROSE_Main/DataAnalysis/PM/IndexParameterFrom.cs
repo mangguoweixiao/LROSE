@@ -17,5 +17,10 @@ namespace LROSE_Main.DataAnalysis.PM
     public partial class IndexParameterFrom : Form
     {
 
+        private void GridViewDynamic_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+        }
     }
 }
