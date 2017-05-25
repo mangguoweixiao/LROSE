@@ -13,6 +13,7 @@ using LROSE_Main.DataShow.MR;
 using PMDataOperation.InputDate.PM;
 using PMDataOperation.DataShow.PM;
 using LROSE_BLL.PMData;
+using LROSE_Main.DataAnalysis.PM;
 
 namespace LROSE_Main
 {
@@ -155,7 +156,9 @@ namespace LROSE_Main
 
         private void mR分析ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            IndexParameterFrom pmAnalysis = new IndexParameterFrom();
+            pmAnalysis.WindowState = FormWindowState.Normal;
+            pmAnalysis.Show();
         }
 
         private void 二维分析ToolStripMenuItem_Click(object sender, EventArgs e)
