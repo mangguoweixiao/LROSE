@@ -184,7 +184,7 @@ namespace LROSE_BLL.MR
             int xmlNumber = 0;
             int dbNUmber = 0;
             //初始化XML文件夹
-            string xmlPath = @"..\..\XMLFile";//路径xml文件夹
+            string xmlPath = @"..\..\MRXMLFile";//路径xml文件夹
             ClearXMLFile(xmlPath);
 
             //解压
