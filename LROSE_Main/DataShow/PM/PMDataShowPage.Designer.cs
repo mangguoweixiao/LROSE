@@ -35,6 +35,7 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.导出全部文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.导出有数据的文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.PMDataGridView)).BeginInit();
             this.contextMenuStrip2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -85,16 +86,24 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.导出全部文件ToolStripMenuItem});
+            this.导出全部文件ToolStripMenuItem,
+            this.导出有数据的文件ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(173, 70);
             // 
             // 导出全部文件ToolStripMenuItem
             // 
             this.导出全部文件ToolStripMenuItem.Name = "导出全部文件ToolStripMenuItem";
-            this.导出全部文件ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.导出全部文件ToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.导出全部文件ToolStripMenuItem.Text = "导出全部文件";
             this.导出全部文件ToolStripMenuItem.Click += new System.EventHandler(this.导出全部文件ToolStripMenuItem_Click);
+            // 
+            // 导出有数据的文件ToolStripMenuItem
+            // 
+            this.导出有数据的文件ToolStripMenuItem.Name = "导出有数据的文件ToolStripMenuItem";
+            this.导出有数据的文件ToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.导出有数据的文件ToolStripMenuItem.Text = "导出有数据的文件";
+            this.导出有数据的文件ToolStripMenuItem.Click += new System.EventHandler(this.导出有数据的文件ToolStripMenuItem_Click);
             // 
             // PMDataShowPage
             // 
@@ -121,5 +130,6 @@
         private System.Windows.Forms.ToolStripMenuItem 导出数据ToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 导出全部文件ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 导出有数据的文件ToolStripMenuItem;
     }
 }

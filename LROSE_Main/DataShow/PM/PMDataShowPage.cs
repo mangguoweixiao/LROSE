@@ -117,5 +117,34 @@ namespace PMDataOperation.DataShow.PM
             }
             MessageBox.Show("全部数据导出完成");
         }
+
+        private void 导出有数据的文件ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sf = new SaveFileDialog();
+            if (sf.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                if (SingletonPMData.pmAllMd == null || SingletonPMData.pmAllMd.Count == 0)
+                {
+                    MessageBox.Show("全部表数据为空");
+                }
+                else
+                {
+                    string path = sf.FileName.ToString();
+                    if (!Directory.Exists(path))
+                    {
+                        Directory.CreateDirectory(path);
+                    }
+                    foreach (DataTable item in dbset.Tables)
+                    {
+                        if (item.Rows.Count != 0)
+                        {
+                            OutPutFile outPutFile = new OutPutFile();
+                            outPutFile.ExportToExcel(item, string.Format("{0}//{1}.xlsx", path, item.TableName));
+                        }
+                    }
+                }
+            }
+            MessageBox.Show("全部数据导出完成");
+        }
     }
 }
