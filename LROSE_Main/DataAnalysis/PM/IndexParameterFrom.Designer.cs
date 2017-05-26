@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.chartDynamic = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.GridViewDynamic = new System.Windows.Forms.DataGridView();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +50,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.chartDynamic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridViewDynamic)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -60,10 +61,10 @@
             // 
             this.chartDynamic.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea7.Name = "ChartArea1";
-            this.chartDynamic.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chartDynamic.Legends.Add(legend7);
+            chartArea3.Name = "ChartArea1";
+            this.chartDynamic.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartDynamic.Legends.Add(legend3);
             this.chartDynamic.Location = new System.Drawing.Point(12, 24);
             this.chartDynamic.Name = "chartDynamic";
             this.chartDynamic.Size = new System.Drawing.Size(902, 315);
@@ -233,7 +234,7 @@
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column2});
             this.dataGridView3.Location = new System.Drawing.Point(606, 345);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowTemplate.Height = 30;
             this.dataGridView3.Size = new System.Drawing.Size(308, 216);
@@ -247,11 +248,23 @@
             this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column2.Width = 21;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(650, 346);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(48, 16);
+            this.checkBox1.TabIndex = 13;
+            this.checkBox1.Text = "全选";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // IndexParameterFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(913, 559);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -295,5 +308,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column2;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
