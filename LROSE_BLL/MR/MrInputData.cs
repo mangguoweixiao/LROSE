@@ -184,7 +184,7 @@ namespace LROSE_BLL.MR
             int xmlNumber = 0;
             int dbNUmber = 0;
             //初始化XML文件夹
-            string xmlPath = @"..\..\XMLFile";//路径xml文件夹
+            string xmlPath = @"..\..\MRXMLFile";//路径xml文件夹
             ClearXMLFile(xmlPath);
 
             //解压
@@ -203,8 +203,7 @@ namespace LROSE_BLL.MR
                     {
                         return false;
                     }
-                }  
-             
+                }       
             }
 
             //读取XML
@@ -229,7 +228,6 @@ namespace LROSE_BLL.MR
                 db.Configuration.AutoDetectChangesEnabled = false;
                 db.Configuration.ValidateOnSaveEnabled =false;
                 //db.anto
-                
                 int KPid =0;//设置主键ID
                 int columnNumber = db.MrTableAllColumn.Count();
                 if (columnNumber != 0)

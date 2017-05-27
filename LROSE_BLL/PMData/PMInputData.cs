@@ -16,7 +16,7 @@ namespace LROSE_BLL.PMData
         public bool PMInput(string path, string dbName)
         {
             
-            bool b= PMTableListInput(path, dbName);
+            bool b = PMTableListInput(path, dbName);
             bool a = PMMoidInput(path, dbName);
 
             if (a && b)
@@ -48,7 +48,7 @@ namespace LROSE_BLL.PMData
         private bool PMMoidZipInput(string path, string dbName)
         {
             //初始化XML文件夹
-            string xmlPath = @"..\..\XMLFile";//路径xml文件夹
+            string xmlPath = @"..\..\PMXMLFile";//路径xml文件夹
             MrInputData mrclass = new MrInputData();
             mrclass.ClearXMLFile(xmlPath);
 

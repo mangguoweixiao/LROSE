@@ -71,6 +71,12 @@
     <Compile Include="DataAnalysis\MR\query.designer.cs">
       <DependentUpon>query.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataAnalysis\PM\IndexParameterFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataAnalysis\PM\IndexParameterFrom.designer.cs">
+      <DependentUpon>IndexParameterFrom.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataShow\MR\Search.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     <EmbeddedResource Include="DataAnalysis\MR\query.resx">
       <DependentUpon>query.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DataAnalysis\PM\IndexParameterFrom.resx">
+      <DependentUpon>IndexParameterFrom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DataShow\MR\Search.resx">
       <DependentUpon>Search.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,9 +181,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataAnalysis\PM\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\LROSE_BLL\LROSE_BLL.csproj">
       <Project>{72FCC0F6-8455-41EB-9F86-34151CC16EA2}</Project>

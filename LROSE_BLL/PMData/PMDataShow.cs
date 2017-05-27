@@ -14,9 +14,10 @@ namespace LROSE_BLL.PMData
     /// </summary>
     public class PMDataShow
     {
+        public static DataSet ds;
         public DataSet PMShow()
         {
-            DataSet ds = GetTableHeader();
+            ds = GetTableHeader();
             if (SingletonPMData.pmAllMd == null || SingletonPMData.pmAllMd.Count() == 0)
             {
             }
@@ -24,7 +25,6 @@ namespace LROSE_BLL.PMData
             {
                 var pmAllMd = SingletonPMData.pmAllMd.GroupBy(q => q.moidKey).Select(q => q);
                 var moid = pmAllMd;
-
                 //同一个Moid
                 foreach (IGrouping<string, PMAllMd> oneMoid in pmAllMd)
                 {
@@ -91,16 +91,16 @@ namespace LROSE_BLL.PMData
         /// <summary>
         /// 筛选moid相同项
         /// </summary>
-        /// <param name="str1">表头中moid</param>
+        /// <param name="str1">STS 结构表中moid</param>
         /// <param name="str2">导入xml文件中的moid</param>
         /// <returns>moid相同</returns>
         private bool IsTablesNameEquals(string str1, string str2)
         {
             if (str1.Contains('-'))
             {
-               str1 = str1.Split('-')[0];
+                str1 = str1.Split('-')[0];
             }
-            if ("ManagedElement;"+ str1 == str2)
+            if ("ManagedElement;" + str1 == str2)
             {
                 return true;
             }
@@ -117,60 +117,80 @@ namespace LROSE_BLL.PMData
         /// <param name="pmData"> 数据</param>
         private void InputPMDataInDt(DataTable dt, IGrouping<string, PMAllMd> pmData)
         {
+            DataColumnCollection dtColumn = dt.Columns;//表中的列
 
-            DataColumnCollection dtColumn = dt.Columns;
-            foreach (PMAllMd item in pmData)
+            if (dt.TableName.Contains("-"))
             {
-                DataRow dr = dt.NewRow();
-                string cell = null;
-                string ne = null;
-                foreach (DataColumn item3 in dtColumn)
+                string counter = dt.TableName.Split('-')[1];
+                foreach (PMAllMd item in pmData)
                 {
-                    string item2 = item3.ToString();
-                    switch (item2)
+                    if (item.mtList.Split(';').Contains(counter))
                     {
-                        case "ID":
-                            dr[item2] = item.KPid.ToString();
-                            break;
-                        case "RecordTime":
-                            //未记录
-                            //dt.Rows[a][item2] = item.re;
-                            break;
-                        case "NetworkName":
-                            dr[item2] = item.SubNetwork1;
-                            break;
-                        case "NE":
-                            dr[item2] = item.MeContext;
-                            break;
-                        case "MO":
-                            ne = item.moid;
-                            dr[item2] = ne;
-                            break;
-                        case "CELL":
-                            int t = item.moidKey.Split(';').ToList().IndexOf("EUtranCellFDD");
-                            cell = item.moidValue.Split(';')[t];
-                            dr[item2] = cell;
-                            break;
-                        case "ENBCELL":
-                            dr[item2] = cell + "_" + ne; ;
-                            break;
-                        default:
-                            if (dt.TableName.Contains('-'))
-                            {
-                                //指标是List
-                                dr[item2] = GetRValue2(item.mtList, item.rList, item2);
-                            }
-                            else
-                            {
-                                //指标是单个值
-                                dr[item2] = GetRValue(item.mtList, item.rList, item2);
-                            }
-                            break;
+                        InputOneDate(dt, item, dtColumn);
                     }
                 }
-                dt.Rows.Add(dr);
+            }
+            else
+            {
+                foreach (PMAllMd item in pmData)
+                {
+                    InputOneDate(dt, item, dtColumn);
+                }
             }
         }
+
+        //插入一条数据
+        private void InputOneDate(DataTable dt, PMAllMd item, DataColumnCollection dtColumn)
+        {
+            DataRow dr = dt.NewRow();
+            string cell = null;
+            string ne = null;
+            foreach (DataColumn item3 in dtColumn)
+            {
+                string item2 = item3.ToString();
+                switch (item2)
+                {
+                    case "ID":
+                        dr[item2] = item.KPid.ToString();
+                        break;
+                    case "RecordTime":
+                        dr[item2] = item.RecordTime;
+                        break;
+                    case "NetworkName":
+                        dr[item2] = item.SubNetwork1;
+                        break;
+                    case "NE":
+                        dr[item2] = item.MeContext;
+                        break;
+                    case "MO":
+                        ne = item.moid;
+                        dr[item2] = ne;
+                        break;
+                    case "CELL":
+                        int t = item.moidKey.Split(';').ToList().IndexOf("EUtranCellFDD");
+                        cell = item.moidValue.Split(';')[t];
+                        dr[item2] = cell;
+                        break;
+                    case "ENBCELL":
+                        dr[item2] = cell + "_" + ne; ;
+                        break;
+                    default:
+                        if (dt.TableName.Contains('-'))
+                        {
+                            //指标是List
+                            dr[item2] = GetRValue2(item.mtList, item.rList, item2);
+                        }
+                        else
+                        {
+                            //指标是单个值
+                            dr[item2] = GetRValue(item.mtList, item.rList, item2);
+                        }
+                        break;
+                }
+            }
+            dt.Rows.Add(dr);
+        }
+
 
         /// <summary>
         /// 得到某一个指标(指标的值不是一个列表)
@@ -214,9 +234,9 @@ namespace LROSE_BLL.PMData
                 if (n >= m)
                 {
                 }
-                else 
+                else
                 {
-                     f = d.Split(',').ToList()[n];
+                    f = d.Split(',').ToList()[n];
                 }
 
                 return f;

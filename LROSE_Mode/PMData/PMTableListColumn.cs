@@ -24,7 +24,8 @@ namespace LROSE_Model.PMData
         public string mts { get; set; }
         public string nesw { get; set; }
         public string gp { get; set; }
-        public string neun { get; set; }
+        public string neun { get; set; }    
+     
         
 
     }

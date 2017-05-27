@@ -39,8 +39,11 @@
             this.导出结果ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.label2 = new System.Windows.Forms.Label();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label8
@@ -96,6 +99,7 @@
             // 
             this.treeView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)));
+            this.treeView1.ContextMenuStrip = this.contextMenuStrip2;
             this.treeView1.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.treeView1.Location = new System.Drawing.Point(16, 40);
             this.treeView1.Name = "treeView1";
@@ -112,7 +116,6 @@
             this.treeView1.Size = new System.Drawing.Size(299, 385);
             this.treeView1.TabIndex = 11;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
-            //this.treeView1.Click += new System.EventHandler(this.treeView1_Click);
             // 
             // label2
             // 
@@ -121,6 +124,20 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 12);
             this.label2.TabIndex = 21;
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(137, 26);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(136, 22);
+            this.toolStripMenuItem1.Text = "导出所有表";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // MRShow
             // 
@@ -137,6 +154,7 @@
             this.Load += new System.EventHandler(this.MRShow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,5 +169,7 @@
         private System.Windows.Forms.ToolStripMenuItem 导出结果ToolStripMenuItem;
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
