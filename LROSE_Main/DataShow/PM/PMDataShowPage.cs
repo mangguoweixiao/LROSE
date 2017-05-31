@@ -77,9 +77,9 @@ namespace PMDataOperation.DataShow.PM
                 else
                 {
                   
-                    string path = sf.FileName.ToString() + ".xlsx";
+                    string path = sf.FileName.ToString() + ".csv";
                     OutPutFile outPutFile = new OutPutFile();
-                    string str = outPutFile.ExportToExcel(dbset.Tables[PMtableName], path);
+                    string str = outPutFile.SaveCSV(dbset.Tables[PMtableName], path);
                     if (str != null)
                     {
                         MessageBox.Show(str, "提示");
@@ -111,7 +111,7 @@ namespace PMDataOperation.DataShow.PM
                     foreach (DataTable item in dbset.Tables)
                     {
                         OutPutFile outPutFile = new OutPutFile();
-                        outPutFile.ExportToExcel(item, string.Format("{0}//{1}.xlsx", path, item.TableName));
+                        outPutFile.SaveCSV(item, string.Format("{0}//{1}.csv", path, item.TableName));
                     }                 
                 }
             }
@@ -139,7 +139,7 @@ namespace PMDataOperation.DataShow.PM
                         if (item.Rows.Count != 0)
                         {
                             OutPutFile outPutFile = new OutPutFile();
-                            outPutFile.ExportToExcel(item, string.Format("{0}//{1}.xlsx", path, item.TableName));
+                            outPutFile.SaveCSV(item, string.Format("{0}//{1}.csv", path, item.TableName));
                         }
                     }
                 }

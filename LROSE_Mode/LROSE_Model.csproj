@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="MrData\MrTableAllColumn.cs" />
     <Compile Include="MrData\MRTableList.cs" />
+    <Compile Include="PMData\Counter.cs" />
     <Compile Include="PMData\PMAllMoid.cs" />
     <Compile Include="PMData\PMAllMd.cs" />
     <Compile Include="PMData\PMTableListColumn.cs" />

@@ -77,9 +77,9 @@ namespace LROSE_Main.DataShow.MR
                 }
                 else
                 {
-                    string path = sf.FileName.ToString() + ".xlsx";
+                    string path = sf.FileName.ToString() + ".csv";
                     OutPutFile outPutFile = new OutPutFile();
-                    string str = outPutFile.ExportToExcel(dt, path);
+                    string str = outPutFile.SaveCSV(dt, path);
                     if (str != null)
                     {
                         MessageBox.Show(str, "提示");
@@ -142,7 +142,7 @@ namespace LROSE_Main.DataShow.MR
 
                         dt2 = mrDataShow.GetTableData(mRTableList);
                         dt2.TableName = item.Name + "-" + item2.Text;
-                        string str = outPutFile.ExportToExcel(dt2,string.Format("{0}//{1}.xlsx",path , dt2.TableName));
+                        string str = outPutFile.SaveCSV(dt2, string.Format("{0}//{1}.csv", path, dt2.TableName));
                     }
                 }
                 MessageBox.Show("导出成功!", "提示");

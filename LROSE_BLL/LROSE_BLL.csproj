@@ -64,6 +64,7 @@
     <Compile Include="MR\MrDataShow.cs" />
     <Compile Include="MR\MrInputData.cs" />
     <Compile Include="MR\SingletonMrData.cs" />
+    <Compile Include="PMData\PMAnalysis.cs" />
     <Compile Include="PMData\PMDataShow.cs" />
     <Compile Include="PMData\PMInputData.cs" />
     <Compile Include="PMData\SingletonPMData.cs" />

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.chartDynamic = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.GridViewDynamic = new System.Windows.Forms.DataGridView();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,10 +61,10 @@
             // 
             this.chartDynamic.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea3.Name = "ChartArea1";
-            this.chartDynamic.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartDynamic.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chartDynamic.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartDynamic.Legends.Add(legend1);
             this.chartDynamic.Location = new System.Drawing.Point(12, 24);
             this.chartDynamic.Name = "chartDynamic";
             this.chartDynamic.Size = new System.Drawing.Size(902, 315);
@@ -251,7 +251,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(650, 346);
+            this.checkBox1.Location = new System.Drawing.Point(607, 345);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(48, 16);
             this.checkBox1.TabIndex = 13;

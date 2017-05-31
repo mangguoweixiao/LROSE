@@ -155,9 +155,9 @@ namespace LROSE_Main.DataShow.MR
                 }
                 else
                 {
-                    string path = sf.FileName.ToString() + ".xlsx";
+                    string path = sf.FileName.ToString() + ".csv";
                     OutPutFile outPutFile = new OutPutFile();
-                    string str = outPutFile.ExportToExcel(searchResult, path);
+                    string str = outPutFile.SaveCSV(searchResult, path);
                     if (str != null)
                     {
                         MessageBox.Show(str, "提示");

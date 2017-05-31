@@ -570,9 +570,9 @@ namespace LROSE_Main.DataAnalysis.MR
                 }
                 else
                 {
-                    string path = sf.FileName.ToString() + ".xlsx";
+                    string path = sf.FileName.ToString() + ".csv";
                     OutPutFile outPutFile = new OutPutFile();
-                    string str = outPutFile.ExportToExcel(dt, path);
+                    string str = outPutFile.SaveCSV(dt, path);
                     if (str != null)
                     {
                         MessageBox.Show(str, "提示");
