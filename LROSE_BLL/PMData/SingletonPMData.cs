@@ -40,7 +40,7 @@ namespace LROSE_BLL.PMData
                                    neun = q.First().neun,
                                    SubNetwork = q.First().SubNetwork,
                                    SubNetwork1 = q.First().SubNetwork1,
-                                   moid =m.moid
+                                   moid =m.moid.Replace(',',';')
                                };
                 pmAllMd = leftJoin.ToList();
             }
